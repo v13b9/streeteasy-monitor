@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "pg": "^8.11.5",
     "puppeteer": "^22.10.0"
   }
 }

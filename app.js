@@ -1,7 +1,39 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
+const { Pool } = require('pg');
 
-sample = 'sample.html';
+const connectionString = 'postgres://postgres.omszflfpoxotqapvioim:ZFh1QKUYHhCDkYJ3@aws-0-us-east-1.pooler.supabase.com:5432/postgres'
+
+const pool = new Pool({
+    connectionString,
+});
+
+async function insertListing(listing) {
+    const { listing_id, url, price, address, neighborhood } = listing; 
+    const query = `
+        INSERT INTO listings (listing_id, url, price, address, neighborhood)
+        VALUES ($1, $2, $3, $4, $5)
+        ON CONFLICT (listing_id) DO NOTHING;
+    `;
+    const values = [listing_id, url, price, address, neighborhood];
+
+    try {
+        await pool.query(query, values);
+    } catch (err) {
+        console.error('Error inserting listing:', err);
+    }
+}
+
+async function getListings() {
+    try {
+        const query = 'SELECT listing_id FROM listings';
+        const result = await pool.query(query);
+        return result.rows;
+    } catch (err) {
+        console.error('Error retrieving listings:', err);
+        return [];
+    }
+}
 
 const searchUrl = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3';
 
@@ -13,30 +45,27 @@ const searchUrl = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001
     await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36');
 
     // await page.goto(testUrl);
-    await page.goto(`file:${path.join(__dirname, sample)}`);
+    await page.goto(`file:${path.join(__dirname, 'sample.html')}`);
     await page.setViewport({width: 1080, height: 1024});
 
     // sort listings by newest
     await page.select("select#sort-by", "listed_desc");
 
-    // listings are rendered as a ul with class="searchCardList"
-        // ul contains li with class="searchCardList--listItem"
-            // li contains div with class="listingCard"
-                // div contains a with class="listingCard-globalLink" and href for listing url
-
-    const newRentals = await page.evaluate(() => {
+    const oldListings = await getListings();
+    const existingIds = oldListings.map(listing => {
+        return listing.listing_id;
+    });
+            
+    const newListings = await page.evaluate(() => {
         const listItems = document.querySelectorAll('li.searchCardList--listItem');
         const containers = Array.from(listItems);
         return containers.map(container => {
-            const id = container
+            const listing_id = container
                 .querySelector('div.SRPCarousel-container')
                 .getAttribute('data-listing-id');
-            const link = container
+            const url = container
                 .querySelector('a.listingCard-globalLink')
                 .getAttribute('href');
-            // const title = container
-            //     .querySelector('span.u-displayNone')
-            //     .textContent.trim();
             const price = Number(
                 container
                     .querySelector('span.price')
@@ -51,9 +80,8 @@ const searchUrl = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001
                 .replace('Rental Unit in', '').trim();
             
             return {
-                id,
-                link,
-                // title,
+                listing_id,
+                url,
                 price,
                 address,
                 neighborhood,
@@ -62,24 +90,27 @@ const searchUrl = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001
         })
     });
 
-    console.log(newRentals);
-
-    // query database for already visited listings
-
-    // for each listing,
-        // check if id already in database
-        // if not,
-            // create object consisting of:
-                // the listing id (primary key)
-                // the listing name
-                // the listing url
-                // other info if useful - price, neighborhood, etc
-            // add to new listings array
-
-    // for each listing in the new listings array,
+    const filteredListings = newListings.filter(listing => {
+        return !existingIds.includes(listing.listing_id);
+    });
+    
+    console.log('existingIds:', existingIds);
+    console.log('newListings:', newListings);
+    
+    console.log('filteredListings:', filteredListings);
+    
+    // for each remaining listing in newListings,
+    filteredListings.forEach(async (listing) => {
         // navigate to the url
+        console.log(listing.url);
+        // await page.goto(listing.url);
+        // await page.screenshot({
+        //     path: 'screenshot.jpg'
+        // })
         // submit the contact form
-    // store the listing in a database
+        // insert into database
+        await insertListing(listing);
+    });
 
     await browser.close();
 })();
