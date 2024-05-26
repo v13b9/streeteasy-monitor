@@ -11,6 +11,9 @@
   "description": "",
   "dependencies": {
     "pg": "^8.11.5",
-    "puppeteer": "^22.10.0"
+    "puppeteer": "^22.10.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.215"
   }
 }
