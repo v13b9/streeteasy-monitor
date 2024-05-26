@@ -1,18 +1,39 @@
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const userAgent = require('user-agents');
+const UserAgent = require('user-agents');
 
 const path = require('path');
 const { Pool } = require('pg');
 
 puppeteer.use(StealthPlugin());
 
-const connectionString = 'postgres://postgres.omszflfpoxotqapvioim:ZFh1QKUYHhCDkYJ3@aws-0-us-east-1.pooler.supabase.com:5432/postgres';
+// instantiate user agent
+const userAgent = new UserAgent();
+const defaultUserAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
 
+// connect DB
+const connectionString = 'postgres://postgres.omszflfpoxotqapvioim:ZFh1QKUYHhCDkYJ3@aws-0-us-east-1.pooler.supabase.com:5432/postgres';
 const pool = new Pool({
     connectionString,
 });
 
+// helper functions
+// Randomize viewport size
+const setRandomViewport = async (page) => {
+    const randomWidth = 1920 + Math.floor(Math.random() * 100);
+    const randomHeight = 3000 + Math.floor(Math.random() * 100);
+
+    await page.setViewport({
+        width: randomWidth,
+        height: randomHeight,
+        deviceScaleFactor: 1,
+        hasTouch: false,
+        isLandscape: false,
+        isMobile: false,
+      });
+};
+
+// DB helper functions
 async function insertListing(listing) {
     const { listing_id, url, price, address, neighborhood } = listing; 
     const query = `
@@ -55,26 +76,18 @@ const botUrl = 'https://bot.sannysoft.com/';
         Object.defineProperty(navigator, 'webdriver', {get: () => false});
       });
 
+    // get random user agent
     const randomUserAgent = userAgent.random().toString();
-    const defaultUserAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
 
     await page.setUserAgent(randomUserAgent || defaultUserAgent);
 
     await page.setCacheEnabled(false);
 
     // await page.goto(searchUrl);
-    await page.goto(testUrl);
-    // await page.goto(`file:${path.join(__dirname, 'listings.html')}`, { waitUntil: 'networkidle0' });
+    // await page.goto(testUrl);
+    await page.goto(`file:${path.join(__dirname, 'listings.html')}`, { waitUntil: 'networkidle0' });
     
-    //Randomize viewport size
-    await page.setViewport({
-        width: 1920 + Math.floor(Math.random() * 100),
-        height: 3000 + Math.floor(Math.random() * 100),
-        deviceScaleFactor: 1,
-        hasTouch: false,
-        isLandscape: false,
-        isMobile: false,
-    });
+    await setRandomViewport(page);
 
     await page.screenshot({
             path: 'screenshot.jpg'
@@ -83,14 +96,14 @@ const botUrl = 'https://bot.sannysoft.com/';
     // sort listings by newest
     await page.select("select#sort-by", "listed_desc");
 
+    // query db
     const oldListings = await getListings();
     const existingIds = oldListings.map(listing => {
         return listing.listing_id;
     });
             
-    const newListings = await page.evaluate(() => {
-        const listItems = document.querySelectorAll('li.searchCardList--listItem');
-        const containers = Array.from(listItems);
+
+    const newListings = await page.$$eval('li.searchCardList--listItem', containers => {
         return containers.map(container => {
             const listing_id = container
                 .querySelector('div.SRPCarousel-container')
@@ -107,6 +120,7 @@ const botUrl = 'https://bot.sannysoft.com/';
                 .querySelector('address.listingCard-addressLabel a')
                 .textContent.trim();
             const neighborhood = container
+                // fix incorrect textContent
                 .querySelector('p.listingCardLabel')
                 .textContent
                 .replace('Rental Unit in', '').trim();
@@ -122,6 +136,42 @@ const botUrl = 'https://bot.sannysoft.com/';
         })
     });
 
+
+    // const newListings = await page.evaluate(() => {
+    //     const listItems = document.querySelectorAll('li.searchCardList--listItem');
+    //     const containers = Array.from(listItems);
+    //     return containers.map(container => {
+    //         const listing_id = container
+    //             .querySelector('div.SRPCarousel-container')
+    //             .getAttribute('data-listing-id');
+    //         const url = container
+    //             .querySelector('a.listingCard-globalLink')
+    //             .getAttribute('href');
+    //         const price = Number(
+    //             container
+    //                 .querySelector('span.price')
+    //                 .textContent.trim().replace(/[$,]/g, '')
+    //             );
+    //         const address = container
+    //             .querySelector('address.listingCard-addressLabel a')
+    //             .textContent.trim();
+    //         const neighborhood = container
+    //             // fix incorrect textContent
+    //             .querySelector('p.listingCardLabel')
+    //             .textContent
+    //             .replace('Rental Unit in', '').trim();
+            
+    //         return {
+    //             listing_id,
+    //             url,
+    //             price,
+    //             address,
+    //             neighborhood,
+    //         };
+
+    //     })
+    // });
+
     const filteredListings = newListings.filter(listing => {
         return !existingIds.includes(listing.listing_id);
     });
@@ -132,34 +182,31 @@ const botUrl = 'https://bot.sannysoft.com/';
     console.log('filteredListings:', filteredListings);
     
     // for each remaining listing in newListings,
-    filteredListings.forEach(async (listing) => {
-        // navigate to the url
-        console.log(listing.url);
+    for (let listing of filteredListings) {
+        console.log(`Trying URL: ${listing.url}`);
 
         const randomUserAgent = userAgent.random().toString();
-        const defaultUserAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36';
-    
         await page.setUserAgent(randomUserAgent || defaultUserAgent);
 
+        // randomize viewport size
+        await setRandomViewport(page);
+        
+        // navigate to the url
         await page.goto(listing.url);
 
-        //Randomize viewport size
-        await page.setViewport({
-            width: 1920 + Math.floor(Math.random() * 100),
-            height: 3000 + Math.floor(Math.random() * 100),
-            deviceScaleFactor: 1,
-            hasTouch: false,
-            isLandscape: false,
-            isMobile: false,
-        });
+        await page.evaluate(() => {
+            Object.defineProperty(navigator, 'webdriver', {get: () => false});
+          });
 
         await page.screenshot({
             path: `${listing.listing_id}.jpg`
         })
-        // submit the contact form
+
+        // submit the contact form [TODO]
+
         // insert into database
         await insertListing(listing);
-    });
+    }
 
     // await page.goto(`file:${path.join(__dirname, 'listing.html')}`, { waitUntil: 'networkidle0' });
     // await page.screenshot({
