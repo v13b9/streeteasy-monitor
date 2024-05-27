@@ -1,9 +1,10 @@
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const UserAgent = require('user-agents');
-
+const axios = require('axios');
 const path = require('path');
 const { Pool } = require('pg');
+
+const UserAgent = require('user-agents');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
 puppeteer.use(StealthPlugin());
 
@@ -60,6 +61,8 @@ async function getListings() {
         return [];
     }
 }
+
+const scrapeOpsUrl = 'https://proxy.scrapeops.io/v1/?api_key=ff34d53e-11ae-48d1-8700-80a764a42210&url=https://streeteasy.com/for-rent/nyc/status:open%257Cprice:-3001%257Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%257Cbeds:1-3&render_js=true&residential=true';
 
 const searchUrl = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3';
 const testUrl = 'https://www.zillow.com/homes/for_rent/condo,apartment_duplex_type/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22isMapVisible%22%3Atrue%2C%22mapBounds%22%3A%7B%22west%22%3A-75.4456884765625%2C%22east%22%3A-72.5343115234375%2C%22south%22%3A39.54196992713169%2C%22north%22%3A41.85299742972416%7D%2C%22filterState%22%3A%7B%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22sf%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A8%7D';
