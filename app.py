@@ -9,7 +9,9 @@ from fake_useragent import UserAgent
 from supabase import create_client
 
 from dotenv import load_dotenv
-load_dotenv()
+from pathlib import Path
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # connect DB
 supabase_url = os.environ.get('SUPABASE_URL')
@@ -17,10 +19,6 @@ supabase_key = os.environ.get('SUPABASE_KEY')
 supabase = create_client(supabase_url, supabase_key)
 
 scrapeops_key = os.environ.get('SCRAPEOPS_KEY')
-
-def wait():
-    time.sleep(random.randint(0, 3))
-    # pass
 
 ua = UserAgent()
 
@@ -50,77 +48,20 @@ test_search_url = 'https://streeteasy.com/for-rent/nyc?sort_by=sqft_desc'
 search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'    
 
 listings_data = supabase.table('listings').select("*").execute().data
+existing_ids = [listing['listing_id'] for listing in listings_data]
 
-with requests.Session() as s:
+api_url = 'https://api-v6.streeteasy.com/'
 
-    s.headers.update(headers)
-
-    # r = s.get(
-    #     url='https://proxy.scrapeops.io/v1/',
-    #     params={
-    #         'api_key': scrapeops_key,
-    #         'url': search_url, 
-    #     },
-    # )
-
-    # scrape search results
-    print(f'Trying GET {test_search_url}...')
-    wait()
-    r = s.get(test_search_url)
-    print(f'Status code: {r.status_code} {r.reason}')
-
-    soup = BeautifulSoup(r.content, 'html.parser')
-    cards = soup.select('li.searchCardList--listItem')
-
-    existing_ids = [listing['listing_id'] for listing in listings_data]
-
-    new_listings = []
-
-    for card in cards:
-        listing_id = int(card.select_one('div.SRPCarousel-container')['data-listing-id'])
-        if listing_id not in existing_ids:
-            url = card.select_one('a.listingCard-globalLink')['href']
-            price = int(re.sub(r'[$,]', '', card.select_one('span.price').text))
-            address = card.select_one('address.listingCard-addressLabel').text.strip()
-            neighborhood = card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel').text.split(' in ')[1].strip()
-
-            new_listing = {
-                'listing_id': listing_id,
-                'url': url,
-                'price': price,
-                'address': address,
-                'neighborhood': neighborhood,
-            }
-
-            # print('url:', url)
-            # print('price:', price)
-            # print('address:', address)
-            print('neighborhood:', neighborhood)
-            new_listings.append(new_listing)
-    
-
-    supabase.table('listings').insert(new_listings).execute()
-
-    # send message
-    for listing in new_listings:
-
-        print(f'\nTrying GET {listing['url']}...')
-        wait()
-        r = s.get(url)
-        print(f'Status code: {r.status_code} {r.reason}')
-
-        # soup = BeautifulSoup(r.content, 'html.parser')
-        # # find more robust solution
-        # script = soup('script')[-2].string
-        # pattern = r'(?<=deviceId\:\s\")[a-zA-Z0-9-]*(?=\",)'
-        # deviceId = re.search(pattern, script).group()
-
-        # print('deviceId:', deviceId)
-
-        api_url = 'https://api-v6.streeteasy.com/'
-
-        start_query = """
-            fragment Children on KoiosElement {
+start_query = """
+    fragment Children on KoiosElement {
+    children {
+        ...ChildrenFields
+        children {
+        ...ChildrenFields
+        children {
+            ...ChildrenFields
+            children {
+            ...ChildrenFields
             children {
                 ...ChildrenFields
                 children {
@@ -133,18 +74,6 @@ with requests.Session() as s:
                         ...ChildrenFields
                         children {
                         ...ChildrenFields
-                        children {
-                            ...ChildrenFields
-                            children {
-                            ...ChildrenFields
-                            children {
-                                ...ChildrenFields
-                                children {
-                                ...ChildrenFields
-                                }
-                            }
-                            }
-                        }
                         }
                     }
                     }
@@ -152,7 +81,39 @@ with requests.Session() as s:
                 }
             }
             }
-            fragment ChildrenFields on KoiosElement {
+        }
+        }
+    }
+    }
+    fragment ChildrenFields on KoiosElement {
+    type
+    componentType
+    config
+    field {
+        name
+        type
+        value
+        error
+    }
+    }
+
+    mutation StartPageFlow($request: KoiosStartPageflowRequest!) {
+    data: startPageflow(request: $request) {
+        ... on KoiosErrorResponse {
+        code
+        message
+        errorFields
+        }
+
+        ... on KoiosStartPageflowSuccess {
+        code
+        pageflowId
+        pageflowType
+
+        page {
+            id
+            config
+            elements {
             type
             componentType
             config
@@ -162,116 +123,159 @@ with requests.Session() as s:
                 value
                 error
             }
+            ...Children
             }
+        }
 
-            mutation StartPageFlow($request: KoiosStartPageflowRequest!) {
-            data: startPageflow(request: $request) {
-                ... on KoiosErrorResponse {
+        pageNum
+        totalPages
+        containerType
+        config
+        replyToken
+        }
+    }
+    }
+"""
+
+start_variables = {
+        "request": {
+            "name": "ContactBox-Rentals-Consumer-AskQuestion-v0.0.2",
+            "context": {
+                "_client": {
+                    "koiosClient": "koios.js v0.0.5",
+                    # "deviceId": deviceId,
+                },
+                # "rental_id": listing['listing_id'],
+            },
+            # "fieldValues": {
+            #     "name": "",
+            #     "phone": "",
+            #     "email": ""
+            # },
+            "isStrict": False
+        }
+    }
+
+finish_query = """
+    mutation FinishPageflow($request: KoiosFinishPageflowRequest) {
+        data: finishPageflow(request: $request) {
+            ... on KoiosErrorResponse {
                 code
                 message
                 errorFields
-                }
+            }
 
-                ... on KoiosStartPageflowSuccess {
+            ... on KoiosFinishPageflowSuccess {
                 code
-                pageflowId
-                pageflowType
-
-                page {
-                    id
-                    config
-                    elements {
-                    type
-                    componentType
-                    config
-                    field {
-                        name
-                        type
-                        value
-                        error
-                    }
-                    ...Children
-                    }
-                }
-
-                pageNum
-                totalPages
-                containerType
-                config
-                replyToken
-                }
-            }
-            }
-        """
-
-        start_variables = {
-            "request": {
-                "name": "ContactBox-Rentals-Consumer-AskQuestion-v0.0.2",
-                "context": {
-                    "_client": {
-                        "koiosClient": "koios.js v0.0.5",
-                        # "deviceId": deviceId,
-                    },
-                    "rental_id": listing['listing_id'],
-                },
-                # "fieldValues": {
-                #     "name": "",
-                #     "phone": "",
-                #     "email": ""
-                # },
-                "isStrict": False
+                returnConfig
             }
         }
+    }
+"""
 
-        start_json_data = {
-            "query": start_query,
-            "variables": start_variables,
-        }
+# helpers
+def wait():
+    time.sleep(random.randint(0, 3))
 
-        print(f'\nTrying POST {api_url}...')
-        wait()
-        r = s.post(api_url, json=start_json_data, headers=headers)
-        print(f'Status code: {r.status_code} {r.reason}')
-        # print('JSON:', r.json())
 
-        pageflowId = r.json()['data']['data']['pageflowId']
-        replyToken = r.json()['data']['data']['replyToken']
+def try_post(url, json_data, func_name):
+    print(f'\nTrying POST {url} - {func_name}...')
+    wait()
+    r = s.post(url, json=json_data)
+    print(f'Status code: {r.status_code} {r.reason}')
+    return r
 
-        print('pageflowId:', pageflowId)
-        print('replyToken:', replyToken)
 
-        finish_query = """
-            mutation FinishPageflow($request: KoiosFinishPageflowRequest) {
-                data: finishPageflow(request: $request) {
-                    ... on KoiosErrorResponse {
-                        code
-                        message
-                        errorFields
-                    }
+def try_get(url, func_name):
+    print(f'Trying GET {url} - {func_name}...')
+    wait()
+    r = s.get(url)
+    print(f'Status code: {r.status_code} {r.reason}')
+    return r
 
-                    ... on KoiosFinishPageflowSuccess {
-                        code
-                        returnConfig
-                    }
-                }
+
+def scrape_search_results(url: str):
+    r = try_get(url, 'scrape_search_results')
+    soup = BeautifulSoup(r.content, 'html.parser')
+    cards = soup.select('li.searchCardList--listItem')
+
+    new_listings = []
+
+    for card in cards:
+        listing_id = int(card.select_one('div.SRPCarousel-container')['data-listing-id'])
+        if listing_id not in existing_ids:
+            url = card.select_one('a.listingCard-globalLink')['href']
+            price = int(re.sub(r'[$,]', '', card.select_one('span.price').text))
+            address = card.select_one('address.listingCard-addressLabel').text.strip()
+            neighborhood = card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel').text.split(' in ')[-1].strip()
+
+            new_listing = {
+                'listing_id': listing_id,
+                'url': url,
+                'price': price,
+                'address': address,
+                'neighborhood': neighborhood,
             }
-        """
 
-        finish_variables = {
-            "request": {
-                "pageflowId": pageflowId,
-                "replyToken": replyToken,
-                "fieldValues": field_values,
-            }
+            print(f'listing_id: {listing_id}')
+            # print(f'url: {url}')
+            # print(f'price: {price}')
+            # print(f'address: {address}')
+            # print(f'neighborhood: {neighborhood}')
+            new_listings.append(new_listing)
+
+    return new_listings
+
+
+def send_messages(listings):
+    for listing in listings:
+        pageflow_id, reply_token = get_pageflow_id(listing)
+        submit_message(pageflow_id, reply_token)
+
+
+def get_pageflow_id(listing):
+    start_variables['request']['context']['rental_id'] = listing['listing_id']
+
+    start_json_data = {
+        "query": start_query,
+        "variables": start_variables,
+    }
+
+    r = try_post(api_url, start_json_data, 'get_pageflow_id')
+
+    pageflow_id = r.json()['data']['data']['pageflowId']
+    reply_token = r.json()['data']['data']['replyToken']
+
+    print('pageflowId:', pageflow_id)
+    print('replyToken:', reply_token)
+
+    return pageflow_id, reply_token
+
+
+def submit_message(pageflow_id, reply_token):
+    finish_variables = {
+        "request": {
+            "pageflowId": pageflow_id,
+            "replyToken": reply_token,
+            "fieldValues": field_values,
         }
+    }
 
-        finish_json_data = {
-            "query": finish_query,
-            "variables": finish_variables,
-        }
+    finish_json_data = {
+        "query": finish_query,
+        "variables": finish_variables,
+    }
 
-        print(f'\nTrying POST {api_url}...')
-        r = s.post(api_url, json=finish_json_data, headers=headers)
-        print(f'Status code: {r.status_code} {r.reason}\n')
-        wait()
-        print('JSON:', r.json())
+    try_post(api_url, finish_json_data, 'submit_message')
+
+
+def main(s):
+    s.headers.update(headers)
+    new_listings = scrape_search_results(test_search_url)
+    send_messages(new_listings)
+    supabase.table('listings').insert(new_listings).execute()
+
+
+if __name__ == '__main__':
+    with requests.Session() as s:
+        main(s)
