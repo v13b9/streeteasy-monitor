@@ -47,7 +47,7 @@ field_values = {
 test_search_url = 'https://streeteasy.com/for-rent/nyc?sort_by=sqft_desc'
 search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'    
 
-listings_data = supabase.table('listings').select("*").execute().data
+listings_data = supabase.table('listings').select('*').execute().data
 existing_ids = [listing['listing_id'] for listing in listings_data]
 
 api_url = 'https://api-v6.streeteasy.com/'
@@ -194,11 +194,7 @@ def try_get(url, func_name):
     return r
 
 
-def scrape_search_results(url: str):
-    r = try_get(url, 'scrape_search_results')
-    soup = BeautifulSoup(r.content, 'html.parser')
-    cards = soup.select('li.searchCardList--listItem')
-
+def get_new_listings(cards):
     new_listings = []
 
     for card in cards:
@@ -227,14 +223,22 @@ def scrape_search_results(url: str):
     return new_listings
 
 
+def scrape_search_results(url: str):
+    r = try_get(url, 'scrape_search_results')
+    soup = BeautifulSoup(r.content, 'html.parser')
+    cards = soup.select('li.searchCardList--listItem')
+
+    return get_new_listings(cards)
+
+
 def send_messages(listings):
-    for listing in listings:
-        pageflow_id, reply_token = get_pageflow_id(listing)
+    for listing_id in [listing['listing_id'] for listing in listings]:
+        pageflow_id, reply_token = get_pageflow_id(listing_id)
         submit_message(pageflow_id, reply_token)
 
 
-def get_pageflow_id(listing):
-    start_variables['request']['context']['rental_id'] = listing['listing_id']
+def get_pageflow_id(listing_id):
+    start_variables['request']['context']['rental_id'] = listing_id
 
     start_json_data = {
         "query": start_query,
