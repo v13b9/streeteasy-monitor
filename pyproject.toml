@@ -1,0 +1,3 @@
+[tool.ruff.format]
+# 5. Use single quotes for non-triple-quoted strings.
+quote-style = "single"

@@ -6,3 +6,4 @@ get_device_id.py
 app.js
 package.json
 package-lock.json
+cron_test/
