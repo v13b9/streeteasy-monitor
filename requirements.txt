@@ -19,6 +19,7 @@ pydantic==2.7.1
 pydantic_core==2.18.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
+pytz==2024.1
 realtime==1.0.4
 requests==2.32.2
 ruff==0.4.5
