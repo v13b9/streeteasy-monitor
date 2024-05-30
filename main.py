@@ -6,43 +6,14 @@ import requests
 import time
 
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
-from supabase import create_client
 
-import environs
+from headers import get_headers
+from env_config import get_field_values, setup_supabase
 
-env = environs.Env()
-env.read_env()
-
-supabase_url = env('SUPABASE_URL')
-supabase_key = env('SUPABASE_KEY')
-supabase = create_client(supabase_url, supabase_key)
-
+supabase = setup_supabase()
 # scrapeops_key = env('SCRAPEOPS_KEY')
 
-ua = UserAgent()
-
-random_user_agent = ua.random
-default_user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
-
-user_agent = random_user_agent or default_user_agent
-
-headers = {
-    'User-Agent': user_agent,
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Referer': 'https://streeteasy.com/',
-    'cache-control': 'no-cache',
-    'Content-type': 'application/json',
-    'origin': 'https://streeteasy.com',
-}
-
-field_values = {
-    'message': env('MESSAGE'),
-    'phone': env('PHONE'),
-    'search_partners': None,
-    'email': env('EMAIL'),
-    'name': env('NAME'),
-}
+field_values = get_field_values()
 
 test_search_url = 'https://streeteasy.com/for-rent/nyc?sort_by=sqft_desc'
 search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'
@@ -290,7 +261,7 @@ def submit_message(pageflow_id, reply_token):
 
 
 def main(s):
-    s.headers.update(headers)
+    s.headers.update(get_headers())
     new_listings = scrape_search_results(test_search_url)
     send_messages(new_listings)
     supabase.table('listings').insert(new_listings).execute()
