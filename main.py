@@ -1,5 +1,5 @@
 from datetime import datetime
-import pytz
+from dateutil.tz import gettz
 import random
 import re
 import requests
@@ -150,7 +150,7 @@ def wait():
 
 
 def get_datetime():
-    tz = pytz.timezone('America/New_York')
+    tz = gettz()
     now = datetime.now(tz)
     time_now = now.strftime('%l:%M %p')
     date_now = now.strftime('%B %e, %Y')
@@ -159,7 +159,7 @@ def get_datetime():
 
 def try_post(url, json_data, func_name):
     date_now, time_now = get_datetime()
-    print(f'\n[{date_now} - {time_now}] Trying POST {url} - {func_name}...')
+    print(f'\n[{date_now} {time_now}] Trying POST {url} - {func_name}...')
     wait()
     r = s.post(url, json=json_data)
     print(f'Status code: {r.status_code} {r.reason}')
@@ -168,7 +168,7 @@ def try_post(url, json_data, func_name):
 
 def try_get(url, func_name):
     date_now, time_now = get_datetime()
-    print(f'[{date_now} - {time_now}] Trying GET {url} - {func_name}...')
+    print(f'[{date_now} {time_now}] Trying GET {url} - {func_name}...')
     wait()
     r = s.get(url)
     print(f'Status code: {r.status_code} {r.reason}')
