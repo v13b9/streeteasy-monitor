@@ -1,25 +1,26 @@
 #!/bin/bash
-if [ ! -s cron.dat ]; then
+CRON_FILE="cron.dat"
+
+if [ ! -s "$CRON_FILE" ]; then
     echo "Cron.dat is empty. Write cron job to file or run create_cron.sh"
     exit 1
 fi
 
+start_cron_job() {
+    echo "Starting cron job:"
+    cat "$CRON_FILE"
+    crontab "$CRON_FILE"
+}
+
 if crontab -l; then
-    read -n 1 -p "Cron job already running. Overwrite? (y/n) " answer
+    read -n 1 -p "Cron job already running. Overwrite? (y/n) " ANSWER
     echo
-    if [[ "$answer" =~ ^[Yy]$ ]]; then
+    if [[ "$ANSWER" =~ ^[Yy]$ ]]; then
         echo "Overwriting crontab"
-        echo "Starting cron job:"
-        cat cron.dat
-        crontab < cron.dat
-        exit 0
+        start_cron_job
     else
         echo "Exiting without overwriting"
-        exit 0
     fi
 else
-    echo "Starting cron job:"
-    cat cron.dat
-    crontab < cron.dat
-    exit 0
+    start_cron_job
 fi

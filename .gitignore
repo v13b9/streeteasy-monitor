@@ -7,5 +7,6 @@ app.js
 package.json
 package-lock.json
 cron_test/
-cron_job/
+cron/cron.dat
+cron/cron.log
 __pycache__/

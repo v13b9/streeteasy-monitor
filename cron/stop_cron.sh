@@ -1,9 +1,12 @@
 #!/bin/bash
+CRON_FILE="cron.dat"
+
 if crontab -l; then
-    # save existing cron job to cron.dat
-    echo "Stopping cron job"
-    crontab -l > cron.dat
+    echo "Cron job found, saving to $CRON_FILE..."
+    crontab -l > "$CRON_FILE"
+    echo "Removing existing cron job..."
     crontab -r
+    echo "Cron job stopped and saved to $CRON_FILE."
 else
-    echo "No cron jobs running"
+    echo "No cron jobs running."
 fi
