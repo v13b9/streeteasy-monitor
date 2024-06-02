@@ -1,8 +1,8 @@
 from requests import Session
 
-from streeteasier.config import get_headers
-from streeteasier.messager import send_messages
-from streeteasier.scraper import scrape_search_results
+from src.streeteasier.config import get_headers
+from src.streeteasier.messager import send_messages
+from src.streeteasier.scraper import scrape_search_results
 
 
 def main():
