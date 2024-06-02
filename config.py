@@ -1,4 +1,9 @@
+import environs
 from fake_useragent import UserAgent
+
+env = environs.Env()
+env.read_env()
+
 
 def get_headers():
     ua = UserAgent()
@@ -8,7 +13,7 @@ def get_headers():
 
     user_agent = random_user_agent or default_user_agent
 
-    headers = {
+    return {
         'User-Agent': user_agent,
         'Accept-Language': 'en-US,en;q=0.9',
         'Referer': 'https://streeteasy.com/',
@@ -17,4 +22,21 @@ def get_headers():
         'origin': 'https://streeteasy.com',
     }
 
-    return headers
+
+def get_field_values():
+    return {
+        'message': env('MESSAGE'),
+        'phone': env('PHONE'),
+        'search_partners': None,
+        'email': env('EMAIL'),
+        'name': env('NAME'),
+    }
+
+
+def setup_supabase():
+    from supabase import create_client
+
+    supabase_url = env('SUPABASE_URL')
+    supabase_key = env('SUPABASE_KEY')
+
+    return create_client(supabase_url, supabase_key)
