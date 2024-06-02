@@ -2,8 +2,8 @@ import re
 
 from bs4 import BeautifulSoup
 
-from database import get_existing_ids
-from utility import try_get
+from .database import get_existing_ids
+from .utility import try_get
 
 test_search_url = 'https://streeteasy.com/for-rent/new-jersey?sort_by=price_asc'
 search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'

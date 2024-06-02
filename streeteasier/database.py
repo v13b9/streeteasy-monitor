@@ -1,4 +1,4 @@
-from config import setup_supabase
+from .config import setup_supabase
 
 supabase = setup_supabase()
 

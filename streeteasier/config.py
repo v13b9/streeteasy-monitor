@@ -1,7 +1,7 @@
-import environs
+from environs import Env
 from fake_useragent import UserAgent
 
-env = environs.Env()
+env = Env()
 env.read_env()
 
 

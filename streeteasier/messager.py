@@ -1,6 +1,6 @@
-from config import get_field_values
-from database import insert_new_listing
-from utility import try_post
+from .config import get_field_values
+from .database import insert_new_listing
+from .utility import try_post
 
 field_values = get_field_values()
 
