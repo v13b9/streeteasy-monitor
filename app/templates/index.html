@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>Neighborhood</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for listing in listings %}
+            <tr>
+                <td><a href='{{ listing["url"] }}' target="_blank">{{ listing["address"] }}</a></td>
+                <td>{{ listing["neighborhood"] }}</td>
+                <td>{{ listing["price"] | usd }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
