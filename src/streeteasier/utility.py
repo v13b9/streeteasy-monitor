@@ -1,15 +1,15 @@
 from datetime import datetime
-from dateutil.tz import tzlocal
+from dateutil.tz import gettz
 import random
 import time
-
 
 def wait():
     time.sleep(random.randint(0, 3))
 
 
 def get_datetime():
-    now = datetime.now().astimezone(tzlocal())
+    NYC = gettz('America/New_York')
+    now = datetime.now().astimezone(NYC)
     date_now = now.strftime('%B %e, %Y')
     time_now = now.strftime('%l:%M %p')
     return date_now, time_now
@@ -20,6 +20,7 @@ def try_get(url, func_name, s):
     print(f'[{date_now} {time_now}] Trying GET {url} - {func_name}...')
     wait()
     r = s.get(url)
+    # print(f'Headers: {r.headers}')
     print(f'Status code: {r.status_code} {r.reason}')
     return r
 
