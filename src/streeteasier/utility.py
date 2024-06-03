@@ -3,6 +3,7 @@ from dateutil.tz import gettz
 import random
 import time
 
+
 def wait():
     time.sleep(random.randint(0, 3))
 

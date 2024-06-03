@@ -9,7 +9,9 @@ def get_existing_ids():
 
 
 def get_listings_sorted():
-    response = supabase.table('listings').select('*').order('created_at', desc=True).execute()
+    response = (
+        supabase.table('listings').select('*').order('created_at', desc=True).execute()
+    )
     return response.data
 
 

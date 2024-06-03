@@ -1,14 +1,19 @@
 from datetime import datetime
 from dateutil.tz import gettz
+import random
 
 from flask import Flask, render_template
 from flask_session import Session
+from flask_apscheduler import APScheduler
 
+from main import main
 from src.streeteasier.database import get_listings_sorted
+
 
 def usd(value):
     """Format value as USD."""
     return f'${value:,}'
+
 
 def format_datetime(created_at):
     """Format date and time for current timezone."""
@@ -18,8 +23,15 @@ def format_datetime(created_at):
     time_formatted = parsed.strftime('%l:%M %p')
     return f'{date_formatted} {time_formatted}'
 
-app = Flask(__name__)
 
+# set configuration values
+class Config:
+    SCHEDULER_API_ENABLED = True
+    SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
+
+
+app = Flask(__name__)
+app.config.from_object(Config())
 app.jinja_env.filters = {
     'usd': usd,
     'format_datetime': format_datetime,
@@ -47,4 +59,17 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    scheduler = APScheduler()
+    scheduler.init_app(app)
+    scheduler.remove_all_jobs()
+
+    scheduler.add_job(
+        id='main',
+        func=main,
+        trigger='interval',
+        minutes=random.randint(6, 8)
+    )
+
+    scheduler.start()
+
+    app.run()

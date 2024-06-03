@@ -12,3 +12,4 @@ cron_job/
 cron/cron.dat
 cron/cron.log
 __pycache__/
+test.*
