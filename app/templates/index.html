@@ -9,6 +9,7 @@
 <table>
     <thead>
         <tr>
+            <th>Time</th>
             <th>Address</th>
             <th>Neighborhood</th>
             <th>Price</th>
@@ -17,6 +18,7 @@
     <tbody>
         {% for listing in listings %}
             <tr>
+                <td>{{ listing["created_at"] | format_datetime }}</td>
                 <td><a href='{{ listing["url"] }}' target="_blank">{{ listing["address"] }}</a></td>
                 <td>{{ listing["neighborhood"] }}</td>
                 <td>{{ listing["price"] | usd }}</td>

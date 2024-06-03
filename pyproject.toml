@@ -1,3 +1,8 @@
+[project]
+name = "StreetEasier"
+version = "0.1.0"
+description = "Description"
+
 [tool.ruff.format]
 # 5. Use single quotes for non-triple-quoted strings.
 quote-style = "single"

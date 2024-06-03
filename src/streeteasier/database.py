@@ -8,8 +8,11 @@ def get_existing_ids():
     return [listing['listing_id'] for listing in listings_data]
 
 
-def get_listings():
-    return supabase.table('listings').select('*').execute().data
+def get_listings_sorted():
+    response = supabase.table('listings').select('*').order('created_at', desc=True).execute()
+    print(response.data)
+    return response.data
+    # return supabase.table('listings').select('*').execute().data
 
 
 def insert_new_listing(listing):

@@ -1,4 +1,5 @@
 node_modules/
+flask_session/
 .env
 .ruff_cache
 .python-version
