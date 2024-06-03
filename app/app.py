@@ -1,4 +1,5 @@
-from dateutil.parser import parse
+from datetime import datetime
+from dateutil.tz import tzlocal
 
 from flask import Flask, render_template
 from flask_session import Session
@@ -10,7 +11,8 @@ def usd(value):
     return f'${value:,}'
 
 def format_datetime(created_at):
-    parsed = parse(created_at)
+    """Format date and time for current timezone."""
+    parsed = datetime.fromisoformat(created_at).astimezone(tzlocal())
     date_formatted = parsed.strftime('%B %e, %Y')
     time_formatted = parsed.strftime('%l:%M %p')
     return f'{date_formatted} {time_formatted}'

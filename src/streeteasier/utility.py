@@ -1,5 +1,5 @@
 from datetime import datetime
-from dateutil.tz import gettz
+from dateutil.tz import tzlocal
 import random
 import time
 
@@ -9,10 +9,9 @@ def wait():
 
 
 def get_datetime():
-    tz = gettz()
-    now = datetime.now(tz)
-    time_now = now.strftime('%l:%M %p')
+    now = datetime.now().astimezone(tzlocal())
     date_now = now.strftime('%B %e, %Y')
+    time_now = now.strftime('%l:%M %p')
     return date_now, time_now
 
 
