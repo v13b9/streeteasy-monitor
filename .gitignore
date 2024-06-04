@@ -13,3 +13,4 @@ cron/cron.dat
 cron/cron.log
 __pycache__/
 test.*
+*.log
