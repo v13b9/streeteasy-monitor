@@ -13,7 +13,7 @@ search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Car
 filters = {
     'url': ['?featured=1', '?infeed=1'],
     'address': ['Herkimer'],
-    'neighborhood': ['Ocean Hill', 'Flatbush', 'Bushwick'],
+    'neighborhood': ['Ocean Hill', 'Flatbush', 'Bushwick', 'Weeksville'],
 }
 
 

@@ -55,7 +55,8 @@ def after_request(response):
 
 @app.route('/')
 def index():
-    return render_template('index.html', listings=get_listings_sorted())
+    listings = get_listings_sorted()
+    return render_template('index.html', listings=listings)
 
 
 if __name__ == '__main__':
@@ -67,7 +68,7 @@ if __name__ == '__main__':
         id='main',
         func=main,
         trigger='interval',
-        minutes=random.randint(6, 8)
+        seconds=random.randint(360, 540)
     )
 
     scheduler.start()
