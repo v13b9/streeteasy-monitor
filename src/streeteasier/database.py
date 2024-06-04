@@ -15,5 +15,12 @@ def get_listings_sorted():
     return response.data
 
 
+# def get_paginated_listings(offset, per_page):
+#     response = (
+#         supabase.table('listings').select('*').limit(per_page).order('created_at', desc=True).execute()
+#     )
+#     return response.data
+
+
 def insert_new_listing(listing):
     supabase.table('listings').insert(listing).execute()

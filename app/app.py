@@ -3,11 +3,15 @@ from dateutil.tz import gettz
 import random
 
 from flask import Flask, render_template
-from flask_session import Session
 from flask_apscheduler import APScheduler
+from flask_session import Session
 
 from main import main
 from src.streeteasier.database import get_listings_sorted
+
+
+PORT = 8000
+app = Flask(__name__)
 
 
 def usd(value):
@@ -24,10 +28,8 @@ def format_datetime(created_at):
     return f'{date_formatted} {time_formatted}'
 
 
-app = Flask(__name__)
 
 def create_app():
-    # set configuration values
     class Config:
         SCHEDULER_API_ENABLED = True
         SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
@@ -51,12 +53,13 @@ def create_app():
         id='main',
         func=main,
         trigger='interval',
-        seconds=random.randint(12, 18)
+        seconds=random.randint(360, 480)
     )
 
     scheduler.start()
 
     return app
+
 
 @app.after_request
 def after_request(response):
@@ -75,4 +78,4 @@ def index():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run()
+    app.run(port=PORT)
