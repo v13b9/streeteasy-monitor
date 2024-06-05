@@ -106,7 +106,6 @@ def after_request(response):
 @app.route('/')
 def index():
     listings = get_listings_sorted()
-    print(listings[0]['paddaddy']['deal_status'])
     return render_template('index.html', listings=listings)
 
 

@@ -26,6 +26,8 @@
     color: var(--bs-table-color);
     border-color: var(--bs-table-border-color);
 }
+
+
   
 .table-fine {
     --bs-table-color: #000;
