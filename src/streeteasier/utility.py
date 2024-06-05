@@ -19,7 +19,7 @@ def get_datetime():
 def try_get(url, func_name, s):
     date_now, time_now = get_datetime()
     print(f'[{date_now} {time_now}] Trying GET {url} - {func_name}...')
-    wait()
+    # wait()
     r = s.get(url)
     # print(f'Headers: {r.headers}')
     print(f'Status code: {r.status_code} {r.reason}')
@@ -29,7 +29,7 @@ def try_get(url, func_name, s):
 def try_post(url, json_data, func_name, s):
     date_now, time_now = get_datetime()
     print(f'\n[{date_now} {time_now}] Trying POST {url} - {func_name}...')
-    wait()
+    # wait()
     r = s.post(url, json=json_data)
     print(f'Status code: {r.status_code} {r.reason}')
     return r

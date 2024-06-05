@@ -1,4 +1,5 @@
 import re
+import requests
 
 from bs4 import BeautifulSoup
 
@@ -10,9 +11,11 @@ test_search_url = (
 )
 search_url = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3001%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'
 
+offermate_lookup_api = 'https://offermate.app/unit_lookup?q='
+
 filters = {
     'url': ['?featured=1', '?infeed=1'],
-    'address': ['Herkimer'],
+    'address': ['Herkimer', 'Fulton'],
     'neighborhood': ['Ocean Hill', 'Flatbush', 'Bushwick', 'Weeksville'],
 }
 
@@ -44,12 +47,19 @@ def get_listing_info(card):
         .strip()
     )
 
+    lookup_url = offermate_lookup_api + url
+    r = requests.get(lookup_url)
+    lookup_json = r.json()
+
+    paddaddy = lookup_json['matching_listings'][0] if lookup_json['matching_listings'][0]['similarity_type'] == 'exact_match' else None
+
     return {
         'listing_id': listing_id,
         'url': url,
         'price': price,
         'address': address,
         'neighborhood': neighborhood,
+        'paddaddy': paddaddy
     }
 
 

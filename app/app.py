@@ -5,6 +5,7 @@ import random
 from flask import Flask, render_template
 from flask_apscheduler import APScheduler
 from flask_session import Session
+import timeago
 
 from main import main
 from src.streeteasier.database import get_listings_sorted
@@ -12,6 +13,8 @@ from src.streeteasier.database import get_listings_sorted
 
 PORT = 8000
 app = Flask(__name__)
+
+paddaddy_url = 'https://paddaddy.app'
 
 
 def usd(value):
@@ -22,23 +25,53 @@ def usd(value):
 def format_datetime(created_at):
     """Format date and time for current timezone."""
     NYC = gettz('America/New_York')
+    now = datetime.now(NYC)
+
     parsed = datetime.fromisoformat(created_at).astimezone(NYC)
     date_formatted = parsed.strftime('%B %e, %Y')
     time_formatted = parsed.strftime('%l:%M %p')
-    return f'{date_formatted} {time_formatted}'
+
+    time_ago = timeago.format(parsed, now)
+
+    delta = now - parsed
+    hours = delta.total_seconds() / 3600
+
+    datetime_formatted = f'{date_formatted} {time_formatted}'
+
+    return datetime_formatted if hours > 8 else time_ago
 
 
+def format_url(listing):
+    return paddaddy_url + listing['paddaddy']['url'] if listing.get('paddaddy') else listing['url']
+
+
+def format_deal_status(paddaddy):
+    
+    deal_status = {
+        'great': 'table-great',
+        'good': 'table-good',
+        'fine': 'table-fine',
+        'poor': 'table-poor',
+        'bad': 'table-bad',
+        'tbd': 'table-tbd',
+    }
+
+    return deal_status.get(paddaddy['deal_status']) if paddaddy else None
+
+
+class Config:
+    SCHEDULER_API_ENABLED = True
+    SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
+
+app.config.from_object(Config())
+app.jinja_env.filters = {
+    'usd': usd,
+    'format_datetime': format_datetime,
+    'format_url': format_url,
+    'format_deal_status': format_deal_status,
+}
 
 def create_app():
-    class Config:
-        SCHEDULER_API_ENABLED = True
-        SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
-
-    app.config.from_object(Config())
-    app.jinja_env.filters = {
-        'usd': usd,
-        'format_datetime': format_datetime,
-    }
 
     # Configure session to use filesystem (instead of signed cookies)
     app.config['SESSION_PERMANENT'] = False
@@ -73,6 +106,7 @@ def after_request(response):
 @app.route('/')
 def index():
     listings = get_listings_sorted()
+    print(listings[0]['paddaddy']['deal_status'])
     return render_template('index.html', listings=listings)
 
 
