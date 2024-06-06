@@ -11,8 +11,7 @@ A simple Flask application is included in the `app/` directory, which is served 
 
 ## Usage
 
-
-
+<img width="889" alt="Screen Shot 2024-06-06 at 12 26 25 PM" src="https://github.com/joeschermer/streeteasy-monitor/assets/36313005/4b0f592c-b934-4c69-a778-6ce382535486">
 
 ## Installation
 ### Clone project
