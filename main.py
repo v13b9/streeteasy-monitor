@@ -1,8 +1,8 @@
 import requests
 
-from src.streeteasier.config import get_headers
-from src.streeteasier.messager import send_messages
-from src.streeteasier.scraper import scrape_search_results
+from src.streeteasymonitor.config import get_headers
+from src.streeteasymonitor.messager import send_messages
+from src.streeteasymonitor.scraper import scrape_search_results
 
 
 def main():

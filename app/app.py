@@ -8,8 +8,8 @@ from flask_session import Session
 import timeago
 
 from main import main
-from src.streeteasier.database import get_listings_sorted
-from src.streeteasier.scraper import get_paddaddy_info
+from src.streeteasymonitor.database import get_listings_sorted
+# from src.streeteasier.scraper import get_paddaddy_info
 
 
 PORT = 8000
