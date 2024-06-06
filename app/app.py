@@ -27,11 +27,13 @@ deal_status = {
 }
 
 
+@app.template_filter()
 def usd(value):
     """Format value as USD."""
     return f'${value:,}'
 
 
+@app.template_filter()
 def format_datetime(created_at):
     """Format date and time for current timezone."""
     NYC = gettz('America/New_York')
@@ -51,12 +53,14 @@ def format_datetime(created_at):
     return datetime_formatted if hours > 8 else time_ago
 
 
+@app.template_filter()
 def format_url(listing):
     return paddaddy_url + listing['paddaddy']['url'] if listing.get('paddaddy') else listing['url']
 
 
-def format_deal_status(listing):
-    return deal_status.get(listing.get('paddaddy')['deal_status']) if listing.get('paddaddy') else None
+# @app.template_filter()
+# def format_deal_status(listing):
+#     return deal_status.get(listing.get('paddaddy')['deal_status']) if listing.get('paddaddy') else None
 
 
 class Config:
@@ -64,12 +68,12 @@ class Config:
     SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
 
 app.config.from_object(Config())
-app.jinja_env.filters = {
-    'usd': usd,
-    'format_datetime': format_datetime,
-    'format_url': format_url,
-    'format_deal_status': format_deal_status,
-}
+# app.jinja_env.filters = {
+#     'usd': usd,
+#     'format_datetime': format_datetime,
+#     'format_url': format_url,
+#     'format_deal_status': format_deal_status,
+# }
 
 def create_app():
     # Configure session to use filesystem (instead of signed cookies)

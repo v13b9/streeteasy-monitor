@@ -13,18 +13,15 @@
             <th scope="col">Address</th>
             <th scope="col">Neighborhood</th>
             <th scope="col">Price</th>
-            <!-- <th scope="col">Deal</th> -->
         </tr>
     </thead>
     <tbody class="table-group-divider">
         {% for listing in listings %}
-        <!-- <tr class='{{ listing | format_deal_status }}'> -->
         <tr>
             <td>{{ listing["created_at"] | format_datetime }}</td>
             <td><a href='{{ listing | format_url }}' target="_blank">{{ listing["address"] }}</a></td>
             <td>{{ listing["neighborhood"] }}</td>
             <td>{{ listing["price"] | usd }}</td>
-            <!-- <td>{{ listing | format_deal_status }}</td> -->
         </tr>
         {% endfor %}
     </tbody>
