@@ -12,50 +12,73 @@ A simple Flask application is included in the `app/` directory, which is served 
 
 ## Usage
 
-### Run Flask application
+### One-off script execution
+```bash
+$ python main.py
 ```
+
+### Run Flask application
+```bash
 $ python -m app.app
 ```
 By default the application will run on port 8000 and will continuously execute `main.py` at a random interval between 360 and 480 seconds until you quit the application
 
 ![screenshot](assets/screenshot.png)
 
-### One-off script execution
+### (Optional) Create cron job
+Navigate to the cron folder and make all scripts executable
+```bash
+$ cd cron
+$ chmod +x `ls *.sh`
 ```
-$ python main.py
+
+Create cron job (by default this sets the script to execute every minute)
+```bash
+$ ./create_cron.sh
 ```
+
+Start the cron job
+```bash
+$ ./start_cron.sh
+```
+
+Stop the cron job
+```bash
+$ ./stop_cron.sh
+```
+
 
 ## Installation
 ### Clone project
-```
+```bash
 $ git clone https://github.com/joeschermer/streeteasy-monitor.git
 $ cd streeteasy-monitor
 ````
 ### (Recommended) Set up virtual environment using [pyenv](https://github.com/pyenv/)  
 
 Install Python 3.12.3  
-```
+```bash
 $ pyenv install 3.12.3
 ```
 Create virtual environment
-```
+```bash
 $ pyenv virtualenv 3.12.3 .streeteasy-monitor
 ```
 Activate virtual environment
-```
+```bash
 $ pyenv local .streeteasy-monitor
 ```
 
 
 ### Install requirements
-```
+```bash
 $ pip install -r requirements.txt
 ```
 
 ## Configuration
 ### Create .env file
 Add any necessary database credentials and message fields. Currently only works with Supabase but could be adapted for other databases/providers
-```
+```bash
 $ touch .env
 ```
 ```
@@ -70,14 +93,19 @@ NAME=[YOUR NAME]
 
 ### Add search URL and optional filters
 Assign the `search_url` variable in `scraper.py` to your search URL filtered to your specifications using StreetEasy's interface
-```
+```python
 search_url = 'https://streeteasy.com/for-rent/nyc/[YOUR PARAMETERS]?sort_by=[YOUR SORTING METHOD]'
 ```
 Add strings to the `filters` dictionary to filter substrings out of results not otherwise captured by StreetEasy (e.g. addresses with specific street names, URLs for "featured" listings that include the substring `'?featured=1'`)
-```
+```python
 filters = {
     'url': [YOUR FILTER STRINGS FOR URLS],
     'address': [YOUR FILTER STRINGS FOR ADDRESSES],
     'neighborhood': [YOUR FILTER STRINGS FOR NEIGHBORHOODS],
 }
 ```
+### (Optional) Configure cron helper scripts for script scheduling
+The project includes a folder of shell scripts to help with managing a cron job based on `main.py`. This method allows the script to run without needing to run 
+- `create_cron.sh`: Creates a cron command by selecting the full path of the correct Python interpreter based on the user's virtual environment, saving to `cron.dat`. By default the interval is 1 minute but can be changed by reassigning `CRON_SCHEDULE`.
+- `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log`
+- `stop_cron.sh`: Stops any active cron job and saves to `cron.dat` 
