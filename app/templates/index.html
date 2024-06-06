@@ -19,7 +19,7 @@
         {% for listing in listings %}
         <tr>
             <td>{{ listing["created_at"] | format_datetime }}</td>
-            <td><a href='{{ listing | format_url }}' target="_blank">{{ listing["address"] }}</a></td>
+            <td><a href='/{{ listing["url"] }}' target="_blank">{{ listing["address"] }}</a></td>
             <td>{{ listing["neighborhood"] }}</td>
             <td>{{ listing["price"] | usd }}</td>
         </tr>

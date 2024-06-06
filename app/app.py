@@ -2,30 +2,21 @@ from datetime import datetime
 from dateutil.tz import gettz
 import random
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flask_apscheduler import APScheduler
 from flask_session import Session
+import requests
 import timeago
 
 from main import main
 from src.streeteasymonitor.database import get_listings_sorted
-# from src.streeteasier.scraper import get_paddaddy_info
 
 
 PORT = 8000
 app = Flask(__name__)
 
 paddaddy_url = 'https://paddaddy.app'
-   
-deal_status = {
-    'great': 'table-great',
-    'good': 'table-good',
-    'fine': 'table-fine',
-    'poor': 'table-poor',
-    'bad': 'table-bad',
-    'tbd': 'table-tbd',
-}
-
+offermate_lookup_api = 'https://offermate.app/unit_lookup'
 
 @app.template_filter()
 def usd(value):
@@ -53,27 +44,11 @@ def format_datetime(created_at):
     return datetime_formatted if hours > 8 else time_ago
 
 
-@app.template_filter()
-def format_url(listing):
-    return paddaddy_url + listing['paddaddy']['url'] if listing.get('paddaddy') else listing['url']
-
-
-# @app.template_filter()
-# def format_deal_status(listing):
-#     return deal_status.get(listing.get('paddaddy')['deal_status']) if listing.get('paddaddy') else None
-
-
 class Config:
     SCHEDULER_API_ENABLED = True
     SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
 
 app.config.from_object(Config())
-# app.jinja_env.filters = {
-#     'usd': usd,
-#     'format_datetime': format_datetime,
-#     'format_url': format_url,
-#     'format_deal_status': format_deal_status,
-# }
 
 def create_app():
     # Configure session to use filesystem (instead of signed cookies)
@@ -106,11 +81,23 @@ def after_request(response):
     return response
 
 
-@app.route('/')
+@app.route('/<path:url>', methods=['GET'])
+def url(url):
+    try:
+        params = {'q': url}
+        r = requests.get(offermate_lookup_api, params=params)
+        json = r.json()
+        redirect_url = paddaddy_url + json['matching_listings'][0]['url'] if json.get('matching_listings') and json['matching_listings'][0]['similarity_type'] == 'exact_match' else url
+    except Exception as e:
+        print(f"Error: {e}")
+        redirect_url = url
+
+    return redirect(redirect_url, code=302)
+
+
+@app.route('/', methods=['GET'])
 def index():    
     listings = get_listings_sorted()
-    # listings = [{'paddaddy': get_paddaddy_info(listing), **listing} for listing in listings]
-
     return render_template('index.html', listings=listings)
 
 
