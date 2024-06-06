@@ -11,7 +11,7 @@ test_search_url = (
 )
 
 search_url_broad = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3000%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'
-search_url_narrow = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-2800%7Carea:310,306,305,321,364,322,307,303,304,320,301,319,326,302%7Cbeds:1-3?sort_by=listed_desc'
+search_url_narrow = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-2900%7Carea:310,306,305,321,364,322,307,303,304,320,301,319,326,302%7Cbeds:1-3?sort_by=listed_desc'
 
 offermate_lookup_api = 'https://offermate.app/unit_lookup?q='
 

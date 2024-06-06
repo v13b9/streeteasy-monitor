@@ -33,6 +33,10 @@ def get_field_values():
     }
 
 
+def setup_sqlalchemy(app):
+    app.config['SQLALCHEMY_DATABASE_URI'] = env('DATABASE_URI')
+
+
 def setup_supabase():
     from supabase import create_client
 
