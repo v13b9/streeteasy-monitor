@@ -21,7 +21,6 @@ def try_get(url, func_name, s):
     print(f'[{date_now} {time_now}] Trying GET {url} - {func_name}...')
     # wait()
     r = s.get(url)
-    # print(f'Headers: {r.headers}')
     print(f'Status code: {r.status_code} {r.reason}')
     return r
 

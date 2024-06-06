@@ -9,12 +9,22 @@ import timeago
 
 from main import main
 from src.streeteasier.database import get_listings_sorted
+from src.streeteasier.scraper import get_paddaddy_info
 
 
 PORT = 8000
 app = Flask(__name__)
 
 paddaddy_url = 'https://paddaddy.app'
+   
+deal_status = {
+    'great': 'table-great',
+    'good': 'table-good',
+    'fine': 'table-fine',
+    'poor': 'table-poor',
+    'bad': 'table-bad',
+    'tbd': 'table-tbd',
+}
 
 
 def usd(value):
@@ -45,18 +55,8 @@ def format_url(listing):
     return paddaddy_url + listing['paddaddy']['url'] if listing.get('paddaddy') else listing['url']
 
 
-def format_deal_status(paddaddy):
-    
-    deal_status = {
-        'great': 'table-great',
-        'good': 'table-good',
-        'fine': 'table-fine',
-        'poor': 'table-poor',
-        'bad': 'table-bad',
-        'tbd': 'table-tbd',
-    }
-
-    return deal_status.get(paddaddy['deal_status']) if paddaddy else None
+def format_deal_status(listing):
+    return deal_status.get(listing.get('paddaddy')['deal_status']) if listing.get('paddaddy') else None
 
 
 class Config:
@@ -72,7 +72,6 @@ app.jinja_env.filters = {
 }
 
 def create_app():
-
     # Configure session to use filesystem (instead of signed cookies)
     app.config['SESSION_PERMANENT'] = False
     app.config['SESSION_TYPE'] = 'filesystem'
@@ -104,8 +103,10 @@ def after_request(response):
 
 
 @app.route('/')
-def index():
+def index():    
     listings = get_listings_sorted()
+    # listings = [{'paddaddy': get_paddaddy_info(listing), **listing} for listing in listings]
+
     return render_template('index.html', listings=listings)
 
 

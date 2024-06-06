@@ -47,7 +47,17 @@ def get_listing_info(card):
         .strip()
     )
 
-    lookup_url = offermate_lookup_api + url
+    return {
+        'listing_id': listing_id,
+        'url': url,
+        'price': price,
+        'address': address,
+        'neighborhood': neighborhood,
+    }
+    
+
+def get_paddaddy_info(listing):
+    lookup_url = offermate_lookup_api + listing['url']
     r = requests.get(lookup_url)
 
     if r.status_code == 200:
@@ -63,15 +73,7 @@ def get_listing_info(card):
         print(f'lookup_url: {lookup_url}')
         paddaddy = None
 
-
-    return {
-        'listing_id': listing_id,
-        'url': url,
-        'price': price,
-        'address': address,
-        'neighborhood': neighborhood,
-        'paddaddy': paddaddy
-    }
+    return paddaddy
 
 
 def get_new_listings(cards):
@@ -81,7 +83,6 @@ def get_new_listings(cards):
         new_listing
         for card in cards
         if not matches_filters(new_listing := get_listing_info(card), filters)
-        and not print(f'New listing: {new_listing["url"]}')
     ]
 
     if not new_listings:
