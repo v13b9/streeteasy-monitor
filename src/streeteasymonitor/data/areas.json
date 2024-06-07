@@ -1,0 +1,3841 @@
+[
+    {
+        "id": "1",
+        "name": "NYC and NJ",
+        "level": 0,
+        "parent_id": 0,
+        "map_coordinates": {
+        "encoded_boundary": null,
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "100",
+        "name": "Manhattan",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "kfqwFzkwbM}uAwM_iAmIgi@yQyfDm{BqmGc`Eon@ki@ir@{Ogt@cCcSia@{t@e`@}k@}Lwi@k[qBe[~Fc]lI}KzEcOuBmIoF{CqEoDeDwGkE{FjBiDfG_N~E}Fp@sAtH_@vHxBgAtI}CdFpElGbI_Fd]pEff@xe@ra@h[pz@tj@hjA~b@loAoFfhAdAdf@ea@jk@{@vc@hh@dk@~[pb@lEfX_HtQ|CjWzWv|@vp@nh@vj@bYde@bf@dOri@Hvn@wBvtAtf@rS|y@zEzfA|Ofa@te@~|@{B|o@_Wd\\}n@s@ebB}[",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "101",
+        "name": "Roosevelt Island",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "c}xwFtcjbMwCkBcEmCaD{B{EcFiDqA{C{DuCiEgEsDwAyC}@cFc@sBf@mA`Cb@jDMzCLrCrBhCjAdEtHvGvF|IzGhZpVrDvEjEnDzA~B|ClAxFzDfGrIdI`HtFdGzDhGdC~CzAjDjDvDG~ByBPeBqAmDgAsD}D{EkA_CgByA_CqMiLaJsH_G_FkCcCeCuC}FeC}G}FaDsD{BkC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "102",
+        "name": "All Downtown",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "ijqwFlbwbMrm@zIzf@hFfg@~GbGoAzBqCjEaAjHkFlCoDjBaEzAmEZ{B?sMsByMcEqKeT{`@eEoHoEmGeD{H_BaK_Dqh@kDis@uAgLqCgFsCoCq[gLkNgCkO_DiMkB_RuBgH[uE?mDnAwChEyBrB{Bp@cDd@aLbAsKj\\kOte@mVaP{B{AyByAiTxq@zBlAgr@~xBf`@tNnm@jGvyArK|Jt@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "103",
+        "name": "Civic Center",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "cqnwF|uubMl@c@Rk@Bu@uBwL[eA~OiTqFqDyMaN_@t@}DnK{B@[F_@t@qDeCgAk@mArDeAtCjBjBcAjCpB`B~@qCvB|AiCjH~HlGfCeHfBpAkCfHnLnJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "104",
+        "name": "Financial District",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "_enwFh_wbMp_@bKvAhBbAxFjE_AjHmFlCmDjBcEzAmEZ{B{BqO_BoHfBiBcEsKoQy[sGxHrG{H{GoMcFdG{EaKe[~b@ZhArBbLC`AOh@i@b@vBbBoClHqI~UhVxD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "105",
+        "name": "Tribeca",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "ijqwFlbwbMlm@rInAaZb\\vFvIeVdCoHyBcBoLoJjCiHgBoAgCdH_ImGl@eBzAgEwB{A_AnCqB}AbAeCoIaIim@|_A{AbZ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "106",
+        "name": "Stuyvesant Town/PCV",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "}irwFbvpbMx\\}eAaHc@uE?mDnAwCjE{BrB{Bp@cDd@aL`AwApEyHxUra@jX",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "107",
+        "name": "Soho",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "}{qwF|evbMpGLwAbYxJz@lAgYzUi_@~Vo`@wC}BoRiPgFaBmI}FgAhHcH~QaHnQm@bNa@tJaAfU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "108",
+        "name": "Little Italy",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "y}owFfbtbMr@aCj@XtAeFpExBb@aBoE_CtCeMqEkB}EaB_IxV|JnI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "109",
+        "name": "Lower East Side",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "gyowFfbsbMfFbCzImb@pD`Bv@D|@M|B`n@m@p@h@lBf@}@bMdMhGjEzIgMkC_J_Git@bFk@uD{u@uAgLqCgFsCoCq[gLkNgCkClXwBlHkY`vA`\\~IlEdA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "110",
+        "name": "Chinatown",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "k{nwFjvsbMl@q@{Bym@wB?uD_B_Jnb@uCdMpE~Bc@`BqE}BuAhFm@[s@~BzJpIrCcIbAd@tDdC^u@ZGxBA|DiKo@kB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "111",
+        "name": "Two Bridges",
+        "level": 4,
+        "parent_id": 109,
+        "map_coordinates": {
+        "encoded_boundary": "yxnwFzwsbMi@|@i@oBn@q@GqAgEcjAvBQTOr@?~Iu@hGa@bBtYbE`h@|@dKfA~DbA~C{IdMkGkE{CaDeHaH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "112",
+        "name": "Battery Park City",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "gxowFzqvbMmBlZzf@hFx^fFlGv@bGoAzBkC[}Ca@aB{AeBm_@aLyRqC{Bg@yGkA}QmC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "113",
+        "name": "Gramercy Park",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "gcswFndrbMbE]dRml@qa@gXmOze@eCdIz\\pU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "114",
+        "name": "Fulton/Seaport",
+        "level": 4,
+        "parent_id": 104,
+        "map_coordinates": {
+        "encoded_boundary": "q`mwFhptbMyGoMcFfG{EcKcJnMaPlTZhArBfLC`AOh@i@`@hItGnIgMhDeGnEgEdFuFrG{H",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "115",
+        "name": "Chelsea",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "q_vwFtkvbMnm@hGbAyXf^yiAy|@kl@gr@~xBd`@tN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "116",
+        "name": "Greenwich Village",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "_wswFbatbMpKzGdN_H~AYzObKhGtCvFpBfQud@fAyG`EaPuUwGqBKyHwAgCs@mCWiOqBiBJkQzj@oFtP",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "117",
+        "name": "East Village",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "yyrwFdcrbMhOpBlCVfCr@xHvApBJtUvGdYwuA|BsHjCoXkO_DiMoB_RqB_]`fAeRll@hBK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "118",
+        "name": "Noho",
+        "level": 4,
+        "parent_id": 116,
+        "map_coordinates": {
+        "encoded_boundary": "gerwFlsrbMlCiIxHvApBJxUxGeEfPgApGe_@mZ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "119",
+        "name": "All Midtown",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "{evwF|gmbMnSbO`IjFlH`IjJpFnWvClSRjDtCJbCc\\rcAoVoPsFqDiTxq@zBlAmr@hyB_XkIo{AoeAvDqMrAs@jVmv@bCxAjFsP{@c@BiBk@w@jUqs@fe@gyArNxJbFfH`TxQ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "120",
+        "name": "Midtown",
+        "level": 3,
+        "parent_id": 119,
+        "map_coordinates": {
+        "encoded_boundary": "sgvwFrmobM{S`q@vF`EyMfb@sfA}r@{@c@FaBd@?`N{b@THn@cCMKTgA|@l@jCsIcCaBtKs]hWhQhj@r^",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "121",
+        "name": "Central Park South",
+        "level": 3,
+        "parent_id": 119,
+        "map_coordinates": {
+        "encoded_boundary": "}lywFrppbMh@?zMsb@PJz@gCUKZaAz@d@jCuI_C}AmUps@XXP^",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "122",
+        "name": "Midtown South",
+        "level": 3,
+        "parent_id": 119,
+        "map_coordinates": {
+        "encoded_boundary": "a|twFxlpbMyJ_HwGrSm^yUkKh]tFzD{M`b@df@|[|Mwb@{BmAhTyq@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "123",
+        "name": "Midtown East",
+        "level": 3,
+        "parent_id": 119,
+        "map_coordinates": {
+        "encoded_boundary": "kquwF~wmbM`IjFlH~HlJpFlWzClSRjDtCJ`Cc\\pcA}i@}^uGrSo^}UlG{Rij@u^uVaQ|W{z@rNxJdFdH~SzQnSbO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "124",
+        "name": "Midtown West",
+        "level": 3,
+        "parent_id": 119,
+        "map_coordinates": {
+        "encoded_boundary": "uvywFxcqbMkVnv@sAp@wDrMn{AneA~WfInc@{uAwmBkoAmFtPaC{A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "130",
+        "name": "Murray Hill",
+        "level": 4,
+        "parent_id": 123,
+        "map_coordinates": {
+        "encoded_boundary": "kquwF~wmbM`IjFlH|HjJrFc]lfAo^}Uv]mhA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "131",
+        "name": "Sutton Place",
+        "level": 4,
+        "parent_id": 123,
+        "map_coordinates": {
+        "encoded_boundary": "}rwwFvmnbM~Vuw@cFgHsNyJeX`{@|VtP",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "132",
+        "name": "Turtle Bay",
+        "level": 4,
+        "parent_id": 123,
+        "map_coordinates": {
+        "encoded_boundary": "ugvwFrmobMgj@w^~V}w@`T|QnSfOiUnt@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "133",
+        "name": "Kips Bay",
+        "level": 4,
+        "parent_id": 123,
+        "map_coordinates": {
+        "encoded_boundary": "{guwFvcpbMhVpP@FpRbMb\\qcAK_CkDuCmSUiWaDqT`r@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "134",
+        "name": "Beekman",
+        "level": 5,
+        "parent_id": 132,
+        "map_coordinates": {
+        "encoded_boundary": "{nvwFztmbMsR_MrFyPjQnOkEhN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "135",
+        "name": "All Upper West Side",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "guzwF`msbMkgE{|C~a@{pAzf@l\\hoB|pA`p@~a@|@a@p@Lb@n@?~Ap@r@iFpPeCyAiNjc@gNvc@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "136",
+        "name": "Lincoln Square",
+        "level": 4,
+        "parent_id": 137,
+        "map_coordinates": {
+        "encoded_boundary": "{mzwFf{rbMjVkv@zBzAhFmPu@i@BkBQc@UUc@Ee@F[Zy[oSiSsMud@~xAvp@|c@rD{MzAm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "137",
+        "name": "Upper West Side",
+        "level": 3,
+        "parent_id": 135,
+        "map_coordinates": {
+        "encoded_boundary": "guzwF`msbMkgE{|C~a@{pAzf@l\\hoB|pA`p@~a@|@a@p@Lb@n@?~Ap@r@iFpPeCyAiNjc@gNvc@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "138",
+        "name": "Manhattan Valley",
+        "level": 4,
+        "parent_id": 137,
+        "map_coordinates": {
+        "encoded_boundary": "we_xF~fnbMuJsGgCmAwC_@{Lw@sGaEfUqt@~f@f\\mBvGkCrGgJxY",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "139",
+        "name": "All Upper East Side",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "sb}wFj`jbM|BvArOuf@hCxAxE`@vImC~NqCzGd@xDrAbNfNfNvOfVbRtUlSjZn]wd@byAujEksCd@uA|b@~XxAgF~JnGtKc]",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "140",
+        "name": "Upper East Side",
+        "level": 3,
+        "parent_id": 139,
+        "map_coordinates": {
+        "encoded_boundary": "sb}wFj`jbM|BvArOuf@hCxAxE`@vImC~NqCzGd@xDrAbNfNfNvOfVbRtUlSjZn]wd@byAujEksCd@uA|b@~XxAgF~JnGtKc]",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "141",
+        "name": "Lenox Hill",
+        "level": 4,
+        "parent_id": 140,
+        "map_coordinates": {
+        "encoded_boundary": "qwxwFhznbMxUmu@bEwMzG_TmZm]aWuRiWeRyR|l@iVfv@bpAhy@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "142",
+        "name": "Yorkville",
+        "level": 4,
+        "parent_id": 140,
+        "map_coordinates": {
+        "encoded_boundary": "w~|wFbcjbMtOwf@hCxAvEd@nIiCjO{CvGf@xDtA|MxMvMhOgYb~@sgAgt@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "143",
+        "name": "Carnegie Hill",
+        "level": 4,
+        "parent_id": 140,
+        "map_coordinates": {
+        "encoded_boundary": "mc|wFnklbMzO_g@ao@cb@eNpc@kAs@m@tBdq@nc@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "144",
+        "name": "All Upper Manhattan",
+        "level": 2,
+        "parent_id": 100,
+        "map_coordinates": {
+        "encoded_boundary": "kmfxFrigbM}JsBob@}ScReG{a@_Wm]uS}VaVg\\kZi`@{VaRgAmKrJmBtXCnMaHpSqIhHgBvTpKrSl`@`UpU_@dL~EdIjFjGnFzWxP`KxHxL|ExGzGvDlIjCtHzAhB|QbBbPqCl\\xN|]vEtBd@xi@b[yAbHz_@vTtFmDjp@re@fq@vb@pYg_A|^_lA|b@pYzAgFdKvGjKe]`C|AvOmg@yHsRsMiLgO_HqIoHeI_QiHsKeIsEsLVeMd@}PzFyF~CcMlLeEpCeC~AgDl@yCNqFu@kOk@{Qa@aJFsT|@eMXiHHsJZ{f@r@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "145",
+        "name": "Hudson Heights",
+        "level": 4,
+        "parent_id": 149,
+        "map_coordinates": {
+        "encoded_boundary": "enhxF|dhbMgVaFgBeC}FeGwWsKcFoAuGeCyNuGcHkBeHwC{EFaBYoB_BqAmBiA_DeByCa@vL_EbGiDhMlL|E|H~ErGbGjKxGbKlGrJrH~MnFbG~GnMnXlNcBxTsr@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "146",
+        "name": "Hudson Yards",
+        "level": 4,
+        "parent_id": 124,
+        "map_coordinates": {
+        "encoded_boundary": "gnwwFbvrbMUXMXo]bjA|RbN~WfInc@{uA_j@g^yE~N",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "147",
+        "name": "Morningside Heights",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "gb`xFrolbM}UqFeKwGgCgBmIeDcAXkCiB{A|EiGeEkF~PmJeGkAvDi@pAcAd@L~BmAf@y@LgAMyChIfTtSpMnIhR`LbRrOv[gdA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "148",
+        "name": "Hamilton Heights",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "gbcxFh}ibMs\\xfA{FnD}_@sTvAqHgj@_[h[gaAXJnAcBb@W^@d@Jpb@vXfPjG`UbOb@\\",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "149",
+        "name": "Washington Heights",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "meexFzggbMsj@nfBga@wFcS_JiHyCgPfCcRqAmAoBuC}HyDgIaGsGuMkFcK_IgW_PkGyFkIiFiLaFnDiM`E{GZyKli@iZnKc@hDXnB{Clt@tc@~J|FjRlG`b@xSzJvBzf@{@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "150",
+        "name": "Inwood",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "wfkxFlaebMbLc@xCZpBoCwK}IsEiGsPuMsHaJeTyQaKyFgVqDuJdHuFnVi@jL\\xHmFhOoFzCaCtG_@bKd@lNlFfHhIfH`OfHjNbC~NKnDoLhEwFl@uMvh@}Y",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "151",
+        "name": "Fort George",
+        "level": 4,
+        "parent_id": 149,
+        "map_coordinates": {
+        "encoded_boundary": "spixFjqgbM~Sqo@}[eRyM_JyHeEoBpC_DO{KVci@jZ`BxChAzCpAjBpBbB~AV`CG|AArCpAnChA`HlB`PhHpFpBxEdAhHxCrN|F",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "152",
+        "name": "Hell's Kitchen",
+        "level": 4,
+        "parent_id": 124,
+        "map_coordinates": {
+        "encoded_boundary": "uvywFzcqbMkVlv@sAr@wDpMngAhv@n]cjANYRWHOnEoNsbAcp@mFtPcCyA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "153",
+        "name": "West Harlem",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "utcxFnjkbMeJtYlUtQvC}HzAB~Bq@O}BhAg@lBkGlJdGjF_QhGdEzA}EtCwIiG{DvB{GeCgBwIeJeJiGuLyEmQdl@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "154",
+        "name": "Central Harlem",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "ytexFfmhbMVNnAiBb@SjAPjb@vXdPbGdU|Nd@j@vEtBtE`BhJbGvIdJdCfBwBzGhGzDuCvIlClB~@[|@ZtGlC`C`BfKvGbH~AxLxC|]{hArGgSa[kS}^cVei@c^}LgA}Qa@_JFsT|@eMXiHHsJZiNfd@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "155",
+        "name": "East Harlem",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "uv`xFlfhbM|^|U`[jSmFlP`c@bYvAgF~JnGtKe]zBvAtOuf@oHqRuM_MmOeHiIcI{J_RqFuI_J{DuLQiLl@}KdEmJhGmHzFyJxH}HdC_DE}H_@fi@j^",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "157",
+        "name": "West Village",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "{ptwF`tvbMt@yXRaAd@y@bN{b@fFkPpKzGdN_H~AY|ObKfGtCvFpBqCbp@tFRaAhYsyAqK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "158",
+        "name": "Flatiron",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "c}rwFpcrbMcE\\{\\qUdCeI{F{DqNkJ{B{AyByAiTxq@zBlA~BzAhNfJti@f^jQ{j@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "159",
+        "name": "NoMad",
+        "level": 4,
+        "parent_id": 158,
+        "map_coordinates": {
+        "encoded_boundary": "ydtwFz}pbMmRgMyByAiTxq@dVrOvGqSyBsA~BkHvBxAtGsS",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "161",
+        "name": "Manhattanville",
+        "level": 4,
+        "parent_id": 153,
+        "map_coordinates": {
+        "encoded_boundary": "qxbxF|~kbMmBjGiAf@N|B_Cp@{ACwC|HmUuQrQ_l@xNpJzR~L_NdL",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "162",
+        "name": "Nolita",
+        "level": 3,
+        "parent_id": 102,
+        "map_coordinates": {
+        "encoded_boundary": "{bqwFvesbMjChBrD`DrF|AnFvE~HyVkDeAwV}G_EzO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "163",
+        "name": "West Chelsea",
+        "level": 4,
+        "parent_id": 115,
+        "map_coordinates": {
+        "encoded_boundary": "wetwFpdubMi}@il@{[`dAl`@lNnm@hGbAyXbHuT",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "164",
+        "name": "Upper Carnegie Hill",
+        "level": 4,
+        "parent_id": 140,
+        "map_coordinates": {
+        "encoded_boundary": "ou}wFdgkbMwl@i`@d@qA|b@zX|AgFzJrGoAjEiAo@k@vB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "165",
+        "name": "South Harlem",
+        "level": 4,
+        "parent_id": 154,
+        "map_coordinates": {
+        "encoded_boundary": "mzaxFzzjbMwBzGhGzDuCvIlClB~@[|@ZtGlC`C`BfKvGbH~AxLxC|]{hArGgSa[kS}^cVwb@rsA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "166",
+        "name": "Hudson Square",
+        "level": 4,
+        "parent_id": 107,
+        "map_coordinates": {
+        "encoded_boundary": "}{qwF|evbMpGNwA`YxJ|@lAiYzUg_@dAkBi@BwAWsE{AuJsCsH_CeCu@kCw@oAxYaAdU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "200",
+        "name": "Bronx",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "}fexFxagbMntAkAhR|AnQ{BjSqO~RcNcAyKPkK|@gFjCgExJmGbJeYdHmQfLeL_d@ac@kRg\\eD_m@dQs[nIi\\lCym@Pwi@{f@gZpMgc@`Emo@_Rev@fLyz@aIqg@sYbNoQu{@dEmu@f[sm@xVcv@^{`@}WoKkX|Gql@ng@}Ttq@mq@`PyV~f@wx@uCcb@iGcDmVtIwSdAwYgFwWrk@mZna@mYkBs`@kZaImd@}Ba]ReX|^u^sMq`@[qa@mG_d@aJkUv[{e@z{CyDnc@rG~h@eDtAmDfNyErEyE`U{EgBgFb@HxGyJx\\wDxDaCxHKlHuDzTfChTcg@lOuXnu@bL|HnHxHhIbEyBnM_FlIuBbJuD~I`EjAas@vrDsCAe@jIsAlL{AbJXl@yRjaAb\\h@lZ|HdbCfo@rn@tWz@oRhEaLnLsR{B{OoFyCqEqDeDuGkE}FjBiDfG_N~E{Fp@uAtH_@vHzBgAtI}CbFpEnGbI_FvHv@`YhGra@~^rWjX|P|Mh]hR`TzK|bAh^jJzAn\\qA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "201",
+        "name": "Mott Haven",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "gl`xFflfbM{FvCyPpOyEtCeWGcDoAiCGaGaDgAt@mFFsO}@@aB^sKbBuJzN}_A`HqQhFsWtHck@bGuDbELpDnCrBnDrItQfMb^fGbPhIhKdOpIeBhDeC`DqKlFcAzPb@vLmGfOTl@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "202",
+        "name": "Melrose",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "s{bxFp`dbMKl@ETGVId@E^QbA_@jCe@nCUzAKl@Mn@Ij@Kj@i@`DO~@Mp@Kr@_@xBc@nCWtAUtAyBoB_FaFuBcCqBmC_EcGsCyEkJwQeFgJoFaJwB}D_CaC`E~AVJVJTJVJn@V|An@VJVLn@VNq@Ns@`@eBTcATcARaAPaAJc@Ha@RaAVkA\\_Bb@oBd@RRJHBNHVJVJDBF@^LPFFBFBRDPZVd@HPR^Nz@N|@Jn@NjANjAF`@F`@h@Xh@Xb@Tf@XhAn@b@Vd@Vb@VTNJFJFd@\\RLPNh@^d@`@RNFFHFh@b@p@p@VVPPFHt@z@XZZ`@PTRTRTHHFHTZHLJLRXp@x@TZLLLPVZP`@N^FLFNVp@Vn@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "203",
+        "name": "Port Morris",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_u`xFx_abMnJgJjRf\\`]pYiEtUmHnRwFpQiZ{RmCmMeGkQ_Ma^gKqOv[_D",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "204",
+        "name": "Hunts Point",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "uucxFlv~aMiDeGiCyE}BaDeA_QvMcFnGsD??tPa\\xIyg@zYcS|SyJrK~C`N|JfHzEfHpLbErYmCxm@oIh\\eQr[dD~l@oJfJw[~CqGsIwPmWsh@ij@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "205",
+        "name": "Longwood",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "qzcxFpk`bMABKAQ?a@AeAEIh@Ij@QrAc@bDqV{HuBk@nAaIJeA@kEo@_EoB}JAqQJyKwD}Iu@uAQ_@WcAMiAEyDnKbCrId@|IuA`@jOjHnLJvBJdB?r@@jA?hA?b@?h@@p@@l@?l@@rA@RAX?n@?\\?PAb@?dAAl@?j@?l@?j@?|@?b@?\\?|@AbA?~@Ap@?h@?v@?n@?~@Cx@EdD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "207",
+        "name": "Morrisania",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "cvdxFldcbMkDsAgDyAgAg@aA_@{DeAmRaJeDwAcAk@{G{C{CyAiBm@}@e@sBqAsFuCcBaAqGcCyFeCk@[wI}Dq@_@oD_B]Sm@WUITeG\\iGv@_N\\mDl@mK`@oIJq@pBvBjAhA|@p@tApAfBhAdCpA|DxBxCrAzAnAfCjBrAn@nAd@r@D^P`AF`BKvA]xAu@jAw@NQrC{B|HfA|Dd@lR`GrK`DpV|HU|AYpB]nBWrB]pB[xB_@bCa@hCQjAMx@_@~BSzAOhAOx@Mz@Kp@WrA[vAI`@Qx@c@dBUtAYzAa@`Bk@rCa@zAY|A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "208",
+        "name": "Claremont",
+        "level": 3,
+        "parent_id": 207,
+        "map_coordinates": {
+        "encoded_boundary": "ckfxFnhbbMzCcNrBwI`EoQdAoDJ}ArEoG|BiGkH_C{NoBsC|BsDzBwA^cBLaAGcD}@sAq@aFyDuCqAoLwGsIeIKn@oA~U]hDmBr^l[|NfIxCtEpCfTdK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "209",
+        "name": "Crotona Park East",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "qtexFp``bMeA[cA]u@Im@IyAQwASo@Ik@KyASSCYEIFWRc@^k@b@c@ZMP]T[T]RUJQJe@TSFc@H_@JOB]B_@BS@QAo@E_@Qs@EoAe@m@Ye@Ug@_@_@Y}@q@e@_@w@o@SIi@We@Sq@[g@YaDeBc@Wc@SaAi@c@Y[SYQKKe@c@e@a@GGk@c@GGGGSQe@c@MMY]SQ[]SSSUl@cFPaAN}@TcAVaAfBiEzBaF|@qB^y@\\u@v@aB`AoB|AgDzAeD|@oB~@oB~@qBbDiHjAyDtB~@tBbAbD`AvFj@hBRdDnCdAbA~@|DlAZzDnAvBd@tDmBtCGz@f@IpAZ|Dj@tAvBxElBtECzDGzE@bB@~B?zB?tFnB|JXfBRtA?fB?bBE`@E`@If@Kr@QhAUvAQdA_Be@_Bg@_Be@o@So@SmDgAk@Qk@QeA]y@W",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "210",
+        "name": "Highbridge",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_gexFtagbMOuLoAeGuBsFyL{KcFqEqNoGuRy]_j@{]MdLJrN|@fUIbRmChP|bAj^jJ|Al\\uA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "211",
+        "name": "Concourse",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "anhxFdbabMy@|Yk@v[FnOtj@x^bR~\\vNjGxSvRvBrFjAfGRlLbu@}C\\gMbGy]iCkAwEmEyHkJ}EyImEgHsEuJsDmG_IoMsB}C}B}Byp@eZeMkHoN_GyUcL",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "212",
+        "name": "Morris Heights",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "yshxFvafbMkz@uh@e\\g[vVh@l@iA|@KjA^f@g@rByE|@{Db@qMkBiAiBoClAcFz@mAv@sA@sJfR`Pdb@bXGvKJxN|@tVKxPeBlLg@vB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "213",
+        "name": "University Heights",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "gslxFd|bbMgRqKuP_CwJpIiAaB_BiCrCmETi@Jg@j@mFbAuGrAsDRi@JMNK^Ih@?zFN`ACXMxAeA|@w@v@aA~@_Bz@kBb@_B\\aBTkAp@uE\\qBf@wDd@uFrBxAlClBzEdDfFvDnBbBzBnB|AjA~AhAnFlCtH~DbA\\lAp@zBpAdAn@tDtBh@VtA~@|CfCnFlEEf@?dBF`B?`@Ar@OnAIRSd@WZy@z@kA|EbBdCx@p@z@`@K~HMvAK`Aq@zCkAtCUz@k@z@]^aBk@c@PORUt@gDCuQi@{e@u^",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "214",
+        "name": "Fordham",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "a}kxFrz`bMeAw@o@k@q@m@yAoAEEOMIGQMa@Y]Yq@e@YUWQq@g@mCmB{@k@k@a@wAaAyB_BeBoA_CeBGEIGGEKGSOWOYS_@WOIGGKGIGIGWS]W]UaAq@]WIGS[wA_EGOACCIEIGQKUOa@O]Sk@DIDILWLURa@Zm@BEDIFKBEFKLQPc@n@oAVk@Ra@Ra@bAsBz@eBf@aAVg@P]Xg@HOLUHOHOVe@HKHINO`@c@n@s@LMHKTU^c@dAgA\\WTO^YTOTOx@m@bAu@tAeEfOkLrFgFvBqC~Ay@tKdAjDF~Bi@wBdHg@jCa@`CYrCk@vC}@`CcAxBqOl^JJTTHHHFNP\\Z^^VTRRp@p@\\\\h@l@^^LNHHFHtDpBf@Vz@f@rAt@`@VLFHFDB??HDTLNHFDLHPHPLJDLHVNRLJDLHJDPLRJNH^Rg@vBObFg@tBYdA[pAOh@Mb@u@pDYbAU|@K^K^WfAUfAQv@Qp@i@zB]tAa@zAUIKEGCCACAC?GCCA??EC[QMGMIyF{CyE_CGCCAGEECGEEEKGUOYSi@a@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "215",
+        "name": "Mt. Hope",
+        "level": 3,
+        "parent_id": 248,
+        "map_coordinates": {
+        "encoded_boundary": "ktixFrpbbMeEmDhFaKlBcDfCiBzBuNXeEzAaBhAk@BqCvR`Ju@nSq@j[IlUiTuNuL{H",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "216",
+        "name": "East Tremont",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "ymhxF|babMi@[c@Ws@]oAk@m@WyAq@qAk@_DuAq@[q@e@oAs@yAo@aCkAkAk@e@Sy@e@s@c@_Ai@gAo@q@_@i@W]SMKc@UYOa@Sa@Uc@U}A{@wDwBiE}Bk@Y]SYO_@Ue@Y[Q\\mATw@J[FWHUTq@\\gARq@JWHYPi@FSPi@`@qATg@JYL[Xq@LYLYXk@j@qASQSQI_@AmAZ[h@a@TONI`@SHEVAN@r@FJg@Hm@Ly@Jg@Ny@TgAHe@Jg@Ha@TiARcAF[Ha@Jm@XsAN{@f@qCDSNs@DWFYPy@FYFYZ_BLq@Py@P{@h@Hb@HRD^H\\F\\Dx@NlAP\\FLDZJVQJG^MVKLBxBb@D@lBiCT[LQNWNWNWNUR]^m@T_@\\k@Zi@Zg@T]Zg@f@y@z@sAZk@^m@hAkB~@}A|@wApA{DfBx@nE~@`Bn@~@n@`B`Ar@d@N@r@rAhA|@xBf@jBn@lAt@j@x@jArAh@\\DDa@rAg@`BcCpFWf@Sf@i@fA_@t@_@~@_AlBwBrEiAjCiClFgFbLu@hBs@bBk@`Cc@`Cc@rDSdBIpBUzEq@jKMtAKvAUnDg@tI[tFUvF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "218",
+        "name": "Belmont",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "gcjxFfq~aM[CMAMAIAY@KFm@Z}@l@EBQPIH@V?R?H?H?JBHDTTRRPi@hAITKRCFEFQ^ELKVKVm@xAKXM\\K^M^K\\M\\q@xBUp@IXGPGTSh@[jAa@tAc@Yc@Uc@WUMWMMIMIWMCCECIEIGSKe@WWOUOk@[KGIEUMa@WeAk@s@_@s@a@m@]WMUMk@m@g@k@SSSUMKu@w@aA}@q@o@k@k@KKbDwHbB{Df@kAPc@N[A?N[p@_BrA}Ch@oARc@HQLUXo@d@qAVo@Nw@Z}ALoAJgAVuAJo@DUTiAHg@^mAh@_Cl@wA`AK|@NvOrCfGjAbCd@`APnATQ|@]dBI`@Ib@S`AMn@Qz@IZGXERKh@Oz@Oz@Q~@Ib@I\\CNCLEP]dBi@pCUnAYtAKh@Kf@OdAIb@If@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "219",
+        "name": "West Farms",
+        "level": 3,
+        "parent_id": 216,
+        "map_coordinates": {
+        "encoded_boundary": "kiixFzf}aMrAm@lCf@bCcDdSi\\rA{DfBx@nE~@~An@tEtCNBt@rAhAz@vBf@jBn@lAv@j@x@lArAn@`@kAvDoD`IgA|BcHjOg\\wDiWoM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "220",
+        "name": "Kingsbridge Heights",
+        "level": 3,
+        "parent_id": 224,
+        "map_coordinates": {
+        "encoded_boundary": "c}oxF~i~aMiGeEiIjy@~[rZfQpNjJnBnSvIxB{Gz@c@`JPpEaDhDkGzBqMg@gAeCGoMkKqq@wg@eEqFcOkKEjB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "221",
+        "name": "Bedford Park",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "szmxFp}_bMySsO_UiPi@i@_@c@kAcBiAsAwK}H}Ay@Eg@@o@@WBSFOR_@HO@UB[@W?k@pDuAhCcAn@Wp@e@tAcBx@cARODEDCFCJEDADAJEDCFAHEv@I\\CJARCJCLAJAFCTIbAa@VMNGLITMXUZO\\M^Kh@U\\If@K^GdCe@vAYjBc@\\I\\Kb@KNENEVGRG^Kt@UXITGFCFADCXKlAa@r@Sl@QXILEx@W\\KHCHCLCDCDALCJEPGLERIPGr@YXMHEXI^M\\MPERIJEPGRIRKPITKPIPIRK^S\\OLGHERGVILEVI^MvBzC`@n@^t@Xn@P`@Pt@LjAp@bAp@bB|AxC~DfBqElDiA`DI`@}FbEgGvGuBvD}D`IaC`F[f@gBjD`A~BpBzFTZfFrDzBzA|ElDe@rFg@vD_@pBc@cAq@Ci@Du@OgKcJ{DsCsAeA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "224",
+        "name": "Kingsbridge",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "m_oxFxbbbMxGyEn@qAtH_@xHxBp@oEfB_FZ[^GlHNv@Gp@]`Aq@xAgAxC}FhCcNe@cAeCG{h@wa@eVkQeEqFeOkKCnBiGiEuIby@kBpQwQgHWnDG`A^rBxAnBb@nBw@rBJlDK\\fABhGaAb@SvC|C~CpEhPpRnIfLbEhGbDiFbGkJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "225",
+        "name": "Riverdale",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "cpnxFjtcbMWlNq@`EuBlDeKbLiA`G?nM_K_Ecb@gLwxDycA`P{l@`@{KD{Df@yACsBx@sBSuBb@iNfHFjYk@bLYbLVbTfC~b@wCnYtJWnDG`A^rBxAnBb@nBw@rBJlDK\\fABhGaAb@SvC|C~CpEhPpRnIfLbEhGxHrIdDxGzFnEtD|C",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "226",
+        "name": "Marble Hill",
+        "level": 3,
+        "parent_id": 144,
+        "map_coordinates": {
+        "encoded_boundary": "sonxFhscbMeE{B{FoEeDyGkE{FjBiDfG}M~E_Gn@qAtH_@xHxBgArIc@dAi@x@qAdBlBjEeIz]",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "227",
+        "name": "Fieldston",
+        "level": 3,
+        "parent_id": 225,
+        "map_coordinates": {
+        "encoded_boundary": "woqxFx`abM[hBd@jBvB`C~@zCYpBkBbBgAdD^tA|@|B@~AyNWuNM}Li@eEyAyDmCoD}FwAgF_@oGRgK\\_HjC}N~CXbc@qCnLnD`LfEYpDGt@Z|B|AlB^nBq@zBHdDUr@_EDsAiAwAe@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "228",
+        "name": "Soundview",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "o~dxFtwxaMp@Wt@W\\M`@ObA]zAi@b@On@Sb@Ob@Ob@OtASrASnAQzB]~@Mb@I\\E\\Gh@Gh@KrAQrASlAQdAOt@Mj@Ip@KdC]dAQj@I~@Mf@If@Id@GVEd@GXEZE`@Gl@KpAS`BUr@Kr@KKcBS}AxBaCz@sFk@wFD}EvIqPzVjDpLeLnF?NjHSrCgApCrBHtA~BSxNLhN}ApH{C|LmKhBiDpKyGxBkBl_@{YbSyIxg@uP`\\oGrD{GdBcGrCmQhA{MqEsCKeExByJ}CcAqDcFsEsJiAuCy@_CmAuAwAv@aEd@sC`@eEf@iMHcIPaG\\{F^_EfAeHvAwHvFmXlEm@n@QxOsF|@Y`@OPIj@Q`@O`@Od@OTKVInBq@x@Yv@Wn@Wp@S",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "229",
+        "name": "Castle Hill",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_kfxF|iyaMr`@}nBb@uGAgFtj@_RxKtAbUnMvd@|Wm@bHkKnDwIrPE|Ej@tF{@tFyB~B^`Eg}@pM}GtB}j@bS{Fv@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "231",
+        "name": "Parkchester",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "kngxFlwzaMi@kBEM_@_B[yAQk@Oi@[cA[gAUu@Uu@c@yASeAYeBYaBY{A_@_COy@G[MgCOeDKuBKqBQgDAWIy@KsAUmCIgAKeAQqBM_BKqAEc@Km@Y}AWyAW{AWwAg@uC|AKdB?^C`@Ed@Gd@Ef@GbAMt@I\\ETCXCh@Gv@Ih@GzAQj@Gl@GvBWdAKh@IZCl@Il@EvBWl@Ix@GvAQd@EnAMdD{@dDw@nB[zEs@bC_@dDk@uF|WqJff@{BjKqKrj@cArMSjGGvHKnBOxDG|AAl@C`@_@}@O_@O_@]}@EKIYK[k@kBMc@a@yAe@kBQu@Uu@_@kAOe@Oi@i@eBSs@Us@[iA]iA}AsF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "232",
+        "name": "Throgs Neck",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "cn`xFhjtaM_r@pe@]S_CcAmDiBwBy@eCy@qGmB{EcBwLiFqO]sS|HyQfGu@^YkMEqKs@iLkBqLeFqKqFwJmFeKkEwKeCeDkCsAs@kB`DcCzBeBCe@?_@ASAOGk@Ik@SkAOcA[aCKw@Ig@Ic@]_COaAOaAa@qCEYG[Kq@S{AU{AUyA]qDzDeAhCc@hEe@`Bg@jF{B`KwKbJwW|P}VdJkP|{BscBJlnAm\\t|@wQx]vA~s@hEd\\|OjR|XpFwDbl@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "233",
+        "name": "Pelham Bay",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "{|hxFj_vaMiIyF}D_CwFaDgD{BcBu@aBiAaCeByAoAsAwA_B}BoAyB}@iCeAeDsBwCkA}@c@^mABI_AyAwE}D{NmB_K{AkF[k@k@a@`JiOzA]bAQ|BYvDKxABvBMtACfBM~Dj@~MxCrDPdDSzBYfEmBnC_ArBm@rB]Hn@zBfHnDxPTdCf@pJL|PD~BGt@v@vAj@jAtB~Eh@|A`BzDoFbDqGdHiF~E_IrM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "234",
+        "name": "Co-op City",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "ywjxF~eraMaK|AaKhCoNvJcKpGsVpJaHbCaHvAiKnC_ET}GKeD_@qCo@cDoA}BeA_DkCiCgCaBqBmBoCuA_CcAoBcCqFyBwFgAkDcA_DoBwIiEuToDaUO{AMkAQaClSdDtT|FzRfF|SJpTz@|TmI|^kD`K~GbJlOnCtQfBbR",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "235",
+        "name": "Westchester Square",
+        "level": 3,
+        "parent_id": 272,
+        "map_coordinates": {
+        "encoded_boundary": "wlfxFfcwaMkDnA{k@pGw@Du@EaCPsBuLcDcN}F}KyDoDdI{MpFgFhG}GnFaDiCsG_BsDp@FxAb@pDt@pBVtDZfXb@pHdoA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "236",
+        "name": "City Island",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "wtjxFhpkaM?Oi@_@eAS}Ac@g@A]SJqA_AaA_AkBUE_Bo@c@kDfAm@fAGnASV?`AYhCYnFeBlDkEpAaCjIeFjBgDbBwKtLcHpMcEdKqDrR{FhNMxEvEbHjNlD`H{GhU}ItKuBr@{CpAgHxDiWnRcQiE_Hq@{EiCyExGkU]Gn@_@EDy@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "237",
+        "name": "Morris Park",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "spixF`yyaMsAW{BqCiBkCyHoKc]ac@uAq\\[aKJ{MZyHtFct@pBc@qBb@pBc@fEjEbApEbFxI`BtB|CzBhZnQrHpFxDpD|FzKbDbNpErWyCfMsHpF{At@uNjHkA`DsBtHaErN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "238",
+        "name": "Pelham Parkway",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "abjxFjuzaMmB|J{N|BoFeHsAsFg@wGLcBaAwhAxBhApBzB|AjDlJbM~Zn_@eAhDqHnNuDpF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "240",
+        "name": "Van Nest",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "oejxFha{aMr@uDZ}ALq@F[F[T]lAgBf@s@R[P[JQJSl@iA`AkBpA}Bj@iAVg@Ve@ZaALa@ZeAHa@DSFOLc@Nm@V{@Po@Rm@ZeAV{@L_@H]FUd@cBPu@Ng@Ni@Ts@d@qAPg@HUHSRK|C_BnAo@f@Wf@U~BkA~BgANKNIbAs@fBsAfBsAFUBIBOJe@DSNk@b@_BNo@FWHWDULo@FYDSz@rEpBnVfAvUxC`QhDbLz@vDzEtPtClJxA|FpAdE`BfEQ`BO~ASrAKh@EXI\\UnAKf@ETERUb@m@_@oAuAk@y@kAu@mBq@uBe@kA}@s@qAOEuEsC_Bo@qE_AsJmEwt@oW",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "241",
+        "name": "Laconia",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "ialxF`lxaM{FfCi@Ti@XgDlCOTmExDwDuEkEgFoAkBcAoAmBkB_DcCuAw@{@u@kCoCaB{B}NiTu@oAiA_D{@kDkFiUeIsK[e@nDeLXi@xAiFRk@`@b@xCbCvMdKv@z@jBxA`D|BlCfCxE`EzGdFrEtD`CtBnGvEdA|@~B`BdEpDdCjBvCnCWrd@CBE@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "242",
+        "name": "Williamsbridge",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "k`oxF|vzaMcMyC_MoD{ZmJt^obB|F{R`@cAfIkWXd@fItKjFfUz@jDhA~CvA~BvFdIXd@lA`BnAnBj@z@j@x@t@`Ad@d@n@p@l@j@\\VXT?JAZ?nA?h@Ar@?t@AZ?b@AbB?t@A\\?\\ArA?t@AzAAlA?l@At@AvB?z@AjAA`A?h@?j@ApAAl@?hAAtAAx@?~@AdB?r@Av@AdA?f@An@AlBA|@?lA?z@AjA?dAAfAC|AAx@AjAE`GqBFuM_CwVwFEX",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "243",
+        "name": "Baychester",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "u~lxFtauaMWf@kBbFuA`Dg@fAaAbCeAvB}@`C]bAYYWUo@[qAmAmAaA}BqBaB}A_CcBmByAwC_CsCcCgCsB{@o@cAw@s@i@q@k@oAiAZw@`@mAv@qCrAsDjByGxBmG`TeA`GwAjGuB|FuBxVuKzKqF~JmIvJkCyCtFoDbGcClAaCbAwBlAuAvBoCpG}IbRYx@i@dAsE~Ko@xAu@|AoC~Gq@pA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "244",
+        "name": "Woodlawn",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "klrxF~a|aMYcP{DaVtDgc@hDmPeFaE_EYaEjAcEb@uDLi@m@yCoAyBtJaFrGmBxJoDzHnFlAtEtEtDhGjMv[|H`HnGnB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "245",
+        "name": "Wakefield",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "oxpxFlazaM_A[s@[{Ae@_Bw@eAW}Ai@o@[{@Y_GmBqE{BwAeAgCmC_BmBiDoCuB_BeBcAqBMmAKaElAoBXsAHgCEwA[}@[{As@sC}AiIkH_B{A_AeAsDuCkAq@uDiCfEkL|@}BfC_HfIoUd@iAd@_Bb@_A\\g@VW`@O^I`AUfGkBx@U^Mb@MzCy@`Be@n@Q|DeAzFcBRxARvAp@jDv@fDr@jDnBi@v@Sx@W~EsA`FuA|EsAHBJa@R{@fPrH|\\~Rs\\f|AUdA]jAQ`A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "246",
+        "name": "Eastchester",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_ipxF|qqaMtCxLdGdQbCpFxCnFnE~FjFlF|@f@pEpBzC~@jFr@r@d@mBbFcIrX_HlSoFgKgJw\\wHgJqCiIy@oIoKe@oE\\mIMgSoA~CmJ\\iISmWtSxC_FjOjBj@fEkQkc@aLbGuPlHgDwAqG|J}AhR`BtDxR`DpQ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "248",
+        "name": "Tremont",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "aqhxF~vbbMIdRKIIEWOYUa@[OMOKUMSQg@Yw@e@OMKGKIKGOKYQe@[u@c@c@Ya@YYSa@Y{AcAMIGEKGSMYQYQw@e@uA}@KGECKGEEMIECEEQKa@Y{@m@OKMK]Y_BuAIGMK_@[}@w@[Y[Yw@s@cA{@_Aw@aA{@kB{AWSWUq@i@_BqAYUQQc@[c@_@QOQM_@Wy@g@_Ag@[QYOo@]m@]u@e@KGEEKEWOo@_@i@[i@YQIAA@GBIDOJa@Ry@H_@J_@BMBIDODSJa@VcANu@ZqADQDQ@IDQJ]FYHYRs@FWLe@@G@EBK@CBMH]Ji@Je@DUDOLc@H[J_@Nk@@IBGBIBKBOHYH]Ng@Lg@?E@_@BcAFyBFYBIDM@KBGBIDUDQxA|@XPXN|BjATLHFPHVNh@ZbAh@pC|ARLVLb@Vn@^nAp@p@\\\\Pv@d@`B~@JFJFRJPJ^Tv@b@f@Xv@^ZNPHRJt@\\t@^|BfALFJFVNb@VVNTL`Br@d@RVLd@T`Ab@NHFBJDPJ`@Pf@Vl@XRHVLPHLFJDJDJDZRNFLFUjFOtEMlEGfDQrHGhEOnI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "249",
+        "name": "Spuyten Duyvil",
+        "level": 3,
+        "parent_id": 225,
+        "map_coordinates": {
+        "encoded_boundary": "sonxFhscbMq@fU}B`HoKhP@vLeq@}PnFe_@`C_RwF_I{JwGoD}GuEyHlK_FtD}@vDQ`OhDfLfI~CxFvBqBpAdCw@vAjEzFdDvGzFnEdEzB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "260",
+        "name": "Norwood",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "u}lxFdr|aMsXzJyWfHqFjAeFvBoD`A_DnA{DrEmJhDO|By@vCCnBaI}FnIee@{YmSdPu@zLlBhBwT`I\\cBwa@bp@pNlSbAnS?qEzReDj@yC`DwArDl@nDpCrCxBtC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "265",
+        "name": "Bronxwood",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "aakxFlb{aMcIaBkHa@}Pg@eIgA}GEk[a@FcF\\yp@HwV@mItBfBnBtAbCdCzAbBfAbBvA~Ar@`AxBbC~BpCbEoDTY`DgCjAm@pGsCTud@tCxBtJzHrHlGd@\\vAn@z@deADtBM~Af@tGrAtFeCjE",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "266",
+        "name": "Pelham Gardens",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "mbkxFv~waMIECAQIs@Ym@c@gA_A_Au@i@c@e@e@o@i@WSYU}@u@_@YOMQM][_@Ya@[OMQMc@]QMOOmB{Aw@k@YUa@a@oBgBwBeBqEuDqAaAg@a@i@a@q@i@YSYUs@i@m@e@YUUQYU[WmAeAg@_@USWSe@]e@_@wC}ByBaBHSJWj@uA\\aA\\q@Tc@Re@p@cBL_@b@}@HOZw@^{@Rg@Vo@To@HUJWp@eBp@oALY^{@z@wB\\_ATk@P_@b@{@Zu@x@kBZu@^_AbAeCn@}Af@eAL[L[LYVg@h@kAvAwC`AqB^y@P_@P_@n@sAd@cARg@HSL[`@}@Zu@Zg@Ze@Xm@p@]XMVOfD}AnAm@XEVF^JPZHNZvAh@bCT`AXrApAvFxArFbBhGbBvGa@dEOdBGv@Gt@c@`FQnBQtBk@pHUzCIlAIlAC\\AZOzCElAEl@Cp@En@EdBAp@Ab@?\\C|CAzA?l@Av@J`DDnADrAd@nLVjGLtCFjADlA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "267",
+        "name": "Locust Point",
+        "level": 3,
+        "parent_id": 232,
+        "map_coordinates": {
+        "encoded_boundary": "uqbxFdrnaMiZ|LhCeTx@sStCiRjM_\\tRiKnl@s@zDPuQhV_OvXG|AmCpJq\\~X",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "270",
+        "name": "Woodstock",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_pbxFpbcbMi@`Ck@bCe@nBKl@cAxCaBdFaA|CcBaE}AmBuAmBeAmAiAsAiCmC_ByAeBoAgC_B_BaAkBaAeBaAYyBc@cDWeBiAqBsBq@uB_ARmAHg@Jk@T_BJo@Jo@Fg@TyANaANcARkAPmAT_BJo@Lw@\\yBL_ANaAXiBLw@Jw@RmAPkAViBJy@L}@NiALy@bAD`@@P?F@D?D{BB}@@i@?W?yA?o@@gA?}A@iA?eA?cA?aA?cC@aA@qA@gBAq@Aq@AaCAO?oBAgDKoBGgACe@hDdG|C|CtBjBbCfCdBlB`DbDzBdCbFnFfDfDdAhAdA|AhCnDbCzDlBrCzA`C~AjChBjBdA|A`BhCcBVeBLqALe@Hk@Dy@N]h@kAdBk@lAWfBi@vEy@jGiArIu@vGQrA{@|D_AzD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "271",
+        "name": "North New York",
+        "level": 3,
+        "parent_id": 201,
+        "map_coordinates": {
+        "encoded_boundary": "w|_xFpefbMoCt@uFbBkBv@eGwPcAaDUk@U_@oCgBeE_Ci@{@uBoA}BaBmIyFuH_FoDgCwCcBgH{EiCeB_CiBlBeGxB}GdBoHh@mCbAyDr@kDv@gHx@kG`AoHn@kFh@oD`@eApBwCLEh@OvGm@jAOrKrOxE`N\\fAdGjPpAjErBbGnCpMtCrBjKtG|CzBhDtBsApDw@`BiBfAoAd@eFvCyBnHFrK`@rGjBtEhBdE",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "272",
+        "name": "Westchester Village",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "itexFp}vaMs@HiDj@gKzAsIrBm@Fk@HyANsD`@eJbAgEd@oANg@DcBPcBRaBRq@FYDWB[B[Bu@EaCPuBuLaDcN}F}KyDoDdI{MpFgFhG}GnFaDcB{De@wA_BsDp@FxAb@pDt@pBVrDZz@FxIJ`CD~ACzI[~E]pBWvBYn@M\\E~@Q|@KnCc@jEaApCo@tAhTz@vJ@fFc@tGkB|IsAbGs@zDcAfEe@jC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "273",
+        "name": "Country Club",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "wxfxFdapaMVpCNbANdA`@hC`AvGh@lDLx@Lv@Lv@D^DZJr@L`ADZHb@F^L|@Jp@Df@@\\@\\Bb@sCtBqAv@y@v@j@vAwDz@eD`@gDVaD^aJTyDX{BQiFCkJb@IEu@Na@wAyCiHeKaUlBgAuB_WEaB@oAWkBMwA~La]nr@pFvLt[",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "274",
+        "name": "Schuylerville",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "_texFjktaMoAVqAT}B^eC\\iANw@Jq@JaBRcEZuAJuAHiLPaGKaG[aGw@}@S}@Q}Be@aAyB}@aBDu@EkCKqPg@qJUeCoDwPmCuI|Jc@hFBxBNzDW~ISbDc@pCSxDc@zCq@dDnApAtBxBzCzCbHlAhDfBzDxCpEfCpElAfC`ClEd@bCj@rDN~@PdARpBRrBc@Je@HiAXiBd@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "276",
+        "name": "Edenwald",
+        "level": 2,
+        "parent_id": 200,
+        "map_coordinates": {
+        "encoded_boundary": "uxoxFp}vaM{\\_S_PoHq@vAa[rIeB_Iy@_EuA_KiBmNTk@d@kDvBiLHm@Bm@ViGHw@F]l@oBr@{ANUzCmDTg@XyAhA_FtAmEnN~@fEPvGFnE]lKf@x@lIpChIvHfJfJx\\nFdKcIpWa@dAqFxQKX",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "300",
+        "name": "Brooklyn",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "c|swF~nkbMGaHTaGPsATeBhByIvFsVpGgX`CqDtCcCnEuBhGiBzEuB|CeEzDuItBaKfBwVxAwKfa@{OtJkDg@aCjB_AbK]jEiFrFaAf@zCzB`DtEgAtOqXlKxK`g@ybAlExEfGiLxDpD~Zwl@nHjHzJmTwC}j@dIoc@sB_RoBeStDqKNiBWwCAgB`@sBrN}MyGcSkByHwAsIm@aFnP{BbRqDtKu@rGeAyAyJbSiDIuDn\\eF~R{CqAgPxGgAzf@}HrAdPpIqAfIoA|AbPpGpPzPoPzAmBzO_KfDqF|DqCnJn@pEdBnDLjFoCbI{@fEbCrA|Ix@nHj@jIlCvEtHnOfBxIo@nF|ApE`DHtD~CtEzFbCvF_@jJuCrFiF|DkCpFdF}DjIs@rIdIbHnJdHbObFh@zEcH~IpQ{EhGx@lIhGlLpGtExHfJnGhKp@dI|JkCdFz@dIz@pHeCxBwFT}HvBoKtHqGzFmCdFrB`GpPbLnBlEfOtFdM\\fJ|Ep@~DlBnJ|LfE`MtFrMpJfI~{@ybAcA~V`CpEpAbF_@fH]rIn@xGdCzEfBbEmBdLhGy@xDaEjGeAbB~@VvPm@~DTbEgBrNYnMkBrIcBrR?h]`AdCZlJqAdXSzF\\vH[v@MbLa@ZBtM_@rM`Ah^p@rKlBYeAoU~Gsi@EgIq@sv@h`@{H`CzANpVi@bDIrAhAp@`@ve@e@|G~AfLrB|d@TdGUvLrAlm@bDxc@xJ~|AzClw@U`d@b@lP{CNeC`EwG~XGtHsBnKoB|E_EdCoDVmF~AsDImImEyIsS}@aP\\uJoAaOmDZ{Hk@yEuImBgAeAsFkl@jWqN~J{\\hr@qMtw@{BxYaBvXkHtPmHdIyDpCuChFc\\vV{P`G_a@hCyUs@uIc@qLy@sQuGoc@sPmF}BgCaCoFzIezBgdCqOkS}@n\\}H|Dq]xCcUdEiE{@cEz@qJ`@sIsDqOyYgZqh@ee@}Xcm@e]cAgAm@}AyMeO_B_FiBaAYSqAqZ_BuVwBcWYqUu@eOaIkLaDgHuLuO}UcI{LkEeAhCmEoBuFkE}EwBiAw@q[gO{IkB{Hy@cNl@aG`BPhEcCNWoFcCBmCmAyHoFcHwEmCqFsC_Io@wH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "301",
+        "name": "Greenpoint",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_vswFpblbMsC_Io@wHG{GTaGf@_EhBsIvFyVpGaX`CwDtCcCnEuBhGiBzEuB|CeEzDoItBaKnAeRVqCxAaIrG|HpApC~A~DrF~[dItPbGdKhPt\\aEl@~@jB`Bt]qAHyb@~x@eA`CwKcCeIe@cNvB{FfBT~FcCNWoFcCBmCmAaI^QiEiG}GmCwF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "302",
+        "name": "Williamsburg",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_glwFtvlbMcXx^cO~EeAnFqDhBsGRoHiBWlA}UcI{LkEeAhCmEoBuFkEeAuDmAw@iAtBiAw@tBuDgGmDgCoC}EsBgCsAsCkAxb@cy@tAMaBy]qA_BrEq@mX{h@eIuPsF_\\eMeVfa@{OtJkDg@iCpB{@|JYjEkFrFeAf@`DzB`DzE_@nOyYbSbTzNhRnDvMdKp]zDnTzEt]fEpq@pIloAcLiC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "303",
+        "name": "Downtown Brooklyn",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "eflwFfoqbMQbOqCtEv@lB|DbAlEv@zHEpScE|EvBfQjGpEaSwDuBrSgt@p@h@bDmKqUpOcFtBV}P{VnBy@d@kBbCw@`@mBNgFF[lBs@lBgVhXIxGvBw@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "304",
+        "name": "Fort Greene",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ushwFfxmbMmKrv@gCpJ}Ao@}V~O{FbCTuPmWxBe@Z{AtBeAp@_Uz@h@gVj@ud@vcB_S",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "305",
+        "name": "Brooklyn Heights",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "illwFj{sbMl@|AbAfAbm@d]pTmjAqXkKoSfEcIFcGeAgCs@w@oBeDvE_InKqElG~AjA~BjLxLxH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "306",
+        "name": "Boerum Hill",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "apiwFhfpbMp@d@`DeKbAi@|Al@zZzPaOvh@zFhDaDnLkDpLqh@a[rSat@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "307",
+        "name": "DUMBO",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ydmwF|erbMpApZXR`U_[pCwET_OyBr@L}G`VuWv@}Bb@gBoJVcOSqEfDaDqDgAU}IaEkGu@XpUvBbW~AtV",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "308",
+        "name": "Vinegar Hill",
+        "level": 3,
+        "parent_id": 307,
+        "map_coordinates": {
+        "encoded_boundary": "klmwFp_pbMjGt@zIjEhAJ`DpDpEgDbORnJWc@fBw@|BaVtW@}B}Oc@DeByACC`B{BIS`KeEGwBcWYqU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "309",
+        "name": "Farragut",
+        "level": 3,
+        "parent_id": 358,
+        "map_coordinates": {
+        "encoded_boundary": "gpawF`mebMgGi@|@t_@pBKNzDz@tD~@jJtAj{@xrA{G_BuL{BuL}Qub@}Oia@kl@aG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "310",
+        "name": "Bedford-Stuyvesant",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "{jlwFbxhbMltA}tCbk@ylAdKpNxJ`@aNfvGmFv`@qy@dJsw@|JcFmt@aC{e@uCu_@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "312",
+        "name": "Stuyvesant Heights",
+        "level": 3,
+        "parent_id": 310,
+        "map_coordinates": {
+        "encoded_boundary": "}sgwFjvcbMuC~oAmA`{@mKYSpJw_CnX_AqNltAytCn`A}J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "313",
+        "name": "Bushwick",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "wjlwF`xhbMyEw]{DoTuPil@qVsZfg@ubAlErE`GgLtD|D`[am@pHhHvJgTsCck@dIoc@`DhGr_@rZpMnKxKl@hLnCxAbA|CvHg}@bsBitAxtC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "314",
+        "name": "East New York",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "gkdwFhq`bMm_BzW}AqEqGqT}CuHyAcAiLoCkJk@{CwAcJyHxImFkJoR|M}KoPgd@sRmg@yGcSkByHwAsIm@aFnP{BbRqDtKu@rGeAyAyJbSiDIsDlp@aKiAiPto@gKzAnPlSmCfAhP~DfO`TgPzAmBzO_KfDqF|DqCnJn@pEhBnDHjFoCbI{@fEbCrA|Ix@nHj@jIlCvEtHnOfBxIo@nF|ApE`DHtD~CvEzF`CvF_@jJuCrFiF|DkCnFoBnHyWb[}EnMwG`G{DzB{Dn@u[l_@oO`K_T`EnBfViDi@eJh@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "315",
+        "name": "New Lots",
+        "level": 3,
+        "parent_id": 314,
+        "map_coordinates": {
+        "encoded_boundary": "wxbwF|g_bM~I{KcFoFsVyv@o_@ekAaAmIwFiw@iIt@{AqP_g@jIdDhc@tDbe@lJfNjx@rdC~A`DhC~IvJuAnOaK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "316",
+        "name": "City Line",
+        "level": 3,
+        "parent_id": 314,
+        "map_coordinates": {
+        "encoded_boundary": "w}ewFbwzaMi|@~MyBfAaPpCoLml@rGeAyAyJbSiDIsDlp@_KiAkPtG{@zIliAjBjD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "317",
+        "name": "Starrett City",
+        "level": 3,
+        "parent_id": 314,
+        "map_coordinates": {
+        "encoded_boundary": "qmbwFn{~aMkFkGyCcJcSmn@lFoDdA}Afi@aa@hc@xLjPbIoBnHyW`[}EnMwG`G{D|B{Dl@oP~R",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "318",
+        "name": "Red Hook",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_~gwFtbxbMpJa@bE{@hEz@bUeEp]yC|H}Dl@i]uCmMiEka@sPm_@gQoFmp@d_@uIrHsb@|SjZzh@pOxYrIrD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "319",
+        "name": "Park Slope",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "c~dwF|_rbMfNqKxDqCdDeG|F_LoFaG{MkKi`A}u@qCsB{AMFwBcJvBe{@lj@mAxDvr@pa@hy@~o@nGvFzNyU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "320",
+        "name": "Gowanus",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "wxfwF~{sbMe_@}MfD{JqBoAfDkJmQyMyRoLjN}g@d[zR`WzRlK~HhYfVaHzOy`@`S",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "321",
+        "name": "Carroll Gardens",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ophwFh|qbMnNzI~MbKiDhJpBpAgDxJl_@fNul@l\\yb@_PpHkb@~N_h@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "322",
+        "name": "Cobble Hill",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "sejwFfsrbMrEcSvb@hWeD|LsHza@{[yLoIrBxJyi@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "323",
+        "name": "Sunset Park",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "uy`wFxl{bMczBidCtdAyqBlBjBnO{Y|aBneBiOjZuCpEmDzFgKhR_D|D_EhBuEDyDmA|BlG~ApGPtF[|EsFfSm@hCYtENfFn@pG~AzEbApCcFzI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "324",
+        "name": "Windsor Terrace",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "crdwFfepbMpLrJ|LpMdG}Lxp@uHgBy]j@sLcCeJgTbEeTtEaRdDcA`A{N~_@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "325",
+        "name": "Crown Heights",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "uohwFhdmbMxdBoRzH`C_@iGiDs}AlCciACgKx@@uAcEwjAcmDsAp`@aNhvGsFda@wFzd@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "326",
+        "name": "Prospect Heights",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_`iwFjoobMnO_jAbf@aGvR}ApJuA_@dERrBW|Cs@lAaCGmFyAaD`Q~IlCsGhEYtCyInBo{@xj@bAgE",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "327",
+        "name": "Weeksville",
+        "level": 3,
+        "parent_id": 325,
+        "map_coordinates": {
+        "encoded_boundary": "scewFnygbM`AyRKaMv@@_X_w@s{@}DuCpwAzuAdF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "328",
+        "name": "Columbia St Waterfront District",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "mzjwFx~tbM~d@zXxb@sTtIcHe`Ak^iIjB_Hz_@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "329",
+        "name": "Prospect Lefferts Gardens",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "{fcwF~slbMsq@bGuAa@oBcBi@iJiC{lApCUho@gDlCnmAbDtK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "330",
+        "name": "Wingate",
+        "level": 3,
+        "parent_id": 358,
+        "map_coordinates": {
+        "encoded_boundary": "_{cwFdzibMmi@xCYeP|Awr@|Dh@d]mBdCfaA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "331",
+        "name": "Bay Ridge",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "mm}vFrh|bMkSqAqLy@sQuGoc@sPmF}BgCaCqAcC}AsFq@iGK_FXqErAsGhEaO`@_FSwFwAmGqC_HdExAnEGbEkBpCkDrKyRhEkDbFe@|TrE|g@tP`j@pg@`W|QdFxGvEfLbEzRoCnBwB?gExCqH`I}HlE_Bv@mZhEmDbA{BK}GLoJ\\",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "332",
+        "name": "Dyker Heights",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "iozvFrd{bMwEmTaDgJ}FuHyWwQei@gg@o}@eX}FbA{ErDjI}L~x@c`B|bCrhC{BxYaBvXkHtPmHdIyDpCuCfF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "333",
+        "name": "Fort Hamilton",
+        "level": 3,
+        "parent_id": 331,
+        "map_coordinates": {
+        "encoded_boundary": "i`}vFxh|bMyUs@nBuNbOkbA|FcLtIcRzVtTtP|LfCxAfBdCbDfFtClHtEnTc\\vV{P`G_a@hC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "334",
+        "name": "Bensonhurst",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "qd{vFflvbMkiAolA|aBwbDhIn~An_@x`@kbA|nB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "335",
+        "name": "Mapleton",
+        "level": 3,
+        "parent_id": 338,
+        "map_coordinates": {
+        "encoded_boundary": "ykzvFfznbMs_ApjBo\\e]ib@ma@hL_TbsB}T",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "336",
+        "name": "Bath Beach",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "{dzvFfmwbMu^_`@vr@}tArN_Y`o@|p@oLbM{\\hr@wM`a@aAbBu@JoOqPkDpH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "337",
+        "name": "Gravesend",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "aowvFjptbMsqAytAwIw~A`M{AsBi`@zuAsOfy@lLXhI~@bNpCfWd@zO}@hReB~QhQjU|ErBwP~uAmDR{Hk@yEuImBgAeAsFkl@jW",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "338",
+        "name": "Borough Park",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "yw~vFjcvbMvjAo|Bi`A}_AcDwIejAfMnE`OqS~_@xAxCaQb^dbB|dB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "339",
+        "name": "Ocean Parkway",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": null,
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "340",
+        "name": "Kensington",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ukawFpyqbM}Nwg@gC_g@l@sLeC}IvpAwVdQ}Cj\\f|@sAnDiHvMcDyIijAfMpE`OqS~_@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "341",
+        "name": "Coney Island",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "i`svFbptbMov@vIr@tMyLlAKeBZuJmAaOvPwuA}EsBiQkUbBsR~@uQe@{OqCgWyAmXhcAfNdD`g@rE|t@pC|v@OdZBzGb@|Q{CN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "342",
+        "name": "Brighton Beach",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "gkuvFndkbMtZ_EfZ_DTdGUvL\\fRt@dZ`Dzc@acAcN}@yVaC{Ze@kIBuLrK}@Cm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "343",
+        "name": "Ditmas Park",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "yh~vFzgmbMiXlClBfFeQ|Cut@vNcGgjAxMaA`YuWns@wGnGjmA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "344",
+        "name": "Homecrest",
+        "level": 3,
+        "parent_id": 349,
+        "map_coordinates": {
+        "encoded_boundary": "i`wvFnllbMcaBrGiC_JiPci@uD}OoE}EeTa]|i@iGtm@qs@oDcHh]cb@vRb^tBvc@lCvg@jEtu@lCfg@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "345",
+        "name": "Seagate",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "stsvFhmvbM_EdCoDXmF|AsDImImEyDgI_DkIq@{LxLmAs@uMnv@wIqAtBs@jA_DfMwBxJGrHsBnKoB|E",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "346",
+        "name": "Flatbush",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_lcwFdglbM|ChKpD]jRgB~PiB`NcBs@aK~DQ~Gw@bL_KlEiEfCmCfAYbYwC`Y_DoCqo@cdBvImt@lDnCjmA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "347",
+        "name": "Cypress Hills",
+        "level": 3,
+        "parent_id": 314,
+        "map_coordinates": {
+        "encoded_boundary": "wngwFxk`bM?@?@???jCAzDIfEOhBC^mFsQ}CwHyAcAiLoCyKm@qMoKxImFkJoR|M}KoPgd@sRmg@yGcSkByHwAsIm@aFnP{BbRqDpKu@??????p@lDv@`E??n@fDn@fDp@rD??p@jDt@~Dx@tEz@zF?@hArFLt@?@\\jB?@b@tAFNt@|DLn@??d@bCTtA??XxAXxAXvAX|AVtA??ZzA??TpAZ`B??TlAZ`BPz@`@tBHd@h@rCh@hDh@jDf@jDb@pDb@pD^pD\\rDZrDVtDTxDPtDNlELdEFtDMp@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "348",
+        "name": "Midwood",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "eezvFznlbMxKzd@sHz@rBj`@uaC|Wa`@scAbXwC_GgmAiCwi@`s@}u@hGnTx^t[lSf\\tAdCfCtBvD`PxQzm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "349",
+        "name": "Sheepshead Bay",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ytwvF|`gbMgLgTvJyKgDaIei@jm@dBbDuS`V}@wB}Dv@iAGc@g@_e@`j@gO~AxUh`@fCtBlBjIbGlUtGnRhEzOxIj_@jlAoMfy@lLy@{VaCsZg@aI@_MtKy@QgDx@Gq@sKi@uPWsL^sM?}HCwC`@[LcLZw@]wHR{FpAeX[mJaAeCCmGl@aPx@mWjBsIXoMfBsNUcEl@_EWwPcB_AkGdAyD`EmGx@uEhEs@`IQdIzFtOxApMQjKN~L}KtOcE|DuE~IqV`@cJlL",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "350",
+        "name": "Manhattan Beach",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "{tsvFdvjbMR~A_v@dJOoBfEm@{@eUvFsi@VmE_@uz@x^sH`CzANpVy@lB@`AfApAJ~EtAAB`BwABXz\\e@`H~AbL`Bra@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "352",
+        "name": "Fiske Terrace",
+        "level": 3,
+        "parent_id": 343,
+        "map_coordinates": {
+        "encoded_boundary": "kp~vFptlbMgBe[sMdAfB|[rM}A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "353",
+        "name": "Ocean Hill",
+        "level": 3,
+        "parent_id": 310,
+        "map_coordinates": {
+        "encoded_boundary": "}sgwFjvcbMhD}qAsGmTe}@fsBn`A{J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "354",
+        "name": "Brownsville",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "cicwFbzdbMav@n|@mjAmlDl_B}WbJg@dDh@^pBdBnBnGpLhEhl@NrIw@f{@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "355",
+        "name": "Prospect Park South",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "qfawF`hnbMa[dGkOci@mMzHqImZ|OgB|UwB|UsCrEb~@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "358",
+        "name": "East Flatbush",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_aawFhmdbMnbAaFdcAzgBa{@p~@QcEonEjUYcPnCahAGcLl@Fn{@sbA`bA}E",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "359",
+        "name": "Canarsie",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "c}|vFxw_bMw{@zcC{@yAoDtEtBxDobAzEabA~E{CtDr@_{@M{IcEsk@{GsMcBgBa@mBcBiVxSsDbOyJdPeR~JwLbEs@jDkBbHsGlEuL|Wk[vB}HbFwDjIs@rIdIbHnJdHbObFh@zEcH~IpQ{EhGx@lIhGlLpGtExHfJnGhKp@jI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "360",
+        "name": "Flatlands",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "qy|vF~ngbM_cAwgBbuAgHtFaHbb@lu@}{@rcA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "361",
+        "name": "Marine Park",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "cy{vFxiibMy^u[iGoTl}AgjBlcAghAh{@abAcA~V`CpEpAbF_@fH]rIn@xGdCzEfBbEmBdLwE~Dy@jIKhIbCbHkv@d}@kDwHki@nm@bBzCsS~U}@}BaE|@aAEe@_@{CnDe`@hd@kO|A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "362",
+        "name": "Mill Basin",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "srzvFr~dbMmp@qkAyBqBzEyFtAvB`a@wh@hFoDbKY`Mj@fHiCLgL~Ep@~DfBnJ|LfE`MtFrMpJdI{aA|fAuOzQ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "363",
+        "name": "Bergen Beach",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "_qyvF~i`bMIpLqHhCwLg@cKToFfD}`@th@yAsB}ExFdCvBfMjU_QjSauAhHqBuDlDwEx@zAv{@adC|JkCdFz@dIz@pHeCxBwFT}HvBoKtHqGzFmCdFrB`GpPbLfBlEnOtFdM\\fJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "364",
+        "name": "Clinton Hill",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "gwkwFrjmbMoBsTfACh^uEhpAmOyJny@ucB~Rb@s`@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "365",
+        "name": "Old Mill Basin",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ku{vFthcbMiIhJ`b@lu@dIyJ}a@}t@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "366",
+        "name": "Madison",
+        "level": 3,
+        "parent_id": 349,
+        "map_coordinates": {
+        "encoded_boundary": "qpxvFbsjbMmfAzKiAuEmBkIgCuBuAeCuEcHmL_S|_BaQhFfz@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "367",
+        "name": "Greenwood",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "a~dwF~_rbMfNsKxDqCdDeG|F_LnDtDvFeMbq@eH\\rGzN`h@zApCua@xx@qBgBydAxqBqOkScD_NiEkb@wP{^mPaFl\\{PtGgPzNwU",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "370",
+        "name": "Gerritsen Beach",
+        "level": 2,
+        "parent_id": 300,
+        "map_coordinates": {
+        "encoded_boundary": "ervvFjrfbMoVh@cJhLmLaTrbAsjAtBrFrAjMS`KNrMkK`OwEpEsEvI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "373",
+        "name": "East Williamsburg",
+        "level": 3,
+        "parent_id": 302,
+        "map_coordinates": {
+        "encoded_boundary": "aylwFj|gbM_Bt@sCzEgBvAuC`@i_@fDyC^mFtB{FtBeEfBqGM}MsHwShBmMcWsF{[gKsOlAiGx\\cNtJoDg@gCpB}@|JYjEiFrFgAf@`DzB`DzE[nO{YbS`TzNhRnDvMdKp]zDnTmB\\aCbA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "400",
+        "name": "Queens",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "szswFvxkbMo@wHGaHTaGPsATeBhByIvFsVpGgX`CqDtCcCnEuBhGiBzEuB|CeEzDuItBaKfBwVxAwKfa@{OtJkDg@aCjB_AbK]jEiFrFaAf@zCzB`DtEgAtOqXlKxK`g@ybAlExEfGiLxDpD~Zwl@nHjHzJmTwC}j@dIoc@sB_RoBeSnDsKTgBWwCAgB`@sBrN}MyGcSkByHwAsIm@aFnP{BbRqDtKu@rGeAyAyJbSiDIsDn\\gF~R{CqAgPxGgAzf@}HrAdPpIqAfIoA|AbPpGpPzPoPzAmBzO_KfDqF|DqClGiF`f@eKgJmtAf`@iSfTqLvLqG~M_B`ShInMiFvNhNdSbGrK_@bGxEjGhDhIeXnWvAxLpMvQ_FtQgYdM]lNv[iBlVjRt\\x{@n]jHrYnfAfgCtJnZ|@pk@Qn_@bS~`@hJb]JxUcJpWM`TnLle@lC|ZfIv[lP`VdDt\\~LrY|Q~Gn[gEzh@rCjCoH{@eLiRyo@g~@a~C}Bch@oz@giEk|AqrGub@}gCcQ{|A_MgmAiBg|@vEyv@QuHuLeJ}HcMqDgSb@sj@JiJmCkDyEXiO~EaIr@uHpCuEFyEhAoB`BuYbY_RhPrAzEyBfAb@lAlA|NzEjT}@hd@qEzKcFpLeO`Q`@lLyBvF{J[_VgOyY}FaQgYek@gfBqKwHk@{Ev@wEvBw@tFbExCz@x@eAEqDWgG}BoBcNrFyCpBsFhEkAiDaE|BqCmAi\\k@kEwJkJsZsB}[mGaXcA}FaMq@oNtBs`AhLug@_Cq_@mIyXz@}FT{m@vBaeAjAcPTcV^_B_@}]bF}HpByVkPqLsCmJwAaAqFsGc_@cBaNu@}LsAuRwBwPoL_}@ys@dR_D}C{qA|GeClFwAlCge@j}@y^fr@anB|qD{@`CnAfDpBdD|AjBlCl@pFtDdCNdGjCdDPp@d@z@{@n@GjCoBpDy@lFkB`ARlA~AtEnK~Dl_@u^n]aYrKoK|Ga\\b\\mAsMqJsDaPrDkd@r\\pIzh@|SlKlGrm@kKjByLCuQzpAoSxxApTrW|CrLgI|_AjY~nB`]KrGtRpSpLzYe`@EkZffAoBxXeTN{ZzPt_@pLhs@g@`DaClH_CnDySdPqHjG}BiW{KqMqQoKmu@llBeG{Ec@cEiGoEsIbAkCdHh[rWoHtRjF`EhFi@hCbc@fGf@`[wC`C`_@kNkAm]zKcRt]cIoFkWp^mPl~@xoAjcB~MrQeKhPfBlWbThPpQw@lF}PpJnSfOrUbThOjm@zg@|h@rg@x`@jUvQnG`NT~@iPmCqFsC_I",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "401",
+        "name": "Astoria",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "goywFxjabM|Bh@fUiGmAhDdHzE~EfCbJbD~JvFxD|@|LrChHtFv@zBAnCw@vLmAhL_@fIh@nIxCpSu^zdA{\\vfA{WoRqTgh@iJ`SsQv@cTiPgBsWdKcPy~AevBlPg~@jWq^bInFbRu]l]{K|QbAfWqC|@cAvJeCxDt]qAxImIj{@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "402",
+        "name": "Long Island City",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "{|swFh}lbM}ViIka@}Ush@kg@un@yg@|Mgf@rYo{@lTej@iB}O_BsOnEog@L~@fGyBnAjLfB|W~Dt\\vOlzA~Khd@dOtc@dKr]vFxAs@jSfBhMbHfKiBvPiHt@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "403",
+        "name": "Sunnyside",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "antwF`|ibM{Oke@eLae@sMmoAcGih@gBuWsAcLxD{A`IrAvBz@v@?zAu@m@tKbL~AB}@xTtCS|D|J|Bm@tGtWrGrAGvElANbIp@bGbAzF|@fDlAhDbBvCrBnC|C|BvEvCzIxFrHzIg@d@cAlH_B`VoB~JaEtIyCjE}ErBmExAyBj@sFxBoBpCiCnHcDhN_Lli@gFcB{Jc[",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "404",
+        "name": "Woodside",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "getwFj{~aM~M_GnX{Kg@jBOhCVfVkAzGm@nJWnQbBdEfDnE_JzUtStH{EtYqRcHxF~s@gDiAuCi@gWqFn@uGaK_CTwD{TwCIdA{K_Bf@mKgAReHeBiFOeLlECq@qGeGoEkBiOuDcK{F{I{CcFiCgH}ElAgD{JrCiIpB}Be@hAwL`@kF|E{f@xI|AtGlI~c@bZn`@}SvJw@|UgL`CgD|]wP",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "405",
+        "name": "Jackson Heights",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "wtuwFj}{aMnK`tBqUzKcK`Ao`@|S_n@wb@oHwCfTguBdZyCrAQhCkAtTwJ|NgG~MgHdCxi@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "406",
+        "name": "East Elmhurst",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "oywwFxdxaMaAnJmAjLlAdEJxJlBzZ^lJfAvZeZxCiR`jBaDw\\_AoE_EmP{BgGmIiRkBmEmAwEs@uFYyFSmHLyD`@wEbAmFpC}HzFcKpHcKhGsGpHkGxSeP~BoD`CmHf@aDbC|D",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "407",
+        "name": "North Corona",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "}xuwFprzaM_NfH}NfGuTvJiCjAsAPgBef@mB{ZKyJmAeELsANwA\\}CPaB`AoJfE}KdKuE~VkHbIf`@zCbPv@`HjDhn@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "408",
+        "name": "Elmhurst",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "getwFj{~aM}]vPaChDoKatBeCyi@vGsDn\\mEfGZjDIri@aRbMpj@rArGvCfNpHlZrAjLNbNp@rHiCf@qJzBsQzEa\\jM_N~F",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "409",
+        "name": "Corona",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "qaywFpvtaMbRNpKiDv^QrOcHpVqNvU`G`NpNjb@jnA`Er^nOtt@{i@fQaLQa]lEwGzDuCuf@kA{O}CePcIg`@_WjHeKvEoFtM{AwFqLis@{Pu_@oCiR",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "410",
+        "name": "Maspeth",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "e}qwF~}ebMmPkK_D{BuBsCoD}H_BeHa@}BQ_B_@cDMyHyF_t@pRbHzEuYuSuH~I{UgDoEcBeEVoQl@oJjA{GWgVNiCf@kBpBo@rQ{EtJsBdCo@`TgChNMzO|BdUbH`MfFjIdCsAdhAa@`]KdHq@dWaDjqA_F`A{BaDg@{CsF`AkEhFcK\\kB~@f@`CuJjDga@zOkHqG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "411",
+        "name": "Middle Village",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ypmwF`u{aMfCt}@yKt_@mXsFkIeCaMgFeUcH{O}BiNLaTfCq@sHO_OkAwJwHi[yCcNsAsG|LP|HeBxOsF~CqAfIqHjS}QbMoLvMcOfDcBdCP??rFdNtGnPlGj]lJ`VtCzG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "412",
+        "name": "Ridgewood",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ehkwFlhabMa[|l@wDyDaGfLgEsEkg@tbAmKyKkOvX??????`DkqAp@eWJgH??tBefBfg@`KfIbClTzQxXrWnEfCtVvNwJfTqHiH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "413",
+        "name": "Glendale",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "uynwF`vxaMtH`@`Hm@fTuA|C_AvBgCeGaW|G?fBt@pO{Lw@hQdH]f@jOdCN_@jKqKs@KjFw@xHUnIf@jHnAhG|AvCtCvB`LnCdBp@vBhDh@rBnQkLh@xDtSeGl@`FvArIjBxHxGbSsN|Ma@rB@fBVvCUfBoDrKnBdSrB~QeInc@rCbk@uVwNoEgCyXsWmT{QgIcCyMmCxKu_@gCu}@uC{GmJaVmGk]uGoPsFeN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "414",
+        "name": "Rego Park",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "k~qwFb`{aM}LQcMqj@mQe|@`@{FHgAj@jEd@[dCxLlPeHWgApByA_BkItBeAbBxIdCmAcBuIfCcAfBtIjKcFlCJ~B`Kb`@fTX|Fn]yBbFWvGIhHq@tGk@Fz@`BSdA`DPfHaHl@uHa@eCQgDbBwMbOcMnLs]n[_DpAyOrF}HdB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "415",
+        "name": "Forest Hills",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "kmpwF|mxaMY}FcWgN_H_E_CaKmCKkKbFgBuIgCbAbBtIeClAcByIuBdA~AjIqBxAVfAmPdHeCyLe@Zk@kEIfAoBgHcOqg@b[}B`MwEj^}\\dTkI|P{I~I}G~MkNnCcGvB_M`DkLpFp^dO`^^[vC|BXfAJjGbBfOlGpRzAjITlEIzD_@lEDlCnI|a@wBjDcExCaNhBoK|@iHp@wGHcFVo]xB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "416",
+        "name": "Flushing",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "mnxwF`wtaMeRi@eLqGcLwMuOeZwXwRAAd@mBKcRWkO~AmXlBsPrGkhBjB{C~BqFbBcCvV_U|GoFbSaNdD{FrGkIfGkA`RyHta@p_@}End@de@PzA~Ur@d_@lA?bGnFtFs@lL?zQ|@g@nb@YlS{@zJsSh}@iFb_Al@vJD~BaNqNwUaGqVpNsObHw^PqKhD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "417",
+        "name": "Whitestone",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ga_xF~vraM~OxGlWvIlEcDfCYfOuAdLuAda@yC`F_Jd@mBKcRWkOnBsU|AmSrGkhBqEzCeXdT}RrK}UrLlAa_@l@cSiBsRkJiYaPvLkKjB{LCsQ`qAoSrxApTrW|CrLlBxL",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "418",
+        "name": "College Point",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "}n_xFbjtaMlImaAfBhN~OxGjWtIzR}EjUyCb_@iCbF}IbNpG~I~IxMfXrMzOdLpGnCrRMj[yXdTgfAnBDjZ_XzZyMXgO}[a]JkYynB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "419",
+        "name": "Fresh Meadows",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "}{qwFrkiaM?BqWxJNl@lIl^fFr^gEjA{AH}CyA_C\\sPsAoFQwKU}CmWoTirA`WoIrOyDrFgBnKmF`JiGzOtdA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "420",
+        "name": "Kew Gardens Hills",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ogowFtcraMsFvBaEc@wLaAqDx@_JzEaIvGkJzOiFbEwn@rV_Tt@iUxD{GFo@kJfFm_ArSi}@z@{JPmSzy@zBhFh@nFsAvMUj[aIxXwFa@zOJpGFje@m@rGaBtMRpFpDhR",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "421",
+        "name": "Jamaica Hills",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "scnwFlclaMVrAZ`BJd@Hb@Jj@Hh@Jb@Hd@Lp@Ln@Lp@Ll@ZzADXFXNp@H`@TnAHd@Hd@ThALn@Ll@Jn@Hd@H^P`Al@xCyCdBeApBu@tB[x@g@x@gAt@aCrAqCjBcBZkCViC\\oBr@{BtAwBp@_Ed@qDp@kB^wAZoAZgAVuAVgATmAXaANqCyLsA}FsAsFkDgNoE}QsC}LeDuNcDwMt@Yd@Qd@Qd@Sd@U`Bw@v@i@t@i@h@ObAMrAIx@Az@Av@Ax@Ax@Ap@@p@?p@Bj@Db@Br@Nl@Zl@RrBl@f@fAl@~@T\\j@`@VNl@Zp@RXB^Bx@DpBHb@F~@`@n@Zl@ZzAx@hBfAhAPz@FN?NANCn@Sl@W|Ao@r@KPCRCd@CjAEH?J?R@h@@T?J?H?DAFCBEFKJXHXPj@Lb@JZNb@H\\L\\HZX`ADNLl@P|@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "422",
+        "name": "Woodhaven",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "m}hwFn_zaMuKt@cRpDoPzBuSdGi@yDaNciA}AwVScFiCcP??fqAog@??vXqKjBlPp@lE|EzoBHrDcShDxAxJsGdA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "423",
+        "name": "Richmond Hill",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "y`kwFnioaM`h@~nChMzo@gqAng@eFmXwEcK_CkIgHgJmAsBi@gAtSkn@aEc`@kAeHuCkUy@iLBmLpYeLjXiO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "424",
+        "name": "Kew Gardens",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "gflwFnbsaMqSdn@sCoGkAKyH|D_C@aKoGeAyAwEqLcJdKcOw]uF{^vFuEnJoGlMwPhM_Iha@yPHzLfAtNzApMtB|L~@vJzB|T",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "425",
+        "name": "Howard Beach",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "sjcwFxvxaMaYxSsDsMIaSoUpDyAiPsO|ByVxDmGhAXtEr@rI}RxCht@moDrp@gWf{@yOmBhHqF~MuDtD`KaAnIg[tM||@bEzp@u@~q@o_Alm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "426",
+        "name": "Ozone Park",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "sfgwFr_yaMmCf@sBXwBZcBTkC^cBXsBVyAVK{EMoDWsGIcDKgGMcFYwG?}BOeBEaDGeBM}GOuCIqEIwDGuCMqBEmCEyACyDs@mETwDl@kFVwCPwBbHkClI{C~UuJzRaI|I}CjLwEsD~R{E~ViDdRwF`XyKdi@uFfXmE~S",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "427",
+        "name": "South Ozone Park",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "oldwFr}raMi_@zM}b@hPew@|ZFs@LcBTsDXkDLcBPoAVqAP}@V_BVsAd@oCRqA^{B^sCDa@Lu@VcBNmANuALqAL}@J{@TcBFm@Fm@XgDNgBR_CVwCQu@Ko@Q}@Q{@a@{BUiAUiA]cBe@{BWwAUiAOaA[_BQ_ASaAUmAUmAUqAQ{@WoAUmAYaBMu@Qu@]eBa@wBOw@Ii@ScASeA[cBSgAQw@Y{AOw@Ms@_@kB_@uBSkAScAOw@SgAUgAUqAWuASgAScAScAQ}@ScAWwAG_@I]Ou@zFyBnBy@dEcAxBw@tEsB|HqChGcC`DkAhAe@|Bu@vFg@tFMhNC`]fEmCt`@vHdVhBbKb@|K|Kpu@v@ve@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "428",
+        "name": "Bayside",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "wqywFpheaM}HpFyI_K_LhKwo@hq@a\\b\\mAkMqJuDaPtDkd@l\\pIxh@|StKxKvj@fb@we@h\\oGbVy@rJQxMuA`QmI|H}Cz^mRhPeCde@{J`PoGdKyBh]mHuHeTyGsa@gMke@gIum@}AwH_DgHiHkMaOlLgNtNcEtJsCfLeCvM_MpJcIpHwKrB_I~C",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "429",
+        "name": "Douglaston",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ugywFvgdaMaQNgIdEiCyKkBqC{@MmCvAiBTuGnBmAxAs@Hi@r@g@Fg@{@uA@wD}AmAOw@c@wCIkFgDcBAgCqCaAq@m@oAc@yAYoAGyAn@iAhHiIbDuGW{@dIeOvBeA~JgFtFXvFsDfD}ErLeLRoQxAeM|FaKf@uH`EmE~IeXvH}DhG~TxL`VbFdTrNxYbEnIX`Gr@vJ{AdLuEhGeHbHuEjLmCjO}E|LsOrO{OdEgPtEf^uj@_KdI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "430",
+        "name": "Little Neck",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "sqwwF|w`aMzH~Q|@tAbA~OrFwDbFoCnDgB`DwBbIqJtDeBbDcDvI}LbE{@fCkDRiDm@sGoCiGiTaKoEuAoD_CcH{KgCiGiDqCwSqC}HF}HlAqUlE`FdQbFbL|FtLl@lAd@rDnCbL|HrN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "431",
+        "name": "Auburndale",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "{uswFb~maM{Q}@mL?uFr@cGoFmA?s@e_@{A_Vee@Q|Eod@ua@q_@aRxHgGjAsGjIeDzFa\\pUgX~VaFcVkKgm@rJQxMuA`QmI|H}Cz^mRxSgDvPqD|OgD`PoGdKyBh]mHtB~SnThrA|ClWnDr_@c@ng@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "432",
+        "name": "Jamaica",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "g_mwF|kpaMSmHiUcoAmMiq@sCoJyFsTMwANeBb@yBDa@AkAQoAqE{Yn_@_OvLcD?Ti@dIQfHQ|K`BtL~AdKzBlLlAjItHoFfA_DvEoC~E_H~GoHxAcF`CeGnGkIxHaGzGiFfGoEtOfh@pF~ZzGzUdT|hAmdAnc@kXhOqYdLoI|C",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "433",
+        "name": "South Jamaica",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "isewFjkmaMuNgB{OAqDJkCPwCf@cElAwDvAwEdBee@jQeT}hA{G{UqF_[uOgh@fKiHfGqE~HiLtQ}\\`CrAtHbLhBfFzAbF|E`SzFxKvFpIdBdHbLnPjNlG|`@rG\\pKLzHJzHFlOExKKrHK`J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "434",
+        "name": "Hollis",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "yhmwFh_iaMqL`Da`@pN_Ek\\sFeZgNcj@}GoNeKk\\zUkOnUuPng@mPvFfe@e@bGs@~DClDa@rMo@pEiAlC\\vBbBlLdAQhCxX|ArR}AxPFbK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "435",
+        "name": "St. Albans",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "_oiwFvzgaMkFvIcEpGsEjD}CfCeDnB}B|AcEnDmAd@qErDqFbEqDpCmCbEgB|BaCdGyAbFuDxDiBtBwCxDgAdBwEnCgA~C{HjFgAgIyBmLaBeKaBwLRyMNkFh@cIE{Jf@oFf@uHg@sHaAkKg@mIaAwMiAV_C}NtAcEv@oLLkKzAqJmAqLgBgPmAgIlE{AxG}BvBs@vDsAhCcAvEeBvCiAvEkApEkBxFkBbDsAdFcBpEkAfGkBpD`CjGdE~EpCrGtDhBrFtBxHtBtGnCzIzBvGtCzIrCtGnD|JrGxAzC|@pE|@iCjH}@|BmDtJeDxGoBbEuCrI{CnGwHtM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "436",
+        "name": "Laurelton",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "koewF`{daMmFaCsD{A_FaA}Ew@eH^_KeAoKu@qEcA}EyAiMiIgFmDuBgA}B_A{IqCqIwDiOoKsEkCuEaCwPyK|DiB~GwEnA_AbJ{FpCaBPc@Ni@hA}E`AeFTs@vByK~CaOvBwKhCwLd@qCxByKvGjD|@f@nHpEzGpElP|OlEtDjBhBnBvA~@z@fBnAtAr@~GlEbAj@fF~CnEtCnBbArFxE`AbAbAdBr@`Bt@`CPdA]`JUhWDjULf[@vIFhC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "437",
+        "name": "Cambria Heights",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "mekwF`mbaMsBl@_Bj@{CjAmDjAgAb@uBp@kA`@uAf@{@R_Bl@sBv@_Bd@_Bn@c@kCKs@Mq@YcBc@mCMo@Im@WyAO{@Ii@SoAMu@Mq@W{AEWG[Km@W{AIg@Ga@O}@Ie@I_@E_@?a@?[@u@DWB{@BgAHoG@eA@eA@u@@u@@gBDyBBqC@w@?g@BoA@u@?s@B_CDcC?mA@kA@aA@}@@u@@m@@{A@a@?_@@_A@oA@mAFoF@gBfACvAApACfBCjAA`B?zACdBEl@C~AAjAAfBErAE`B?nACrBCrCEnDGtDG|CIrCIpDI~CMvAEpBCpBGlDIvCIfDKvCCpDClBZ`B\\e@`Ci@pCi@hCi@zCw@xDeAxEaA|Ew@~Dc@pBa@nBYlAYtAw@lDi@tCkAvFw@bEg@zB[xAs@jCcBjAaAn@gAp@o@\\wBtAoBjAc@^e@ZkAx@qBtAs@b@o@`@UJo@Zq@Zw@`@{@^aBf@yAn@mA`@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "438",
+        "name": "Queens Village",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "m}owF`v~`MpK~IlUpAtWyFvMWnNi@vILEzCCzCC|CClAAnAGlGCfCChCKbJCpDGpDKbMG~EGlBEXAfA?P?R@JBXLj@\\vBJj@Hh@TnAd@|CNp@Hd@Hj@Jh@Jp@Lx@TpAXbBNx@Lz@TnAJn@Jn@Jl@Jl@VdBqb@xNyg@lPgRbNyRpM_EjCsGtFgDjGgCtGyCfHaIxGLyP|AyRo@mMiAgJ}C}K{CyImFyHmDgG{FiHmEmFvBYl@OFCROJIFKT]HMNU^o@`@o@hHog@bHmg@n@_En@cCl@cCjAkGl@_H`@aFz@iDd@wAz@kCzJnAjEt@bE|@lFtArFtC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "439",
+        "name": "Glen Oaks",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "cltwFt__aMnDgHb@w@oKmd@qB_IaCaG_DsGeCmGmTqf@uEuI{D_JaDuKiCqFc@h@_BpCwAhCgFtCcMbAeETeEiAo@OaA]j@dEf@fKO~JwApWH~H@lDVlDVlC^hC|@rDrAjDvB`DtBdCdA|@dAp@bDrAxE`ChE~ChI|PzDbE~AbBnBhAhMfDtW`SnEuJdDaK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "440",
+        "name": "Far Rockaway",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "y_yvFzpdaMXrDe@xUj@rAlAbK`B~BnMfXdBNy@jHStHfAhDx@vErTPdVeAgBc|@vEyv@uAgMqJuEeFsOiGuPRsXNaQaCoOcVrFaIr@uHpCuEFyEhAoB`BmYhY_HvfB|WlHbHcZbBqGrMz@`AxC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "441",
+        "name": "Broad Channel",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "ym`wFprsaMxLqVyLyg@hv@aOtc@gbE`tA{tAnz@dmCpTlq@j^xeAjk@piAiQbu@{Y`l@cq@qxAuQhYwQ|EiOse@Kgo@sTpNyApGiDrVlAbHtDzKeIxRwlAeX_U_FaPhCyb@zD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "442",
+        "name": "Floral Park",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "exswF`vy`M~EnKrJxWbJdXgBj@fGtT|FsAfM_AtDa@~JSs@yK_AsKqD}WcIsp@qZdIwZpI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "443",
+        "name": "Bellerose",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "_nqwFzj_aMwBvJiGxb@gJ`q@mCfEy@VoD~AgCwDiD{D{DyGgMwPsBuWwHa@OvA_OaRoEsGgDiDfKqWrE_J}Gw]wHoVvo@kU`AvH|NeE~JiBrJi@fOw@xCz[zF`\\@vA{BlEgBpFu@pC}@xK_@vCm@vC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "444",
+        "name": "Rosedale",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "_}bwFtk~`MjHxU`DpU`BvUhPnj@qs@nBQxGaCnRwh@ib@qIoMqCcCwAdKgOgQkIuEaVsNuQmQcj@{^fA}DxX{@p_@lItg@~Bd{AmP",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "445",
+        "name": "Springfield Gardens",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "oeewF`bkaMkD{BoHaD}`@sGkNmGaLqPeB_HsCeEeBoCuDmHeAkBkEyQ}C}Jy@uBuHcLaCoAxGeOjOqa@mSuEsQsh@aBkEuD}KuAmEmBaIrShNbVpIfRpMtC~AnInBtFtAxFLnIv@tIQfGtAtDb@pPrHnS`K`M`FvR}LlRhN{KtVaMtXaGjNcEfJgGnUsFdQaCfLqB~LwBz^",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "446",
+        "name": "Briarwood",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "e_mwF~kpaMiWrKgM~HqMvPmJlGwFvEqDgRSoFd@uEz@aGl@qG?{]SaOReINsE`D_@zAYt@]xBwAtBq@TG~Dc@~B]VIr@]hDwBdAm@|@q@`@m@Ta@dA{Cb@y@l@y@VWPO`Bw@vIpd@|Hjb@`@lCPvAJzCHrC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "447",
+        "name": "Jamaica Estates",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ginwFptkaMMVyC?{ADq@Hs@LwDxAk@FwAOq@KiBgAyDqBuAg@wF[uB}@k@c@aA{Ag@eAaDaAm@]s@OeFOwFFi@@aEf@u@h@{Ap@cGnC{Sq`A{OydAla@wV`IyGxCeHfCwGfDkGrGuFvKj]nI`R`Lpe@rFdZpEx\\pEzYPnA@jAE`@c@xBOdBLvAxFrT",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "448",
+        "name": "Arverne",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "giwvF~jmaMyKtLu@FsKbHcHoQoBuW_@yNgBmTsJuPqIcOzBkDtDlEpHrDtBgJpt@cA|RoBbQz|Ago@nF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "449",
+        "name": "New Hyde Park",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "exswF`vy`Mw@uA~A`L|@pHlBjN~Dl[dE`[|FiB~F{AgGwTfBk@wU_q@_FoK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "450",
+        "name": "South Richmond Hill",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "y`kwFnioaMvh@cSrOkH`CbOsBkOrImEd\\jeBrEjU_Ev`@{DlWs@jDsBzSsBbXkByPwXpKkv@{_E",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "451",
+        "name": "Oakland Gardens",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ikvwFjtbaMpAiFdJkDlPuF`CrLvSwHfH`x@`NkNqHgu@pPiAcHm]vH`@rBtWfMxPhFtIlHpFxHvKnC~BjDdGjCvDhCjFxCzIvBpHjAfJn@nM}AxR]~O{WpQeWhOoGjDsFfBsOxDaQpF_E|AuB_TuHeTyGsa@gMke@gIum@}AwH_DgH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "452",
+        "name": "Rockaway Park",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "uqtvFzlraMk`@~PjHt_@GhL`A|EtCr@JhEHlCjd@aTqSg}@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "453",
+        "name": "Hillcrest",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "qkpwFf}maMsZwnAg`@~K_BB}CuA}B\\gNmAkTi@nC|P~@~Pm@vQYnQfs@lAfLPdL}@lYcA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "454",
+        "name": "Pomonok",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "qbpwFrynaMkEz@}Bh@kLdDiCj@kCNeCB{D?YDuBr@mAT}@Hc@AyCa@o@AiGOwOg@w_@}@ZeTJsMnBXxf@p@|INlKHrf@_C|DtQ`BrH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "455",
+        "name": "Utopia",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "agqwFhmkaMiG|AoQzGuFu_@_J_`@rWyJlBlIbGvXnEjSxAbH",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "456",
+        "name": "East Flushing",
+        "level": 3,
+        "parent_id": 416,
+        "map_coordinates": {
+        "encoded_boundary": "ewvwF~mqaMsO`VyJkb@dZym@RsS^oQ^_QF}PsYqYyMsL_IoP{B}EaCmE{@uPrGkItCGvUgJpa@z^}End@de@PzA~Ur@d_@qIuB_JzDs@bWpGlLrOjZwo@ps@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "457",
+        "name": "Murray Hill (Queens)",
+        "level": 3,
+        "parent_id": 416,
+        "map_coordinates": {
+        "encoded_boundary": "mazwFvgnaM^qSiHwQeIgP~BqFr@cAfX_WpI|ES_IbGh@dVtAfAr`@bGldAxLdkAiF|AeHpC{QbHsBz@mYrDaEfCkFyy@_AcL`@{O~@o\\",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "459",
+        "name": "Clearview",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "uw{wFplmaMqa@~VqGtMhB}i@l@cSiBsRkJoYbF}IlL}MnP_GxLgAbVy@????????zCdQ{CeQjKfm@`D~I~@bKs@bA_CpF}HvHyXrR",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "460",
+        "name": "Malba",
+        "level": 3,
+        "parent_id": 417,
+        "map_coordinates": {
+        "encoded_boundary": "gr|wFpzqaMpK|A~IdEhSxJcF|Iea@xCeLtAgN`CuJpCwRcHuTmIgBiNb\\oRvBDvKsA~JtBrWbD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "461",
+        "name": "Beechhurst",
+        "level": 3,
+        "parent_id": 417,
+        "map_coordinates": {
+        "encoded_boundary": "_x~wFfwkaMjMFxJoB`P}L`JvXrBjSwC`~@{fA}HtQaqA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "462",
+        "name": "Bayswater",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "mn{vFxrfaM~@oF`AkDjHPx@kHfBaGgB_CpE{KzZrHdKub@tMz@zAnIg@xUzBvMnPd\\m@tHk@hGuC`@}g@kD}Fa@qEaDgCeAiF|LwElEgCz@uCyCkHg\\",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "463",
+        "name": "Belle Harbor",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "gdtvF~_yaMpl@oXy^qpA{k@vXJvKlAhLjAnDdKnUvLfZ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "464",
+        "name": "Breezy Point",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "chpvF`ufbMvX_LkMsl@iEfB_@es@eBuYcWmAc[vMfQ|e@|A|Gh@dLOtEFjJ|BxJxNzB`CnIhDrO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "465",
+        "name": "Neponsit",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "uvrvFjfxaMsl@rXxJ~PxCuAdElO`Bo@^hAr`@wQ{Mmf@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "466",
+        "name": "Edgemere",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "yqwvFlmjaMff@iDqMwoAe^jAnEtrA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "467",
+        "name": "Hamilton Beach",
+        "level": 3,
+        "parent_id": 425,
+        "map_coordinates": {
+        "encoded_boundary": "otcwFdsraMxViEpXaFmBjHqGrOuC`CsQpCsAqA{@eA{@g@q@KYGu@a@]y@_AcE[qADaB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "468",
+        "name": "Ramblersville",
+        "level": 3,
+        "parent_id": 425,
+        "map_coordinates": {
+        "encoded_boundary": "}~cwFzksaMgByRrHyB`C_@C`Br@jDf@fB\\x@t@b@hAPz@h@nCvChIsApBYsCl@gAP{GtAgOrCyCp@q@aC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "469",
+        "name": "Rockwood Park",
+        "level": 3,
+        "parent_id": 425,
+        "map_coordinates": {
+        "encoded_boundary": "sjcwFvvxaMqV_]}PuVwHeQkHuSeH}Sj_@iG~l@oJnr@}L`Ezp@s@|q@o_Alm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "470",
+        "name": "Lindenwood",
+        "level": 3,
+        "parent_id": 425,
+        "map_coordinates": {
+        "encoded_boundary": "cpcwFzoxaMnD|EaCrA_UdQsDqMIcSuUxDqAqPuO|BwVxDoGhAXtEt@rIaJvA}G`Atb@itBfQwCrDjLzKf[vHdQ~b@vm@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "471",
+        "name": "Old Howard Beach",
+        "level": 3,
+        "parent_id": 425,
+        "map_coordinates": {
+        "encoded_boundary": "_qewF|nsaMxm@{UfBzRp@`CbRwDlUkE`KaAnIg[tM||@wCjA{[xE_NxBi_AxNcb@vHrPcz@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "473",
+        "name": "Hammels",
+        "level": 3,
+        "parent_id": 477,
+        "map_coordinates": {
+        "encoded_boundary": "aluvFpxoaM~B`KiOpHuO`KqHwIqCwKwa@ms@x@yH`CyLxDaE~CqDxW}BnVqBxHxu@l@lGBpNn@dE",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "474",
+        "name": "Ditmars-Steinway",
+        "level": 3,
+        "parent_id": 401,
+        "map_coordinates": {
+        "encoded_boundary": "{o{wFlpebMoy@mcAwAeBgC{DgAcDW]GAQLEAi@m@?UPSBI[iAIEs@DC?_BoCQc@_@e@CyApB}QFMJo@pAiMT{AJcA@k@N{ALuBDITgBPmBp@{BE??EfAcAr@_AxDsG~BoDHWBQ@c@FMpBkAz@cAzBqALJ|LzPR`@DTLrL@RFNT\\?BfAhBpBpBnBdAnBJNi@NCJMDQ?QOQMI{@MgCyAyAwBa@iAUuIG`@E@ACNaA@[?Oy@uB_BcDAO@MASy@aB@_@bDuF_AoEdFmJvD_EdCfFtDeHlHbGnDqC_FcHzIeBtGl@bEfA\\eEnf@oFzBdU}@hUeFpi@gNd{AsU~_@iZdT",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "477",
+        "name": "Rockaway All",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "_wovF|njbMezEw|T}Y`l@aq@qxAwQfYwQ~EgOse@Mio@qTpN{ArGiDpVnAbHtDzKeIzRwbBe_@cPfCyb@|DzLsV{Lwg@jv@cOrc@gbEbtAytAuBcSuCyCkHg\\`AoF`AkDhHNz@kHfBaGgB_CnE{K|AF~GufB|\\k\\xEkAtEGtHqC`Is@bVsF`CpOc@rj@nNja@rJtErAdMcFrt@tBj~@d_@dkDxpGj~Z{nA~j@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "478",
+        "name": "Hunters Point",
+        "level": 3,
+        "parent_id": 402,
+        "map_coordinates": {
+        "encoded_boundary": "cluwFrogbMoNhOod@nrArh@~f@ba@~UlWxIhHs@fBsP}GkKgB}Lr@mSiFaBsKq]aO}b@eLae@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "479",
+        "name": "Brookville",
+        "level": 2,
+        "parent_id": 400,
+        "map_coordinates": {
+        "encoded_boundary": "ymewFvkaaMp@oErCbCpIlMrCpCh\\zVvFzErA{Ll@qDFmAHmEvQc@_Bjs@cAd_AmRkNwR|LoQuHqSaK]u`Ah@{d@d@wF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "480",
+        "name": "Bay Terrace (Queens)",
+        "level": 3,
+        "parent_id": 428,
+        "map_coordinates": {
+        "encoded_boundary": "gd|wFtbgaM{\\b^s@kOqJsDaPrDg^|W{A|StEnUpTpNxKxj@|KiIjHcN|IoJnPaGxLgAzQc@fCUkF}UeDcQeByJqCoByMuXRkJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "500",
+        "name": "Staten Island",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "gbrvFzq}cMmkAgYe{@eJa]mMu\\qYsNKed@x\\kkA}Jge@|Eui@sJqi@gi@{k@ov@iDsg@xWecE~@ok@qH_o@Umk@yWufBw@ecByVkk@~Bst@fSyg@ff@iZ`k@s@|a@cHbOzR~Z{a@xd@iY`h@gg@`ZaSdb@_Bda@lPlWhl@pbC`iCtcBrfBzpAngCrdAdiA|Tzr@yRlu@zm@v|Arh@xuBxr@~~@qB`oAjj@rq@pa@hbC`KhmBqa@tk@{`AiAwm@sVkb@{v@s_Cz\\ql@oSyt@}|ApEqtAaYqW{b@_O",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "501",
+        "name": "North Shore",
+        "level": 2,
+        "parent_id": 500,
+        "map_coordinates": {
+        "encoded_boundary": "ibawFxjmcMd@sGgGow@sRk_AtG}@JsFo@mgAqFu^qJgYl@}JpAqGYkLtAeKjR}m@pe@uKrMgApbA~MIuFlUqEz_@_u@bKiI~i@}Wv@jK~CxKvRji@\\Qp@u@dAuBfAoCa@vIOlH}Lrd@w@|Ew@rHSjDGbGOnLEhHWtE?t@i@rEcCtL{JlZOS}CzIiBxIk@jKL`JaF|EkClBiAeFWOqB]_EcC_BDcAOwXbCeCrGmCbDmBrJbO|U~E|JeLvVwEbHwBxBbC|BwCtJ}FfIaCzHyDlA}FrD{AcDsApByApAkDdC|@xDxDQ}CNJ|AF|@PjCNvB??TnDh@pH??j@~HXzD??TdD?@LbDDxA?@EdE??EhExBpG~ArC??j@bA??l@hA?@jBnE@@?@?@?@HnE?@?@cAxQ??ABrM|@eN_AmA`PLvOi@bLjKnAtHtIlIvOdKrLnHvDxEbB_Tdd@qGnPkExPiCx\\cDpIoGrI_JtJ{Zbo@}b@baAad@{c@kX_b@{@cm@Lme@xKaf@c@iZvAuTdMejAkHmgB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "502",
+        "name": "South Shore",
+        "level": 2,
+        "parent_id": 500,
+        "map_coordinates": {
+        "encoded_boundary": "gjevF~cfdMac@`H_OaDkEqIkLQiSmNiDuNcHqPiIaMgKsIqSvGw{@lGkj@`Uc`@gH{NcZoSs\\{_@oiAbEox@wFi`@zGmGmBaNi@wM|@wHmCmJeEeJeH_J{`@cb@UyPoBwL}EgTpF}VeAmHvN}f@tDon@qB}V|DuLoXu_@gBuE|x@sz@jJMpL}A@OjCaEv@WfAkAbTy\\vExFxNoNbQqJn~@zy@vl@d{AfPtd@|Llf@vUr_AvAvMhh@xr@zDva@aNpj@na@df@h[nm@`Cz|@bApMpGh^`MhPjB~\\fKr^uQ|]sVtS",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "503",
+        "name": "East Shore",
+        "level": 2,
+        "parent_id": 500,
+        "map_coordinates": {
+        "encoded_boundary": "eqrvFd{hcMf_@uaAbE}IlDuBn_@fv@`b@~Ibe@`u@a\\|h@qIxFkCaE}]zr@pMfOpSxZpHvNcTx\\gAjAw@VkC`EANqL|AkJLyx@tz@oAj@kLgJuCcDmBqNiCsFp@qJW_E_OjBwMk@iOok@uLyNyJoU^kB|@qBwPyg@jViYhDiFdGyDhHc@~@uCKaA[gEe@}@mA{AgEeE{@_Az@~@gB\\aCUiBqAuHuEsFsCyGwBiFRkHzGo\\yDdBpb@gCdv@i`@qScCcAuFeKYU_@EgD?_k@pBeD`@qFi[k@aLLaFVcCnBiMj@_HFwCe@g[aA}e@MaJj@kKhByI|C{INRzJmZbCuLh@sE?u@VuEDiHNoLFcGRkDv@sHv@}EzA_G`Js\\NmH`@wIgAnCeAtBq@t@]PwRki@_DyKw@kK~XgXvWHdVfBx_@n_@~s@vv@|e@zk@eA`CdAaCpTnc@pTpS|\\h^}GnW_LpTa_@hz@l@`AtDxCdDqGnHCr@fI`ErG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "504",
+        "name": "West Shore",
+        "level": 2,
+        "parent_id": 500,
+        "map_coordinates": {
+        "encoded_boundary": "evtvF~u|cMi`A{Ksg@as@y{@`KkPDuOcMcLoB{FfKiAfSiRj@kb@tIwj@_K}[i\\|b@caAzZco@~IuJnGsIbDqIhCy\\tIdFf`A|r@~F}o@bDr@vB[lDqCtF|Ot@tA|HjJtN~T|BqFhSbGhNlPdSfKfOjCfTw@|RePzKdBvCbFsAp`@hFtGfBvOoNn\\g@bYe@hThBrJsA`J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "505",
+        "name": "Mid-Island",
+        "level": 2,
+        "parent_id": 500,
+        "map_coordinates": {
+        "encoded_boundary": "qisvFpjucMi]aAqs@{EkPwCqLeLuD_GyBcDaAo@gAUi@@_@b@U|Bq@zK}@fFoCfHqZ|q@}BpFuN_U}HkJu@uAuF}OmDpCwBZcDs@_G|o@g`A}r@uIeFjEyPpGoP~Sed@yEcBoHwDeKsLmIwOuHuIkKoAh@cLMwOlAaPdN~@sM}@@C??bAyQ?A?AIoE?A?A?AAAkBoE?Am@iA??k@cA??_BsCyBqGDiE??DeE?AEyAMcD?AUeD??Y{Dk@_I??i@qHUoD??OwBQkCG}@K}A|COlFiB`HsAtFeCfEeD~FkAvKeFuA}UxU{ApG{BsKg_@{CmNkLScO}UlBsJlCcDdCsGvXcCbAN~AE~DbCpB\\VNhAdFjCmB`F}E`A|e@d@f[GvCk@~GoBhMWbCM`Fj@`LpFh[dDa@~j@qBfD?^DXTtFdKbCbAj`@rSdCgv@`TxQrTzVvPxg@}@pB_@jBe@~D_AfB}AbA}AEwBa@sA\\eAxA{NjYQz@FpDkAtF|Ch@jBdWfKbHfWx\\jJdJdz@fhBqEjA{BJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "507",
+        "name": "Annadale",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "_blvFdtwcMc_@jNuF~EgS}OkDzIqCvGkIxSoBkCuCaCyCsB_JmGkDoCkDoCeEkEgEiEeAgA{DsDaC{BuAqAs@WfD_Is@uKdEo@dBSbBOrIu@`QsBzAOzA[hDoAlJ|@hB?hBPrErBxBnArBxAdAsB|@}BpDcKnA_EdFeO`@iAd@_AlAYt@Il@Pf@AvKyGhEyC`OoJ~N}J~FsDnNoJ~FiD|E}DfPpd@zLlf@sI|BuItEcAv@_A|@aFxDuAnAeB|@w@XcE|BsFdCuPjD}EbB{ErByFrCG`AeAjId@rBh@jB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "508",
+        "name": "Arden Heights",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "msovFhuycMuI~IuI|IsIxIwAvAIHGHWXe@n@cD`EeH{HcEoEoEsE_KcKUyPqBwL}EiTpF{V|Ee@~Es@~Eq@|Ee@~LsAhF_@v@VfBbBpDjDvAtAj@h@j@j@jDnDxAzAtAvAz@|@h@b@jBvAtErDhFpD`DzB_@z@{FjMgDnDqBvBiAlA}@~@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "509",
+        "name": "Arlington",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "yq~vFzpxcMsJuLgKmLcKwDmJwEy\\eC}UaGAad@hLog@vq@hAdXZvZ^d@LbYpEvA^nBx@pEpCq@nIe@xIq@lGq@nBqBbFiGnIwClCmEjFaEdIcJzQwIbR",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "510",
+        "name": "Arrochar",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "wexvFxtbcMa@|CoAfEw@jDMpFQIeBqBiBmBsBwAsAi@uAg@}Er@sCtAy@HS?s@GkEi@wD]kBSRkDXyC\\yCv@}EzA_GdDyLr@eCp@iCtAiFNmHLyDPcD`@{Bb@{Bn@iBNaAbEp@|@jCLb@v@e@dAq@hCaBRx@R|@Rz@Pz@b@lBj@bC~CbNXnAb@lBz@vDtBdJ}@v@y@r@y@fBYn@c@l@i@Pa@Ei@GYRCb@AVTTr@p@hAfAn@tAVbBFfB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "511",
+        "name": "Bay Terrace",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "{ynvFn}ncMeOvU_DbFeAjAy@VkC`EANkB\\eI~@kJL|@_B_CyDiBmEQmJtGeMeB{E{@kB[s@g@m@mAo@uCs@mAYiAe@mBaCqB{BcDgAmCgBaEqDZaARmAEc@NC|JcAvJ_BtLaDnHoGvH~IzChDnGdKvEdGhDlFrHtN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "512",
+        "name": "Bloomfield",
+        "level": 3,
+        "parent_id": 504,
+        "map_coordinates": {
+        "encoded_boundary": "ybzvFtiycMhBvOZ|It@vZkPDuOcMcLoB{FfKiAfSiRj@kb@tIuh@yGa^o_@pTeg@bRoa@xHaP`I_PlBqDhEgFpCkCnGwI`DkIr@mGh@_Kf@iHzI`FhW`R~SxOfRlNfFtEbHdEhDpCwBhQaFlh@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "514",
+        "name": "Bulls Head",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "yiyvFb`vcMo@y@_AiAu@uAmA}DqAaEuA}CoDpC_AXu@@aDq@lAkMbAeNFwBy@{OpEc@bD?~Dt@jL|CbB@xB[dCi@dFi@|OuAlG}@d@@~ALdB^v@Vt@ZbAn@r@n@t@|@x@nAy@_@gAUi@@ULITU|B[bGUvC}@fFoCfH}Oz]iGnNeE`KiIoMmDkFmEiF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "516",
+        "name": "Castleton Corners",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "}kxvF|smcMoBf@_BRaCRuBHqHj@uOdAgLf@cEb@eLn@qLCWoMkAo[_@eQsFE}B`@}BfAuEdBqCVmCI{Dw@sJt@UFkBsPk@mFjBYtCs@~FuCxCoAg@{Jo@aJhEo@nOk@pG{Bv@xT`CRxAFtGg@bIe@`HmBbCa@bCYnK}@bCKhASbEW`B{@ZpA`@tGCxEJtPjD@^DTP`AdBrD`HbCbAY@UJYb@lApCrAfC^nAFlAs@|M}@dMJjARj@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "517",
+        "name": "Charleston",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "{_jvFj|cdMy{@hGkj@`Uc`@gH{NcZoSs\\ke@kgAvTcGvTaHtL}DhCqA`NiGlHbDnK|ClEbApEp@vEd@vETvEL`DAy@yEGaAO_EO{EUwEIkBGiBM}ElKnA`CXlGWxDQfC_@fBYhB]rGuA~Aa@`@ObC{@pJbj@b@zCbAvMPxKh@pS\\nKdAd`@XrO^pO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "518",
+        "name": "Chelsea (Staten Island)",
+        "level": 3,
+        "parent_id": 504,
+        "map_coordinates": {
+        "encoded_boundary": "c`xvF`uzcMy{@~Je@eRm@eReByOdEuc@d@qEjBmOaDqCiHmEsEaE~F}o@`Dp@v@A`AWhByA`Aw@tA~CfBjFv@rCr@lAdAtAzFzGdFzHlG|JGnXzRj}A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "519",
+        "name": "Clifton",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "ct{vFbhecM_GsDoGqCgFs@gFWgOuBmOkr@u@aPk@uYnUqEvLbMrDfAnC~ChBhE`FjGzOfI_Vd\\zLrQ|LhRaFn@sC~A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "522",
+        "name": "Dongan Hills",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "untvFpticMgJtSz@~@{@_AyEqIcHkRwVc[qUcUeJb@iEeAsEgFuHkPcB}HkAgEcD{FmGyEaBU{EkFsAeCs@sCW_I?mB{@sDe@eDzLnEpGbB~EdBnDbB\\cKnAoKgBcG`AmA{BiItKaG|EvRzE_C|BtCdClCvc@n_@PZ_JtTtDzDjDxEyM~Zzt@diA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "523",
+        "name": "Egbertville",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "whtvFh~lcMsBk@y@UIC[AKAU@e@RSLy@b@y@b@]R[Pw@b@y@j@g@^a@`@c@`@o@n@o@p@_@f@c@x@]l@QRY^o@n@WP[RWXSRWb@sPqg@fVqYhDiFdGyDhHc@~@uCxCvCxBbBhAz@~@~AhB`GdAhDVx@l@j@mA|B_AdBGVK\\Ip@GfDGbCAn@Gp@Gr@m@nCMl@Kt@Ih@mAN]B_AD_@Ba@B",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "524",
+        "name": "Elm Park",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "kn~vFzqocMjB|BpBzB|@d@|BX`Cl@dEnAn@`@d@f@f@hDfA?HtLBzAi@dLu@Sw@EeDm@cE{@KEaASmH_BoHiBs@Qc@nDg@~Eu]uH}FoAaGcAcOcCuB_h@lFS`Gg@nE|@pFxAlFrArR~EQ^`QvDNmBrBeG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "525",
+        "name": "Eltingville",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "_djvFjascM_FdEwF~CiMvIoFdDeFlDsMrI_OtJwMjIu@Fu@O}B`@uAlDmAtDgDtJgD~JyA~Dq@zAq@pAsE{CiFaCaCSaAD_AK}Hq@oEvAyATyBTeLxAmE`@_FwBuCqBe@[e@i@aA_C_@_Ag@_AcBcBuDuD_ByAoA_BWyAK{BsAJsAFbAyIhAuIDw@Ps@PeBFe@@k@SiCOoA]mA_AwCxUsFlJ}BnJ_CbDs@|DVxAVxALvANb@?t@GbIqAxAw@p@Sj@]bBeAxB_@t@Kn@i@`K}J`EaEdE{DdMyLjBiBhBoBrDcIfMkX|MsKxl@d{A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "526",
+        "name": "Emerson Hill",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "utxvFbkgcMwC`Is@lBqB|EsAyDiEJqBj@yCdBKvAmAe@oAa@kBQi@Kw@a@k@UaAGqARsCLaBpA}BlCuBbCi@r@Wl@}A`@UiVS}NM_Jj@kKr@mDt@kD~AqE|@iCNTxByGxAqExAmElAuDf@oBNs@lAsGTaBRmBdAlAZ\\bEdEOb@~BzCxCzDrFu@fDKz@rD?lBD~CP`Dt@pCpAdC|EjFoFdTgBvGgBtGhDrA`C`A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "527",
+        "name": "Fort Wadsworth",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "u}vvFxc_cMkWrYaFhDe@Nc@FwA~@oAfAyAdAeA`AyCzBqByIgGxDkAqDcEq@O`Ao@jBeAtFg@dAMVQt@a@~@e@v@s@v@[LeFgNcFkNkDuJmAgEo@gB_@cBy@qK~XgXvWHdVdBx_@r_@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "528",
+        "name": "Graniteville",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "amzvF||vcMsd@c]}Q{MqGuEyIaFvA{GtBcHpGoPhCoGvCgG|JmSyEcBoHwDcKsLoIwOuHuIkKoAh@cLMwOlAaPhj@xDtTpAdIj@fIb@ZnD`DrW`E|\\bEb]tBrQn@hKx@rOGbCaAvMmBdSeFbj@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "529",
+        "name": "Grant City",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "untvFnticM{t@ciAl@cA~@sBvBmFrFyMzDjFvDdFvDfFtDhFbCdD~B`D~BzC`CtCnC~BlChC|CvCtBvBuAzE{AtEuFjMoClG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "530",
+        "name": "Grasmere",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "c|wvFhgecMiDaBmC_A_Cu@cEgAu@QiBo@iBk@u@[aDuAh@fDkDJsFt@{GyINa@_FcFeAqA?s@VuEDiHTsTxFh@|Fp@~@Hx@IxCwAzEo@`DjA|B|A`BdBjBvBLDKdFMnFFhDl@@t@UnDyBtDmB|B`J_AlAdBdGoAnK]bK",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "531",
+        "name": "Great Kills",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "wqkvFdepcM_NrKmHzOmIvQoCrCqCnCgKxJoKdKoFnFkDbDoDj@kC~Au@RyAz@kAPqBZ_BX}AP]AuD[uAWcEW{Cn@{Cv@eHbBmHfBoQdE{Bl@wAmEeBsH}FEoXu_@gBuEp[q\\dSyS`HkHhJIbI_AtB]AMf@y@dBiCx@W`AeAfT_]vExFxNoNbQqJn~@zy@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "532",
+        "name": "Greenridge",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "arpvFzhwcMyEXkEf@sEf@qEb@qL~AkAP{Eb@eAoHvN}f@vDon@sB}VzDwL`GD`BrHxB|Gf@xAXxAP~AJ~AOtB[pBIfAiAnIaAlIfDSJ|BXxAtAbBdC`ClFlFb@z@bBbEd@h@~DnCzErB}Iv@}C^yB\\r@vKgD`I",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "533",
+        "name": "Grymes Hill",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "mr|vFlogcM_GqIuIyKuPuTgIgFkIyEmCsAiA{A{CmDzIqPGo@gA}AfEqHvCpB|BjA|Df@vHzCpK~@tNrB|F\\vEn@pGlCnGzDjC}AjFu@bHtE|KjGbCpD}CzIiBxIk@lKLbJgF~EcChBkAgFWOmB]aCwAU[k@O}AHcASiFj@oQvAeCrG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "537",
+        "name": "Howland Hook",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "uu_wF|rzcMad@{c@kX_b@{@cm@jQnErCp@zCZrWhBpJtEdKxDbKhLzJxLqLlWkUth@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "538",
+        "name": "Huguenot",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "}mhvFbowcMeYdQwKhH}K`Huh@x\\uIxDuLvEkLtEwErBoSpHwEvAcCz@{GdDcPrGyBl@kInCiJfDsStHkDvBgDtEiCuJeEeJeH_JfFsG`WmWbWaX|GiOhBrAdCpBrBpCdEmKfCsGjCkGlDaJdSzOvF}Eb_@mNm@yB_@aBdAmIFcArGaDbFqBrDsAvIiBbFcArEsBhFsC~@]xAu@fAeAhF}DbAaAhA}@pIqErI}BzUr_A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "540",
+        "name": "Lighthouse Hill",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "wesvFjlpcM_OjBwMk@iOok@uLyNyJoUJs@Rw@Vs@Xo@b@q@j@m@p@g@n@m@j@u@d@y@Zi@`@i@b@i@d@e@xAwAbBiAfDiBpAu@d@STCT@P@|@XxBl@~CQlAOh@Hf@P^Nn@X|@f@j@nBb@vBf@vB~@~Dd@fBnApEx@fE\\hDZfFd@~H`AlPfCra@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "543",
+        "name": "Manor Heights",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "mkuvFrtmcMGLs@bBQr@Mv@QvBSfAWh@g@|@g@b@u@^c@@y@Gu@QaAOW?YHa@ReAxAQ`@}AbDQLeBtDmAlCaCdEcAlBKXE`@AtAHxAmJpd@cBQ_@I_@UoBiAw@g@s@k@gAeAkA}@cD_CoHkF{IyFn@iKy@}DBuAN}Bx@gDlDwLsD}DsBwCiBmD{@kCKkAx@kLXeF\\qGGmA_@oAoA_CqAyCXc@TIXCr@\\xDjBrGfDjCvAxFbDl@\\tBfAbAwZ`AqZ`TzQtTzVjCdIlCdIxGlS",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "544",
+        "name": "Mariners Harbor",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "}x|vF`bucMwA}@qBqAuB}@oAa@mKaBaMmB_@KuU[oW[}o@eAzJu`@tIem@yF{i@tPpCne@bKd@sEf@{DrHlBjIfBbMhCx@Fv@TjKnAvHtIlIvOfD|DzErFhHrD`FfBgK~SgCjFmCtGsGtPuB~GwAxG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "545",
+        "name": "Meiers Corners",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "sexvF|rocMoEsCuPj@oIj@yKXmR|@{Qx@gEe_@ByC_@uQpLJjLs@xDc@pI_@~Ji@|Jw@lDYlBEfD[jASzAa@f@~AdBhDxB|CtD`EqDnL{@hDOjEx@lEo@`K",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "546",
+        "name": "Midland Beach",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "ypsvFtmhcM}CpHoIoIkH_HyCkCqCeDaF{G{DkFoCyDmBiCgRgW}DmD`Ns\\lF{MhPk`@nV{j@pTnc@pTpS|\\h^}GnW}KpT_T|g@gL|T",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "547",
+        "name": "New Brighton",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "}sawFv_icM]uh@Qw]qFw^nEoCcAgCrDgDtDeD~AaAzAw@ZK^Gd@Id@CbCFfKbBdKfBX@j@Ap@Qf@YTdBHh@`@h@rBnAbB~@`BbA\\^Xh@Pt@Nv@Jr@KdDQxDDb@Tb@X`@ZTVZRb@Dv@Ez@Ij@Oj@]rA{@nDEl@Dn@Pf@\\j@nCtAzBpAIbIw@fIkAvKmH~@uCZsAZ`@bGaJfALzBgPpBcOlBHtBeJtEJsF",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "548",
+        "name": "New Dorp",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "worvFxilcMgAo@oA_@o@Ko@Gy@i@QGoByBwBuCs@i@w@e@wCQo@Ai@BqA^gD|@yABs@Ym@k@yAsEuAuEW{@_A}AmCwBu@i@s@s@eBcBIaAGaACw@Gg@Ie@e@}@mA{AqAuAy@{@{@w@}@{@z@mB~@oBdAcCfC{FjGsNvC_HhAkDhBgGz@|@pApAvAvAdCaG^}@z@eBl@`AtDxCdDqGnHCr@fIbEtG[~@vCrBbErCrJdHrJhHzDfCzD~B_JnQmDhHoDdHaGvL_B|CqDbHqAfCa@dAm@hA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "549",
+        "name": "New Springville",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "c_svFxgucMDt@gBHoBJ{BJaBGyEQyEOkBGmBEwEIoAE_@CaIi@mBMmBMyE]uL}@uJq@kBUkCg@uFeA}@QcAs@c@_@c@c@eAgA_FeFuD_GyBcDeAaBu@}@q@q@aAk@y@_@s@Wq@Ou@O_BKe@AWD}BZ{BZcAiUbGs\\b[}l@dJqc@|Ch@f@vHbAlMfKbHb@j@z@hArBjC~ArBzAzBjChDvBjCrBpC|@|@~BjB|@t@|@z@p@hA~AtClCtFpGxNtCbGrChGbHnO~K`VvJ`T",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "550",
+        "name": "Oakwood",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "ugovFzmkcM}]zr@mHnGwL~CyJ`BkKdA_CXOgB}BwDaCeDQg@Y_@kAeBiCeCaCaFiCwEfB_Eh@cAb@kAjJsQrDwHrGgMpBkE|J{RpC|AlC~AX@LAp@_@N?TFl@Zl@Nb@Pl@GtB[R?PDLFTRJJFRf@tCVjAr@hCZt@`@j@z@p@tCrBtChAjAr@^HnAIzGtGpAnBf@v@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "551",
+        "name": "Ocean Breeze",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "yuuvF~kecMQ[yIsHqJkIkMoKeCmC}BuC`@m@`BiAfB}@hCwAr@mAtJiUjJwUdUam@~e@xk@k^vy@wS|g@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "553",
+        "name": "Park Hill",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "smzvFzxecMsCeEcDiBaDiByAy@sBsAgBkAkAs@[e@}EuHmByCoByCkBoCiBqCmBoCyAyBrDcFrDcFvDiF|DqF`KdF`EpB|DtBjK|FrE~CrEzCUlE?x@UnBSbB}@vEa@nBg@hByDrL_BzE_B`F",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "554",
+        "name": "Pleasant Plains",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "arjvFzy~cMsGo^qCgOhJc@l@MzAaAbMkDx@|@d@fAxBc@f@k@hCqAvEn@n@DzBYxD}@pAc@`CgAfZyLbBuAvKqEfEwCna@df@h[nm@cLlGEHBEAFe@f@{FtG{@z@WLoCF{DB}A?_BCeELyFlByZxI{TQaMvIqH~EwA`@oKl@Ql@UxMOb@IvCiFWe@yUeAaNmCmQoAcGeAmG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "556",
+        "name": "Port Richmond",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "ij~vF|clcM|EqI`AhDH|AF|@PhC??NvBTpD??h@pHj@~H??XzDTdDLbDDvAEdEElE?@???@?@@@zBvG?@?@bBrCh@`Aj@hAjBjEFhEcAxQIjAMhB[nD[|D?@?@??q@@g@iDuAiAiI}B{BY}@e@}EyFsBdGOlBaQwDP_@ch@kMmN|@wDo~@d@sGpb@}DfXgFfBs@vUmN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "557",
+        "name": "Princes Bay",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "ckgvF|_|cMiExCuAj@kBv@uElBm@f@w@l@{An@uEjByGnCyGlCaCfAqAb@}D~@uBVq@EkAOkC_@UJuBdAe@j@yBb@e@iAy@{@cMjD}AbAs@J{AHiGVyFc[yAgIgB}JiLkn@gAkEuAcEhHuCtIyDjR{LdSkMlIeFnS_N|UyNvAvMvt@tbAqTj}@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "560",
+        "name": "Richmond Valley",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "ihevFps`dMkEHgCn@UFUF}A\\aATaATeCj@sDz@kAZg@JUFODwCp@sAZeAVsDz@{A^yA^{Ct@oAZmAXoB`@mBd@cATaARcATcARwCn@mATmAPcC`@]FiA\\c@PMRe@x@u@tAIL_@h@m@l@[Rw@\\mCb@mCb@eAPsBXsAPqAPQrCSxCW`KEpBGtBWzFU~EWfFsSvGeBew@y@eVAuAOmFhFVHwCNc@RyMRm@nKo@vAa@bHsEnMcJzTRhZsIhGuBpAErBEbBBpGCnCGXO`AaArFoGb@c@FM`LmGbCz|@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "561",
+        "name": "Richmondtown",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "mnpvFpepcMs@lAey@b{@oAj@kLgJuCcDmBqNiCsFp@qJyCse@kCyc@[gDy@eEsBsHkB}Hc@wBi@oBy@e@_Ae@cA[a@GR}Az@}DPgBPyIHs@Ru@xAqCr@oAt@VvACdCm@rBm@j@El@@vCPf@XdAx@vBrClBxBPFx@f@p@Fn@JnA`@fAl@eB~DhCtE`CdFjCfCbBbCRd@`ChDzBrDNhB~BY@`@QnA[~@bErDlCfB`DhArBvBjBbCjAd@bFlAlAl@d@j@vA`DfB~EwGbMNnJjBfE~B|D",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "562",
+        "name": "Rosebank",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "q{yvF|`dcMmLaI{MoHge@{U{EsGoBkEwCaDkDiA}LwL~_@eu@xL|Yd_@f~@nGjHlFhFvEzAMjJCxDCxD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "563",
+        "name": "Rossville",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "sujvFjm~cM}ChA_Dv@gI`BsFv@_Mf@oOiBTvHX`GPxFJvCH`BDt@ZpBZnBaD@gGQ}CQyD_@o@GcAOkCa@eFmAgF_BmBg@kBu@yEwBwHlDsHnDmQ|FmQpFsSrF|Juz@wFi`@zGmGmBaNi@yM|@wHdDmEjDwBjE_BtPiGfJaDpDmApDaAbAvGdBr@f@jGpEpH~EiBjCfNrBtNvC|f@fHeBDqN_@wMnVeEvPiEuD_S`VsIlVxtA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "565",
+        "name": "Shore Acres",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "gsyvF|bbcMeB|Gg@~CQjAQvAKv@YtCQlDK~FYGsAe@gBk@kFgFqGmHaD_IoSeg@eIaSeDaIaD{HbKiI`j@}Wt@jKb@hBt@vBr@dCh@bBfEtLvDlKxDfKd@lA\\Qp@u@b@w@`@}@Pu@t@yAQbDKbDS~HyBtIm@vBmDdM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "566",
+        "name": "Silver Lake",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "kv|vFnricMsFuTqEuL]Ug@GmBRoBJuC\\_Cf@gALeAXuF|@_HhA}BTkAPmA^AmAQ}DU{D]gEUgFw@aKSkC[yAm@sAYeDjHeq@Zo@nAbBlCnAtMzHdEnC|IpLlP`TxFdIkCfDoBnJbO|U~E|JcLxVaEkG",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "568",
+        "name": "South Beach",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "ejwvFledcM}EuRa@^qJ`FGWsDjBmDxBs@Vo@EEgDNaGVaMx@sDlAaEb@_DGeBWcBq@uAcBcBo@k@F{@VSlAJh@Ob@m@rAwCvBkB}Lci@xC}BfAcA|AcAlAgAtA_Ad@Ib@ObFiDjWsY`t@vv@qMh]kFdNmF|M{BzF_CnF_GdNq@nAkFtCkBlA]h@aF~B",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "569",
+        "name": "Saint George",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "kt_wFjndcMoEtMY`@qAzAw@`Aq@r@i@Zq@Pi@BYC{GkAoB]oDk@sEs@eCIc@BcAP]J{DxBiJnIbAfCoEnCqJgYl@}JpAqGYkLtAeK`M{`@hDaLpe@uKrC[v@tRl@rR@hH{@zDKf@Sd@Ot@?`ADh@b@v@jAfChAdCZl@vBfElB`Fx@rC",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "571",
+        "name": "Stapleton",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "oc}vFvwdcMuK{@eHyCsCcC{@yBWaACoA^_ECu@G_@eAk@}@@aQ}O@iGoGwCuGeCuEl@mFxAm@{D_@iDcA__@pbA~M^hR~@bPxBxKfK`e@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "573",
+        "name": "Sunnyside (Staten Island)",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "gj|vFbwhcMcGyJ}FeJlBqJlCgD`CoGbL}@lE]hEg@bANv@Af@Ej@NTZ|BxAvBZPPhAdFjCmB`F}ET~MRfWZIJfLT~MGvCYhEOpAqBlMWbCM`FBnCFfBPrBLr@sF`@_AF}AE_CUy@mVqKs]{CmNmLS",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "575",
+        "name": "Todt Hill",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "alwvFhxlcMi`@qScCcAuFeKYU_@EgD?_k@pBeD`@qFi[k@aLLaFVcCnBiMj@_HFwCe@g[dAYVm@|JwKfFa@~@FdBv@tC\\|CfAJwAxCeBpBm@hEIp@nBhAGrG}PiHsC|Lse@`BTlGxEbDzFjAfEbB|HtHjPrEfFhEdAdJc@pUbUvVb[bHjRxEpIz@~@gB\\aCUiBqAuHuEsFsCyGwBiFRkHzGo\\yDdBpb@gCdv@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "576",
+        "name": "Tompkinsville",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "er~vFtnecM_@l@mHbq@uKTyBsAo@[aBy@]i@Qi@Em@Fk@`AcEd@oBHk@D{@Ey@Qa@Y[YU[_@Uc@Ec@RsDDuADwAKs@Qw@Ou@]i@Y]iEgCoBkAc@k@Gg@WgBfBqBtAcBLOHQpEuM{@sCkB_Fg@cAgAwBc@{@a@}@kAcCg@gAc@{@Gi@?s@@MBMJe@Pe@TgAVmAXmAAwC?wCk@sRu@oR|Hk@x@z]`@hEp@|DfFuAzEk@`HfCdGrC@jGzErEpG|FpAhA`ABx@h@N\\Br@_@bED`ARjAv@jBtClC{D_@mCsAuCoBmErHt@n@Zf@@t@}IrP~ApA`ApA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "577",
+        "name": "Tottenville",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "gjevF~cfdMac@`H_OaDkEqIkLQiSmNiDuNcHqPiIaMgKsIl@wMVgFLkFLkFJwCD}@\\oFnEk@hAQdAQzGeAt@]^Uj@k@T[PYzAoCPW`@OfA]pAUnASbCa@bCg@bGoA`Ck@d@M|A[rA[rA[fD{@dDy@hDw@vA[v@SfCm@lCo@`Ck@|Cu@nAYf@Mf@MdDs@dDy@jEKbArMpGh^`MhPjB~\\fKr^uQ|]sVtS",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "578",
+        "name": "Travis",
+        "level": 3,
+        "parent_id": 504,
+        "map_coordinates": {
+        "encoded_boundary": "evtvF~u|cMi`A{Ksg@{r@wKe|@aFk`@FiX~BqFfSbGhNlPdSfKfOjCfTw@|RePzKdBvCbFsAp`@hFtGfBvOoNn\\g@bYe@hThBrJsA`J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "580",
+        "name": "West Brighton",
+        "level": 3,
+        "parent_id": 501,
+        "map_coordinates": {
+        "encoded_boundary": "kv|vFnricM~DhGwEbHwBxBbC|BwCtJ}FfIaCzHyDlA}FrD{AcDsApByApAkDbCkFfJq@f@uDzBqChBc@VwHdEgBt@yMbCoIbBqb@|DgGow@sRk_AnG{@jJwEIuBtOqBtOmBM{B`JgAa@cGpA[pCYnAQbFo@bAkJ~@sJFeItKQZfDj@rA\\xARjCt@jKV|E\\rEPfDRbEBnAlA_@fAMrC[vEy@fHkAfAYdAKdCg@rC_@lBIlBUd@F^RrEvLpFtT",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "582",
+        "name": "Westerleigh",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "}k|vFxelcM|Dt@nCJnCUrImDbCa@nF@dCh|@ZjVdEb_@fAjJgeAyGsM}@@C??bAyQ?A?AIoE?A?A?AAAkBoE?Am@iA??k@cA??_BsCyBqGDiE??DeE?AEyAMcD?AUeD??Y{Dk@_I??i@qHUoD??OwBQkCG}@K}A|COlFiB`HsAtFeCfEeDvCdX`KaA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "583",
+        "name": "Willowbrook",
+        "level": 3,
+        "parent_id": 505,
+        "map_coordinates": {
+        "encoded_boundary": "u_xvFlyscMeOnA_Gn@}Bf@_C\\cBCkL}C_Es@aDAsEb@m@kKaAyHuB{QeFmb@{AaM}BeRg@cEYgDeAiJ|H[jJe@pEShFU`GU`GMdFa@pG[dKYtBnAxAdAlDzBfDxBbDzBbD~B~EnDhAfAXVXTbBbA~A~@`@J~AN_AtEa[~l@eGr\\XbGj@fM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "584",
+        "name": "Woodrow",
+        "level": 3,
+        "parent_id": 502,
+        "map_coordinates": {
+        "encoded_boundary": "emkvFrw{cM{UpIbCxMn@hDaInBgFrA_BXcBXeKdBqDl@NpFNfFGpNwCr@oCp@a@gHg@gImAmSw@wF{@_GkCeN_FfBqEoHg@mGcBs@gA{GxAk@|Ao@zD_B|Am@|Aq@vDkBrAo@jAc@pAc@pA_@rAa@rAe@bDmApE_BnEaBdCgAhCeAnCgA`DqAtEkBtAbEfArElAlGbE|TxCtO",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "591",
+        "name": "New Dorp Beach",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "{dpvFbahcMkEzPwHdQuB|E{BtEsFjL_EaC}DiCwJkHwJiHmI}FxIaV`JyUhJyU`E}IlDuBn_@fv@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "592",
+        "name": "Oakwood Beach",
+        "level": 3,
+        "parent_id": 503,
+        "map_coordinates": {
+        "encoded_boundary": "u{mvFdbjcMa\\|h@qIxFeGiJ{GuGe@Bi@D_@IkAs@iAc@kAe@}AiAo@c@UQUQWSa@k@[u@IYSw@Uw@WoAKe@[mBGQOMQQMGQES?i@He@He@Fm@Fc@Qm@Om@[UGO?SL]PM@YAUMc@YkAs@yCaBvI_RdMmYhEwP`b@~Ibe@`u@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "800000",
+        "name": "North Jersey",
+        "level": 0,
+        "parent_id": 0,
+        "map_coordinates": {
+        "encoded_boundary": null,
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "856000",
+        "name": "Cliffside Park",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_mexFfdpbM`EsMvAgCrFdCzIjGlJ~CjCfCjZpOpBzBbSzII~SjIlB~JlJtJ|@`FnGxIlB}HtM}ElNsBc@uDuBqEaC{CwB_CsBiB}BmCiCByAk@m@_E`JeMkKwArCsWuRcRna@a{@kk@p^cz@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "862000",
+        "name": "Edgewater",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_faxFxtrbMaFoGuJ}@_KmJkImBH_TcS{IqB{BkZqOkCgCqJcDwIgGsFeC{O}GgDoD_BaAcF{AaDc@eA@k@Jc@UMc@_Ca@IdAsCDkNsCqM{AcKuGqAe@s@iAgOsMaDtAuHeCfCyJj@_@|@[h@[`@e@Rq@H_Ag@iAtAkBHNFJRPNJfANNLNH^\\NLFBF?HFHFNPPVLLNDZJD@p@h@x@^r@`@h@XLFh@B`@ELCRHhAv@FJE^ANLTFF@JBVBRP\\FVE`@pClCtDuOpaBdXdpC~cBjCbk@yB~F_EBqD[eDkA{@TkFMyImB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "869000",
+        "name": "Fort Lee",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_mexFfdpbMq^bz@cBdEkC~BkAdCwAaBaBg@\\cAuBoAeMmEjAeCkNeNc`@q`@eI~P}APs@hHsBtEwG|L}UeX_JaJiI{ImKkFa@H_Bk@d@sC`@oD}BF}B}@aIaCuBYgKw@e@[_KwAqAQ_@{@_ASzS}a@}QqQna@m{@zIsXfzAzo@nAlPuAjBf@hAI~@Sp@a@d@i@Z}@Zk@^gCxJtHdC`DuAfOrMr@hApAd@bKtGpMzAjNrCpCEJeA`Cb@J`@b@Tj@KdAA`Db@bFzA~A`AfDnDzO|GwAfCaErM",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1000000",
+        "name": "New Jersey",
+        "level": 1,
+        "parent_id": 1,
+        "map_coordinates": {
+        "encoded_boundary": "aezwFf~lcMiEvBeFjJoHc@yJ|AqBbBoYjs@{Tlg@mE~LzJvDdLNnPk@rDb@`JbH`FnFpJxLvNhJrF~B|MvDlG|CzFnE`SdRdKpGfHnCjE~@jStBzFsQhFyXjPpBKpGwBpRjHr@}@jIdG@DjGvD@nJ{@nh@oP|LsH`DsE|CyIz@aHHgV[{Ws@{HuBqGaEqFaDoCeJ}FoIiJyC}HiB}I{AsOkB{k@KwRt@{OtC_MtCqGvE{DbG{AxM?nTpBh[jFb]~HlQ~@`OqAfIoCf^}PdS{HnQuEnMi@vIh@`TdJzg@jYtRlNpTjN|YzPri@nZpgAjq@xMlLhQxSpDpFlDdHjQjg@zHbQxPpVdEdFbL_wBo@aKaBRr@eDqCwGy@mLgAiD~AgEV_N]aBp@}IAcMTqDoC}Yo@}K{@aH_LsHm@Hs@oFoDcGbAw@cAaDoNtIU_A~IcG}AJyIbGw@qDzIcGsCqAzD{DFkKd@_OnAH?wDoE_@z@eHvDm@^yHcC{@r@gElBAZeNlA}E@_M_AiKuBmIi@a@mTid@qEoB_C_Cc@rMmBOQjBcGl@oA~B{EbA}CrBaLdC_GsBaD[?uEaD@?fJv@{Al@pJoAhD`@xCjBnAc@hFcDISrDvCq@[nDuBo@qCnGuHnGmA`EgCfCGjFkB~Lb@`D_A`JoCkAsAmB|AgHTuKn@o@MgEt@{Gl@gNrFeq@hDuR`CkGbA_FvNim@zE{Nb@E~HmVmFqBaK{HKm@gGlRXRsFrPa@PkD`KPRgJfXiB`IWQkM~i@cA`Di@hJqA`BQlCyDnGcAfJ_ArBmDaB}AmFnD}MuBoAO{FaA}AfBcGeA_DlCkJpI_E`Neb@}@uBrI{WrCoKdB_Cn@`@l@{EtB_Ir@^~CuJo@m@rByFiEcEgE}B{Ey@_DdHeEfMQlD}DbKkCdKoIpWeJxUaDpAaBgA`JkVmEcEbCbAgDeDbHaP{AuAyHrQeC}BbFmLq@{@mFnMeHiFTyJyD}EmEvAkM~SR`@uG~Ja@B}N`VuCgCm@}CfA{CIiLfAWrAkElEoFxCa@fLoPcBgC_Ah@}E_BqK`AqHSuGwAqD_BcMgK_CuE_ErH`Al@GxDn@hCtF~DuBbA{I{GsCuDbBkF{AgBeG{AbBmDdAHbCaH~HoP|EdAn@mCgCs@tHiQfD`AhG}PoQiJcN}IBW}JqHwPkP_HwIqDyFmM_WkCyHbAcV}Dc@]qA{Cg@IrAyEk@oAxAP`C}@fOe@fBiBPu@vDkCAGiHkBqEf@iIcA_BV{EuD_BwFq@}A`@gFm@cHmDh@}KgAM_ArPyJs@fAoRyAQ{@jP}A`BUuEiIKq@pPmKaB`AuWkCeA]bAeAjXw@xC{@IdAiNaAGg@hN}AMb@oKa@kFPcEcAu@oBjAsCKr@qQg@?_AdVkBIlAsZqAKoAxZcAG|@qUUTcArVyBS~@cBAsDqDbId@}LbEqIWoAiCvEoC]m@bRaA_@eLs@kAiHz@mTa@Ea@`Ki@sAqEsD}A]gAdI{ASvAiNsDw@wAnNkJmBuAeBJcCeC_@o@xDeAUuAiEqIyCPkBmCyBeHcDoH@aEdBa@pAuB?DwE_B[q@`FgEYc@j@z@sIc@IiArKe@I|A{OWEyAxNsA?|AiOSCsA|M_B]rAqMa@IwApNgCYtAqN]E{ArNiCe@|AqNa@EuBtRaCe@vAkOcAS{AhOaCg@]fCfFhAcBb@cBhQcDu@UhBcDm@ZaEiDe@i@gE~BeIoa@aYeA{GyFcFwCdA{CqAiAbAwNmJeAv@}JsJdA]sEcImByEuCcAiC{BcB|EyD}@aBbEoBcAhB_EkCiBw@nEwBwAzAoEoDyCcMkIfBoF}@a@iBfEkAu@z@eD{JiH`A{BiEiDiLuHuWsRwC{AyAhDyEm@bBeIoAYk@lBeC^sAeBl@{DaDqEkD?_D_DkBdGqBNdBgI_@yAyGyDo@~@sElNcByDgD_DCwB}EEkCck@epC_dBqaBeXuDtOqCmCs@iFwD{@iGaDaHyEoAmPgzA{o@{IrXoa@l{@|QpQ{S|a@~AnAvNdC|NpA~L~D|BGgAbI`C`@lKjFhT|T|UdXjKsSr@iH|AQdI_Qb`@p`@jNdNkAdCdMlEtBnA]bAxDhCvEeGbBeE`{@jk@bRoa@rWtRvAsCdMjK~DaJf@fCvFfGzGjFfKvFrBb@wFjIDtCmEtD}Jl\\qUdj@yDkD{CvGqM{KmBCq@vBcB\\aFrHTzHqC~IvAjErBlBjHlBj@rEnCeB`Fx@bBzF?tIxAp@xCs@xBj@t@`Hl@b@pBsEdA_@|BzB_A~EaFvC_@tEhBb@zPtAXfAW~L`@dArG~DvEpBhKzJ~AnDzCbDCfG~@zCOhEgCdLoAvCDlTd@bOxAnU|Brk@|@dHrB`HvFxM`FxGpNfLzHvEvBtB`CtGtCbXxBjGnC~DjGzEl[nKdKfIt`@v`@|CnCnKpH|HpD`FLx[}FrQ{AjLaBxIUbEh@pEjCfJ|HgJtLh@|E|BV`AvD_CtFmKrBwFpBiItIoDwCcEP_BwAeDXaBlB_F`@_EfMcA|@iL]y@pIbBrCaDdDyBnFi@hFJbGeBzGT~BtADdDdJbAn@FfGo@lCnDdDhExBdAbGbCgBNpC|BAKhDpCBf@lBkBpDTrGz@dFtA`APzBcAnBvArWe@H",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001000",
+        "name": "Jersey City",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_mxwFpq~bMxA]vAc@~@m@`Ay@z@{A`@_AL]N]h@{AFQPe@@El@kBNe@NWJO@AHId@_@RKJGf@Y^OXILGFMHQPq@Nq@dBaH~AmGT{@r@mCPo@`AwDb@IbCc@\\G`BYr@MfDo@DA~A[vBa@^GVKVONMPUNUL[pAwE]pA`AqD~@mDBIr@qC@?LCBAHQxAyC@AN]BC@C@EHFb@ZPJB@j@XXJhA`@NDXJ|Bx@|@r@DBFFTNBBFDRLVLRHf@Nf@Pd@PXNb@Tb@V`@VRNTNTP`@^b@^VT`@b@TTJLJH?@@??@??@??@@@@??@@?NJNL????@?@@JFJFB@BB@@BD@B@@?@@??@@?@?^BN@@?@?H?FNJIHDHFHFPPPPRNRLRLRJVHTHVDVDTBV@n@DjAOhBSB?B?B???@?D?H@FDHBFFFH??@??@BDBD?@BDJRBDLTBFHN@@@BFHJRLPLPNNNLRHz@Z@@DFT\\^TlA?J?x@Cp@AdC@zAl@XWJKX]^c@p@w@?Ap@y@|@Ed@IHa@ZyBC[?C?CAMCQAQAQCQAQAQCSAQAMEk@CWCW?CAGCi@?ASaCR{AFeA?ABY@GOA?A?C??zAgIjAiGrBuKl@eD\\eBpBsKt@{D??HB@?OxDCx@?DABx@JP?PFhAJdCNh@@xAF?B?LN@h@BDsAHeBFmAHiB?ABs@FcABs@@_@@Q?????A@?@?nANn@HB@FA@?DA??BCBA@CDGHG@A@I@GR]FI?E@G?Et@yA??@??@@D@?@@@?BAVi@?A?A?AAAGE?A??@E@???FF??@@@@?@GbBEFo@rAmCxFAPI~BADAn@E~@?@?`@CVMp@Qp@PR??hA_CjB}DB@DDAXIlBC@C@OJc@z@_@v@X@B@dADl@FB?Fw@z@yTLWF@}@pU@@`ADPyDNgEl@wNpAH?@UhGw@hRjBHBa@FsBDaAT}FVoGBCb@Bs@jQ?DfBJ\\@LATGJCNKNQJOLIRGD?LDNJJHDDHJBF@F@PANG^C`@AXE|@?J@LHd@Fj@D^@F@F?BAZAl@F@K|BWpG|ALP}FTkF@A~@H]lI[CK~Cr@HF?N}Cd@B@?dAkXDM@K@]@EDCDAD?|BPB?BBDH?F?L?N]~Jc@tK@LBBPH`@BF@?G?ED?XB^D?NdAHT@@?B???FEFCD???B?F@F@FDFFFLXD@?R@B@D@^BL@@??A???A@UJiDPiDLiD@Y@Ab@DF?v@FPBXB?a@P@??F?HATC^?P?j@LZL@?@@???@?@???BCTA@???@@??@@???D?B@B??@@B?FGfBATBDBDHT?@??@??AXWHKZYNMFI@E@Ch@qKPyC@ABA@?lAP@??@@@??e@`I]hGCb@j@F??FGLE@?H@@?HFBB@BBFxFl@??HIFAHA~@sPB?bALk@jJDNC`@hBR??RoD~APFD@@DJ?B@B?F?FABEJEDE@GB[E[CE@?BOhD?DBBLFvARf@D@@B@@B@B?F@F?@h@FdAJ@Cj@F?FhAL?IZDBYDIJCF@J@D@B?LB^mGR@_@nG^H\\D@Ef@D?B?Dj@Hf@?LBVD@???AB?TDDFBD?d@HF?DA@?@A@CBA@@D?TJZTNFZN@RAVAZG\\AN@VAHEf@ALAD?DA@VjADBB@HDB@D?D@FBBD@@?BBH?H?HATMf@Mv@KtAGrA?V?D@RBRBLBDJP^d@HDFFT^@BFL@JJ~@@HBf@?DIjCAXB?Z@jB?Bi@@?D@@?@CBA??@E?C?G?O@QB]F[FQ@CBCBA@?J@b@BNADAJEJE??BC@ABA@C?C?A?C?EAG?GAI?GBM??BGTQ??DCBE@ERyCLiCN_CH}A?KAICYIa@AK?K?W?C@ARIHKBCDMBQ@AJKJE?A@ADAD?L?T@TD@@@DbCVPBHsA??H@FH@@?@@?B@@?@ABABA@EDM??@A@AB?@@??@@@N@J@@@@??D@D?@?@A@EHU??B?@?@@@@@R@F@@@BD@D?@?BCHW@A@?B??@?F@F?D???@@???@B@B@@@?D@BABADC?ABC?G@E?AF@@??@IfB|Db@CZ?H?F@B?@@D@B@JALC\\KtBYzESzDAJ@V?FGr@JXRr@`@hA^fAh@xAj@xAn@|AZt@FAF@BB`BdD~BnExAlCDHZf@dA~AZf@JPf@v@tAlBjAxA^b@x@`Ab@h@tBxBrArA~A~AjAdAlAlArBhB~CdCdBpArA|@TNFD@?@@@B?D?FCH|@n@|B~AbDrBbCxAjBdAxBjAhB~@@?f@V@?@A@G@AB?`A`@\\PxAr@JJBD?D?JsA`E_BpEuAhDgDaA_BfDAJ@JBHBBpCl@B@@B@B?@?@ADOTGDE@C?UEaCu@EAEBCBA@_@p@i@pAAD?F@B@@|Cx@@B@@@@?D?BMVCBE@iD_AC?C?GF}@bBAF?B?B@FBD@?BBj@PzA`@FD@@@D@H?LEJM\\GJ[n@?@C?A?SIKCWEmCu@G?C?A@C@A?C?iDdHs@zAaBlD???@@??B???@EJQ^[p@IRKPSf@@P@J@N?H?JAFCFCBCDEBUJA@AACAGGCCCAQ@K@I?A?A?E@G@GDGFUb@QXGNGLCJCHCJCNCNDBN?f@PfEdADFFDb@f@h@f@@BADEJ{A~C??AZAJ@L?HHJd@n@??j@n@v@hAXXf@f@LNDBB@B@|@j@LHFHNRDHBBv@Vf@XDBRRFJ@D@@B@D?J?`@AJCBAHCJKFCHIBA??BA@?@C@E@E?E?CAS?A?AA?AAAAAEEUE]EKEIEGIIECCAC?G@EBC@Y`@E@EECCAE?AAC?A?A@A?C?A@??A?AAA?A???AAA??A?????A@?@A@?BAB?BABC@AAA?AECMAE@C?AACC?MDC?AA]UQMSKCCAOAECCMKCA?C?C@Y?CAEGSGMAOAO?K?GEM?M@E?EAGCKAG?E?E?EBK?G?AAECCEAAA???A?A???A@?R?@?@ABGBE?A?AAAQCCAIMIIMECACCAA?A?C@A@A?A@A@C@?@C?C?CAC?C@A??FMLYPc@NWHSR_@DO~@cBJED?DB`ApADFD^DVJVDJJPBDHFRHZLXd@HFNDFDJDTRTTZRfAhAlB~AlAfAv@Vx@`@~@d@HD@@D@B?L@h@Nz@Tt@NtATrAHZAH@TDJ?DAH?@C@?@A????B?D@F@ZEFADCH?D?h@J@@@@B@@@NCd@GFALAPCVEF?F?F?`@AZ?`@?D?J@LB@?B?@Ab@I`@Kd@MNEB?B?B?D@ZHLDF@B@@@@@?@?BpC~@NTLQ^m@@??@^h@r@~@NT???B?@{AzB_ApACDk@x@MP}@rAk@x@m@z@MRKPW\\C@[e@E@G?C@CBCBA@A@C@E?I@G@IBKFMFIFIFKLa@l@a@l@KNSVW^IPOh@?BIBKAE?C?MBE@CBCDGJA@CJCHAFCLEl@?@CBM@A?E?CBC@?BCFMf@?HAD@B@FG@w@RG@ABA??B@B@N@J?T?RCV?NAd@BxABP@J?FA@AJAF?P?\\B`@@JBTABAFCDOFEFGNENAJ?DADALADCDEFELADAJ@|AA@??GDA@?B?B?DBD?@?B?L?P?R?D@DDLBF?@@R@@B@@A@AAA?CAC?E?C?A@C@A@C?A?A?GAKAE@G@CBCDAJ?B?DBJJLTBBBBB@B@@@FDD@D@??@@@@JNBDRTBBDBFDDFBDBBB??ABCd@u@v@sAxAgCZi@|AaC^m@vAaCrAsBJSBCB?LRtG_K@C?CUYvBkD`@k@bCgEB@FF@?Vc@?E?CAEAGPYxBsDpDgA@CBCJGB?@?B?B@BFNZVZJPHNZf@Z`@X`@FJB@HDB?FE@C?CNu@Lk@Vs@Pe@NWDE@?@?@DAHE^IP_@`ASx@Oz@EZC^GfAGhACl@A|@Ef@?JBDBB`@GD@FBFHNL\\VbBvAd@`@d@f@BBB?@CjFkM`@\\?@?B?B?@?@NN??KRaAzB_AvBuAdDEH???B?@BDBDHJNLLLNJDBF@B@PP`@Z?@@?@A@Gp@{A|AuDhDaI@A@?@@nAhABB@B?B}@zBaDfHcA|B?B?B@Bb@`@r@p@lAdA@B?@?BGNA?A?aB{A][IIIKKMGEC??@CBAD?@?BBHFFFHJDNHFDPNr@l@p@n@HJLJRLPNRVBB?BkFlNeAtCo@fBDFHDHJBBBBBBDFBFBBFBB?HBF@D?D@B@D?BABEBCBAB?JBF@LDJAHC\\YTUNMJKPc@Ti@tFuNfAuCJ[Ja@Le@^iAjA}DL_@LYVu@Z_AXw@rA}Dj@_CRi@l@mBJi@J_@Dc@L_@BIRa@J_@JYp@}ATk@Z{@Zw@HUBK@I@GAU?q@?g@@I@EHSJU@E@EAM@G@Eh@{AXm@P]HQfAuDFSDIT_@Xa@@GDYLe@j@_BFKHMBAB?DAD@R@PBJ@R@N?J@B@FBFBLBFDBDBBDDFBJ?T@P@NBNHHDHDFFDBJHjBbA{Jf[CFgDlK{CrJcCxHABIZABgBtF??M^??_EhM}IdYSh@uJ|Zs@|BM^ENi@rBy@fCgG~QGNOd@s@vBYx@Od@Qn@{FlQWHI@kA\\e@L_Bb@eAXE@MDm@NUF????G@o@RG@E@]JE@cBd@??o@NsCd@K@eC^c@H??u@JC???_Ab@_@PA?WJ]NKDy@\\m@TKFOFSHMDKDOFSJq@VA@cAZA?cFnBs@ZIDWNKDEBGBKBC?A@A?OBO@U@I@K???A?KAA???A???A???E?CAE?C?AAMAGGSQCE_BiBMKOKMGOGQEOCQAOAQ@OBA?OBMDODOFsAr@EBs@`@i@ZSJEB_@TsAt@}ChBMDOBMBO@K?w@nBqDpJkLpZyLn[MAi@IsEMgGBgEd@wF~AwItB}HnCsB|@qFkFqGoGmCaDgGeImE{FgAiBwBoDsCaGkEkKcAoCiA}Cy@uBm@sAw@uA_AyA{@_AmBuAeC}AoBcAkDwAgBe@_MgBaAOkEo@wAMyC[aFgAwGuBmEiBmDeB{IqEqDkCmDeC_BaBsAmBo@yAeAcCmD_KSg@kAaFo@wCcAyFiCgQmB_M_@}A_AcDkBeFwC}GcCiEwB}BaDaCeBcAoAk@iA[}@IqCQoBH_BRs@XcAh@mAdAmAtAu@vAc@~@Un@O~@U`BK|@GpB?ByHiFm@m@QQKOGOEOEYEe@ASAy@Cc@Cc@Ee@Mw@?AEMIMIMIIKIKEICIAKAI?K@KBGB{@f@OJMJMLYZWXa@b@SRQPOLGHSJE@IBWDK@G?G?G?ICKCKECECAEGIMCKCKCMCSASGkAEe@AMCKCIEKEEGIKGCCOMICICKCMAK?K?Q@MBKBK@QHYJw@TKBQ@W@O?K?KAs@MSEKEMEQEQCSGOEIEGCGEEGIKIMGMIWCICGAKAMAM?AAIACAKk@kBCIAIAMAQASASEWEOCKCKEGCCGECCECGEICICKCMAc@C]C[AQCOCGAGEGCEEAECEEI??IW?A_@cAYo@Sg@a@}@GOMU]m@EICEAEAIeDmIGOEKYiAAEGYGW?C[_BKa@WaAK[[}@M[Yo@MUQ]KOMOc@g@WYIKMQGMEKEQESC[C]?S?OBOBUDW@CFYFSFOFOJQh@q@xAmBX_@LQDOLa@DMJe@Jg@Fa@@UBS?QAOE{@C]A[ASAY?OAICMAGAE?AAGCCEKGGGGCAGCEAA?K?E@E?IBG@GBE@EBOBE@G@E?I?IAE?KCKCEAGCGCCEKKMOMKMGEAGAKAW?M@M@WFaAZUFg@LOBc@DYB[?M?G?GCGCIEMKYYMOKMYg@[i@KQCIGMGYKWGSCIGIIK]Wm@g@]Wa@U{DoBiAk@MIGEGEQOpAq@ZOVMnE}BfDeBnDiBdBaArBkAbCy@nB[jCi@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001150",
+        "name": "Historic Downtown",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "kvrwFbw|bMr@oSpY~B[nI`QxAXqIlCVvb@hD|AgIrDvDbM~A{Bve@fRpIxGrEmCpJErAuCf@yChA}E`CaDdDwEVw@hE}OjDoGeDqGj[yJuKz@oBjHy[{g@{MyC_AsBmAuBx@aDqEuGmH}F}D]e@sA}KyAeL~OjA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001250",
+        "name": "Waterfront",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "shswFzn|bMJi@rCcRfAkHh@aGvAqPKeGdC}I\\_AxJl@b@DF?CRdAJl@cRnC\\hCwEVnAcEpIWhHHd@g@zANPpDcINNMbD_AbBxBRHs@jAHlET|@gWl@Dm@nQ`C@~Ak@dAFNtB@rHc@vLbBJf@kNlAHg@fNd@FHmCb@?fAq[dEXgAtZg@Pf@QnJjAt@uPlCRpBUbA^?pDXt@~A{Bv@{PjBL_A`S~Ij@z@qPjBFu@|K|A^n@F[nAzCXdU~B`BfAg@bFmAHaAlR~@RnG|@}@pPwFe@?hDuFg@e@pGxH`AM}AJsAjAq@bCU_Cza@w@nUG~@yGsEgRqIzBwe@cM_BsDwD}AfIwb@iDmCWYpIaQyAZoIqY_Cs@nS_PkAg@{D",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001270",
+        "name": "Paulus Hook",
+        "level": 4,
+        "parent_id": 1001250,
+        "map_coordinates": {
+        "encoded_boundary": "uinwF|f|bMqFhBe@`Gw^mEaDa@kBmC_A]fD{OtByJx@_FzGr@lBe]`a@pEeEdz@",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001400",
+        "name": "The Heights",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "{xswFlt|bMdC@zAl@XWJKX]^c@bBsB`BG`C`RrA|K\\d@|F|DtGlH`DpEB~@}@jC}NhQuIbK_KjMeDvBmBQuIaCiAfDuFkDkCnIcGqDsChJ{NyDaJiFaHyGcEiEk\\uTgSmSxBqFPObCaB`AcB`Ja_@|RiDbE}@RUPUNUL[r@eC\\qAb@_B~@mDBIr@qCNCLSxAyCP_@BCDGFD`@V|Av@hA`@NDXJ|Bx@|@r@DBFFTNBBFDRLVLRHf@Nf@Pd@PXNb@Tb@V`@VRNTNTP`@^b@^VT`@b@TTJLJH?@@??@??@??@@@@??@@?NJNL????@?@@JFJFB@BB@@BD@B?@FB^BP@@?H?FNJIHDHFHFPPPPRNRLRLRJVHTHVDVDTBV@n@DjAOhBSB?B?B???@?D?H@FDHBFFFHLTJRBDLTBFLT`@n@\\`@b@V|@\\DFT\\^TlA?J?x@Cp@A",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001600",
+        "name": "Journal Square",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "mnswFzabcMxGu\\gM}EwDeAk@c@Wq@i@Em@DkA_AwCyBoG{BaSgErCiJbGpDjCoItFjDhAgDtI`ClBPdDwB~JkMtIcK|NiQ|@kCC_AtBy@rBlAxC~@zg@zMkHx[{@nByAhAkDb@sAKoEeB{@AyAhEbJrGwEtHxE|@gFbKeHpM|@pBs@dDyEcE}EkCgEl\\iGuCkAzFoK_EwE{B",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1001800",
+        "name": "McGinley Square",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "_upwFh~acMsPtf@oOkJwNcKsH}DfEm\\|EjCxEbEr@eD}@qBlOuY~T|JpGEbGvC`CtB~ElAgCbIvB`CrE|CnExAeG`S_BjF}AeCmK}JmKwJ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1002100",
+        "name": "West Side",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "gttwFzdccMrMiqAvCxBjA~@l@Eh@DVp@j@b@vDdAfM|EyGt\\vEzBnK~DjA{FhGtCrH|DvNbKnOjJrPuf@lKvJlK|J|AdC~AkFlGtDpDlBkFlLxMdOpWjRfAv@kDzCnA~AvChBwRn]gY{b@cVbk@mHeEsSzb@}DhFcAR_AlFyBUaGmAwGuBmEiBmDeB{IqEqDkCmDeC_BaBsAmBo@yAeAcCmD_KSg@kAaFo@wCcAyFiCgQmB_M_BaG{DaHgAaFiCsD",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1003000",
+        "name": "Bayonne",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "qsgwFrkecMtJ}ZRi@|IeY~DiM??L_@??fBuFJ_@dC}HzCsJfDmKBGzJg[LHNJ^XTTLJ~AhAFFDFBDBF@F?DADCFINCDIRAD]|@Qb@CFMd@Sp@?D@@j@^@@?BYt@{@pCiAlDA?A?i@]AAA?A?A?CDCDCH_@rACNCJCd@ABABG@C@CB?@AJKXMl@Kj@?@`@Z?@?@oAzD_@WOIA?C@OD???@@L?D?DA@A@OJQRSZOPGHELEVIVGJAHCBCBGJCDEHCJABADGLABAFAJ?H?DADCDABCBGNABELAF?B?@@B@D?BADANCNAHCF?F@BBBFD@B@D?FADCBGBUDC?EDmBfGs@`CUp@INENCHADIREDITOZCNCLQf@Yz@Of@Mb@ITANAN?H@D?@@@@@FBDB@@?@?D?D?@@@@@TLNJ@@?@?B_@jA{@hCe@xAw@~B}@tCaAvC{@fCk@lBWt@Oh@Ul@ABA?A?UOQKC?A?A?C?CBOPY`@CFEHABCBCBEBADGBKBIDEBGBIBGBMHQJOHQJMFKDIDIBGFIFOHEFEHGJAJ?DAB?B??ADCHINMZM`@ITYx@K\\GNAF?H?F@@@@@@@@?@?B?BABABCFCFINABAD@DBFJNLPDHBFDTDNDNHV@H?D?N@L?H?L@LBN?DA@?DA@C@C?C?A?A?A?ABEFSz@K\\CHCFADEDCBG@C@OHA@?@???B?DBBDB?@F@DB??BBBDBDDHPZBF@B?D?F?DA@A?A?A@A@?B?FABADCBABAD?B?B?B@@@J@L?BABA@A@A@AB?@?@???@@@@BFDBDBF?FBP@LBRDVBJ@BDHDDJLNJPJDB@?D?BA@?@?B?F???B?DA@EBK@EDW@U@S?CB@@@B@BB@F?JQxAEVI\\ENKZIVAHCHENELGNCLK`@Oh@Q|@Of@Sl@ENMb@CJAH?H?J@H@DBF??@@?@@D@JBP@JBFBHFJHLHJHHDFDD@BBD@DFJ@BBDHJTNRJPHLFJFFFDDDBLDFBB@DBBBD@@?@?DADEBMF]BMFIFI@?TYFKDKBQDSDYDSNk@Fc@BU@_A?k@?I?A?QBIDMb@m@d@{@p@gAd@u@NWFOFSF]?MAOCQ?M@MDONST[HIHCFCBCFMBM@MDi@D{@@]?OCU?M@KDIHQDM?ICOAS?M@QBODOXeAVw@Pc@Jg@R_ATaAR}@f@oBjAcFr@gDpBmIfBmHVPtAcGR}@hBqFr@qBhEcM?EQMJY?C??`B}E|@eC@AXI@ABCh@iBt@}Bt@{Bt@}Bf@qAYSfGmR@??ATN?@K\\`Al@jAv@\\Rr@f@d@Z@@@@@?@E?C@C?E?G@?@A@?VNVP@@?DOd@DFCFr@f@RN@@@??CBE@A??DDBBDM@A@@?AJU?A@?^XLH???@?@KP?B?@?@NHTNZPPJLHHFBB@B?D?H@D@@@?HUDO@A?A@A??@@HFFD?@?@?@?By@fCaBzEgArD{AtEEFEF??C@A?A?AAAAAC?AAAA?C?A?CBCFABC@C??@A?AF?B?DAFK\\M^Kb@Ib@CFEFCDEJCJAFK\\O`@CJMRIPCFADAF?@?D?B@B?BADENELEHGHEHGLQd@c@`Be@rBEJAH?JAJMb@ABA@??A@CJg@nByDfPk@~BWdAGVMf@i@zBe@rBa@bBEVCLEJGJGRKLABHP@@?BIJILILMLCFETCLCJCHEJETIVEPELEJIPMZGPERCRCRCVCNAFCHEFCJCHAJCHADELCDAD?F?J?DAB?BCBABCFCFCLAN?HAFGLCLCPAL?VAV?HAHEP?FAH@N@VAPAJ?DCHEFEFIHA@IHEFAFGt@QvBOhBC`@OfBE\\AN?P?V?TAJAFAHCNCNEf@C^CPEREb@C^C\\Ad@ATAJCVE^Gd@Iz@O`BGx@Gr@Cd@Gl@AV?P?H?FAHCPE\\Gh@Ib@G`@Ep@AHFP@L?NALC\\ARERAFETANAFERAN?N@N?L?FCRAV?L?F@J?J?@?DADA@CF?DAJAJ?FENAZ?N@F@FBDJN?@BB@FBPBJ?D?DABADGFADAF?DA@?@?@GFCFAD?@?@A@A@A?A@A@?B?B?BA?C@A?A?C?A?A?AA?C?ABC@?BEBK@E?A@C@?B?@A@?BEDO?C?CAAA?C?A@?@AHA@?@C????C?C?M?C?C@E?EAAC?A?A?A@EDCBAFCRATCRCTAP?DEJ?FAF?L?P?D?D@F?DBD@D@D?D?@?DABAD?B?@@JFT?B?B?@A@??A@??A?A?A@ABAFCF?D?F?FJ\\BN?B?BABC@C?C?A?A??@?B?@?@@@?BABCBA@A@A?A?C@G@C??@A??B?B?BAD?H?B?D?DAB?@?BA@A@A@?@ABAB?D@B@F@H?F?NAL@J@F?D?@?@ABEFCF?HAD?DA@CFAD?H@R@R@JAB?BAJ?L?P?FCDAHAD@H?DBD@FBF@BDBLHHF?@@@?B?BCB??A?A?A?A?K?K@E@E@IDE@CBCDCFAHAD?@CHCHCPAJMz@GTCP?J?HA@I@?@?B?B@D?D@DBBBFDJ@DBDBB@BBD@FBD?DBB@?B?D@B@BDDB@BDD@@BB@B@@D@B?FBDBNLRJrAf@@@@@?B@DHBBI@C@MIGACAC@M@e@?K@G@IBc@@U@GLo@Fc@?GB_@D]@K@G@E@EAK?AACCCAO@KCICCCECCAGCSCYCS?G?E?EFKHMDG@E?G?CAECECC?C?IBKBO@G?E?E?I@GJ[N_@F[DIDG@A?E?IAWCU?K?SBMBMBGFKDE@GFW?S?OAIGQO[CECG?M?GBELOLMBC?E?E@G?E@C@EBE?EAAAAAC?G@CDAFADAHGLMXk@BEDEVOBE?C?G@CBCHEJCDSPg@H[Jg@L]Pc@PSLSRSpAeAj@e@bBsARMJEFIJQJQHKPSl@eAHOFOBOBU@QDSDOFKBCDCFANAT@D?BBBB@BBB@@D@@B@D@DBJDFFJ@@d@FB?BC@E@?JU?E?EACCEECa@UEEAE?E?GBKFYFQ@E?I?CAACAUIICK?K@K?E@CFEHCD?BAJENUh@A@C?EAECEKESCw@?a@?S@UBKFYBEDA?ALAH?FAP?V@VBJ@D?FADAD@@?D@JBF@B?@??A@A@?@?@?B@@@@?BA@C@C@E?C?CACCCA?AAACAEAICM?E?E?M?IBMF]Ha@BM?E@GAMAICICCKQIIEEEAE?C?A?E?AAAAIEMIKE??GCCECGCM?EAGCCACACCC?CAC?E?M?KBG@C@C@?@C?C?CAA?CA?CAA?CAAEAE?E?A?E@C@ABA@ABC@C@CDI@ABK@KBO?I?K?A?A@G?CBCFGDEDEDIBEFIBI@E?I?G?AACAACACBABABCDCHABEBE?AAA?CECC?IAK?G?EBGHG@C@E?C?G?G?C@E@E?C?ACKCIEGCGCGAEAI?A?[Ag@?G@CBCb@g@@C?C?A?CACGGECCAA?CCAACEACAE?AAAC?A?C@A?A?EBC@CDABAD?D?V@^?FABCBG?C?ECAEAO?M@S?W?AAcA?iA??@mC`DA?PG@?R@n@@^B`@?T?R?J?D@D@B`@VZFJDL?H@LCJELGFCBA@?B?@@HDZTv@h@TPFBH@J?`@MfCs@PCF?F@@@BB?FC@SF{Bh@q@RE@EJ???@??LCZAl@AJAHA`@OVMPGb@KRETE^?TARC`@CRCb@KZKVIZKRKRM^U^Yh@_@JIRKTKNGJCRCZ?LA^El@KPIJIBG@A@M?OAO?MDKJIHEH?B?B?BA@AJMDEBEPCLAD?D?DBTFF@H?H?RCVIBA@CBCBI@E?ABA@AB?B?BBB@B?XCb@GJA@A@A@G?K@IBIBM?A@m@?A@AH@p@Hl@F@??AJyCVaH?W@?@?H@F@N@B@B@BBFJJLDDBDB@DDFPL\\DF@D@@DBn@RRB@??A@AB?@?@?D@NL@@?@Fv@@?n@V@?@AFO@A?A`@L???@\\h@\\j@d@`A^x@f@dAd@bAP^?@?@AB?@??FPXf@HNP`@HRd@~@Td@d@|@N\\d@z@@?@??@@@`@|@f@hAr@xA^x@LVDJJRJTNZLXBB@@LJB@HFBBB@@DDPHd@@BBJDJJXJZFNDFJZLh@??HXBND\\BV?@?DA@ABA@?B?D?@@B@TDXDVLb@BRBNB\\D^Dl@B`@JjA?T?t@@PBd@?P?h@ADCDABGzB@`@B\\@\\?TAJAFK^K`@CDADCFAFAHCFEJ?@A@A?C?A??@AB?@ATADAFCFADANCb@A`@AT?HAJCJCFAFAD?H?H?P@H?J?HADAB?B?B@@XB?B?BANKzAQ~BKNC?}AMA?ABAHOf@CHCBAB?B?HADAJAHENCJADAD?D?T?H?F@@HD\\PFDB?D@z@FB?@?@@@B@B?B?BCj@I|AEl@Cf@Ep@AR?D?H?BA@AAGAA?GAWCeAIA?A?C@s@v@GD?N??A?A??@G|A?@FJ?BA^OAC?A?A??@A`@?B?B@DAX?DABA?UAAp@F@V@h@B`@B^BTBRDP@FBB@@B@VADG?EhBH@Af@oAIADAXCx@B@Ab@Aj@Cb@EdACx@OnDSlA?D@?FDB@FT@H?F@JCV?F?F?D?BCDAF?B?J@TBR?F?D??AJ?BAB?J?D?H?HAF?BAD?D?B?H?H?BADAHEHCDCBc@ZA?C@A?C?A@A@CDEDGFCDIHEFCFEHCDCBGBIBKBC@CBCDOPEHADAF?L@PBLHNFJFDDBF@J?HCJIJIVWNKLILEHAFGHAD@B?@@@B?@ABABGFGJKLIHGFMDOFOJGBC@C@CDEFCFCDC?EBIBMHKH_@Xi@\\YNIFMFWLOFOJONKHEHGJAF?@?F?P?L@D?B@@HFB@FD@BBF?D@HA^?H@FBFBFBBF@B?FENMJGLM\\WBA?A@AHGDC@?BA^W|@i@RO\\Ub@Y\\UZUVKNIPIFCN?F?@@@@@@?BAH?@?@SN_Ap@WREDAAA?CCA?A?C?i@\\EBCDCDCD?BA@C@QJ{@l@o@`@]TFVLf@DCB?D?@@?@@FD??I@C@CDERI@A@@?@@@@@@?@AB?@A@C?IBCFELITMRMl@_@j@_@XQDGBC@EFGDCBCFANGDA@A@A?E@A@CDCJCPIHGDGFIFCJG@CBABAB?B?BA@A@CDG@A@AB?@?@?FCBAJGLIDC??B?@@@BJZDNJXLd@L^@F?B?BA@ABEBOJYPKDAB?@AB?@@F@HDNBLBB?@B?@?FAHAFEB?B?B@@@BB@@@@@@?B@B@D?@?D?@?@@ADA@A@?@@@@?B@F@H@DDFDL@@DDBH?@?@?@??AB?B?@?@@???@AB??@B?@@?@@B@BDH?@@F?@@D@BFJ?@?@?@A@?B@@?@@???@?@A??@@BD@D@DAN?D?H?J?F@F?D?F?FCFCHVv@b@rAXQBAD@HF`CpAVR??RNRLNPDDPLl@\\@@@?JFPHB@JDHDD?B?@?B@B@HJBBXZHNDHHd@@BDRBND`@Db@BN?F?J?@@LBP@R@J@FBH@HBJ?J@^@LBX@P?P?H?F?D@F@H?F@NBV@ZBT@PBRBRBTBV@P?N@N@N@F@HBF@F??BF@L@F?D@D@F@R@@Bf@Db@?@?@A@?B?@@D@HDj@Dt@?DVEDz@LJB\\Uh@@JCHFt@FV@N@RHp@Dj@^bD?H?VAT?RBN?LATCFEFGLCRAZ@X@b@@V?H?HAbA?N@N@H?RATEJKPEHCFAD?D@B@DADADA?CD?B@DDDLJDHDL?L?JKzAAd@?`@E`@In@Mv@En@AN@N@JDFFLHNBN?L?^Ah@CZCRG|@Ep@?t@?^BPA^A~AANALCFGPILKJW`@Qb@GRELAL?H@DBFXb@Rj@FTFXBN?@?n@@VH`AJ~@Lt@D`@B^@~@Fj@Nn@R~@Rh@P^NZHJHFJFNFFD@F??AH?DCHADCHIPIZWhA@RZEdAMBX?@B^h@xHAJcL~vBeEeFyPqV{HcQeHyReHqSmDeHqDqFiQySyMmLi{@{h@gKoGkDmBAAoDoBs]yRa@U}Y{PaAq@qAy@}O_KaBqAmFcEeHwEkJiFo\\aRoB_AeD_BkKeEkAOxLo[jLqZpDqJv@oBJ?NALCNCLE|CiBrAu@^UDCRKh@[r@a@DCrAs@NGNELENC@?NCPAN@P@NBPDNFLFNJLJ~AhBBDRPFFL@@@B?D?B@D???@???@?@?J@@???J?HATANANC@?@AB?JCFCDCJEVOHEr@[bFoB@?bA[@Ap@WRKNGJELERINGJGl@Ux@]JE\\OVK@?^Q~@c@B?t@Kb@IdC_@JArCe@n@O??bBe@DA\\KDAFAn@SFA????TGl@OLEDAdAY~Ac@d@MjA]HAVIzFmQPo@Ne@Xy@r@wBNe@FOfG_Rx@gCh@sBDOL_@r@}B",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1004000",
+        "name": "Hoboken",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "k}vwFh}zbM}LqEiA}@m@_A{@uCSuCL}BtAqJd@eJGcGlAP[`EbDl@TiBbDt@bBiQ~AZB_AgFiA\\gC`Cf@zAiObARwAjO`Cd@tBuR`@D}ApNhCd@zAsN\\DuApNJEB~@r@KJk@v@VvAqN`@HsApM~A\\rA}MRB}AhOdA\\L]xAyNVD}AzOd@HhAsKb@H{@rId@LDe@KABQbDr@N?HAHWRcCLaAFUFELAl@Hb@RHP?TQnAAz@Bb@JPLBXHH?v@_@X}BOAJqAPB^uDNBu@lHFGn@UBXZOl@qGVFg@dFLLf@Sb@wEPB_@jDNRb@S^@h@AdAFb@KH?EgAM@AQj@E@PO?DhAT?XBtCt@ZNVPb@h@v@`@Ir@bATCTvAXQjBfDr@CNKAAH@LBFF@lDt@DLIr@VD@BA@A@?@@@TTJX^dAv@PLBN{AO_@L]LSVaCNDSnBPILA\\AF@THNJJFLL@DALBHBHBJBH?J?HAJCFCHCDEBGF?BDHBDDDHB@?JBJFFJFR?P@BNDjJlBvAoNrDv@wAhN`AR@ERDB?FQFWDWp@cGh@P@G@AB?B@@D?@THAHD@@IBC??B?@@?@@BA@@B?B?@@@@E@?NHADB@BI@?@?@?@?@@?@?B?@???D?B@@@E@?LHADDBBI??@AB?@??@@@?B??@@?DAD@?BG??NJDB?A@AB?@??@@@?D@BJ[BBQ`@DBH@La@ECJ[CCFQBBDMLJWx@EAMb@JJCFB@AHDB@ED@AFJH?@LFADB@NADB@BCv@C^@DDFB@V?LO?C`@aK`@D{@lTf@~COx@qBrK]dBm@dDsBtKkAhG{AfI???B?@N@AFCX?@GdASzAR`C?@Bh@@F?BBVBVDj@@L@PBR@P@PBP@P@PBP@L?B?BBZe@zCCF_BFq@x@?@q@v@_@b@Y\\KJYV{Am@eCAq@@y@BK?mA?_@UU]EGqAg@m@o@a@o@MUCGMUCEKSCECGEGGIGGICGEIAE?A???C?C?C?iBRkANo@EWAUCWEWEUIWISKSMSMSOQQQQIGIGIEKHGOI?A?QA_@CGC?AACCEAACCCAKGKGAAA?????OMOKA??AA?AA?AA????AA??AKIKMUUa@c@WUc@_@a@_@UQUOSOa@Wc@Wc@UYOe@Qg@Qg@OSIWMSMGECCUOGGEC}@s@}By@YKOEiAa@}Aw@a@WIGADqAq@sYyN",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1005000",
+        "name": "East Newark",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "ijvwFp{rcMJ@p@HRBZDRBB?HB@?J@@?J@LB@?J@H@b@FJ@NBx@JB?t@JN@LBv@JN@h@FLBF@Ab@CbAAb@?T?PADAfAAN@?ABK`ACVCPMdAKbACPCPIz@MdACPANIr@ABAH?BAH?BAHABAH?BAH?BAHABAH?BAH?@AHD?d@HF@F?@@r@H??LBL@ZDXBb@Bv@DJ@}@jI@?zBBV?B@F?~ACB??P@T@lA@rC?@E?E?s@As@Cq@E]E{AQq@KuEq@kHm@oIy@sEg@OC??j@}ADMzAcEFQHS?AFO@GJWHWFYHWBM@ABIFYFYFYFYFY?Al@kDBMDSF[BOBG@G@G@EBQBOBO@??EBI?AFBBQDU^wBLs@DQF_@BOLs@DSBQDQHi@DS????@E",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1006000",
+        "name": "Union City",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "c|ywFloybMdg@~X~IiXjDtCnAbAp@lRvK~GlFjBrARhJ|DrYxNCHiAi@xCxAQ^yAxCIPC@OBs@pCCH_AlDc@~A]pAs@dCMZOTQTSTcE|@}RhDqChLm^eUaA[aBAgH~@sEDyGqCsEkCuAeBqEaIwAcDkAqD{@sBm@w@aDeAiDy@iAq@{AsAuFwFaAaCGyCq@m@w@ToB\\gBDcAQs@_@u@u@uA{@m@K_D?~HaScIaH{C}C}AyAcEqDyAaBgBcBeB{BrCcIyAgAvMs^dB_Gv@t@fCvEtIdO~PtLdOfGxBhBzOxK`CdCqNbL",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1007000",
+        "name": "North Bergen",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_z~wFxkubM}CzI|BnBiDnJc@|AcCyAgBtE}@nCgArDaAn@zBbBcAdDpIlBb@j@xCfCpBbBlCnEjKxRpN~L\\HvKb@^@f@E|@CnC_@fDu@`Bc@bD[tAG`A?hAZ`Aj@dBzBfBbBxA`BbEpD|AxAzC|CbI`H_I`S~C?l@JtAz@t@t@r@^bAPfBEnB]z@Ul@l@FxC`A`CtFvFzArAhAp@hDx@`DdAl@v@z@rBjApDvAbDpE`ItAdBrEjCxGpCrEEfH_A`B@`AZl^dUoEvQaAbBcC`BQNyBpFq@lBO\\M\\a@~@{@zAaAx@_Al@wAb@yA\\kCh@oBZcCx@sBjAuGjDgDdBoE|BWL[NqAp@UQoA{@_@WMKEGGIIHGB_AVMFIBODGBMBK?S@UA_@Cc@Ag@?W@a@B[?g@CUCg@EQCMCGCA?GEKGSOUMWQMKSQOQe@g@]e@OOQMGEGCMCMAEAG?E@K@KFMJQTU`@q@~@e@`@]X_@RQH]JQBG@g@CWEYGA?kAIw@?s@Qg@[IOIGWQSOSUe@u@o@gAIGGEKEyA]WCSAY@q@Hg@HaA?m@_@KMMQUS_@c@QQSOMGWO]SMIIG{DsFpDk]dD_b@gBkAwAuAEJa@]c@a@WSQ]M]GYCOAO_B}@eB_A}A{@kz@ud@uFlYeCdHwDvKkEkESn@e_@}]f@gAuHgHaC`CSNIL[b@Uf@mBnEyBzEo@jAg@`As@zB{@hBAPCCCE?M@iAFk@Da@BU?GCOKUEe@Yi@Oe@EW@QNe@JeABa@Ce@Si@e@c@_@e@[g@y@q@s@kBk@cAaAw@gIcIwEqBsG_EIg@QGEUDg@@[Ta@BQC]Qw@LsBA}BIi@O]{PuAcAMe@UMu@?{@Rw@Xk@h@e@vAo@~@m@^S\\i@^gAHw@Gu@k@cAi@[g@[e@F_@VY`@c@z@[|@M^IVOFOEMe@GaBAg@Mw@Ec@W{@g@WqASaADi@Tm@Vc@A[SY[Es@?mAHaBCqBEk@KQQcAQgAm@q@y@Q_AUcAOc@Ak@Ng@Re@b@U\\MOBc@@m@Ac@Gc@Yi@e@UQEyA[_AMyAg@}@s@u@y@i@qAc@uAIc@@e@Jm@N?BSRo@hAcCPcAEq@YuAEq@NaChAyBzAyAb@gAVWbB]PY^}ALIn@Kn@XpMzKzCwGxDjDxIsSvJqU|CaKnCuJnAuD|BeBnAoAo@i@h@kBvFkI|EmN|HuMjFLz@UdDjApDZ~DCxB_GtACrAJr@ABvBfD~CDhA|AnBrEmNn@_AxGxD^xAo@tDu@pCp@`@~@q@bAiDf@{A`@@X`@JPHPJFJDJBBD@HAH@NHJXNF?L@J?L?TCNEPGPA^FPHr@x@JRTZFLFTFJLNZZHJ@F@JIj@Op@Qz@ELAN@VDNJNTNFDb@F\\A`@Gl@EVON_@ZmAb@Ej@^YjAOt@YnASz@Kv@Pd@LHJKRSl@IZB_BxFy@lBeA\\[QqIfVeHxQ",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1008000",
+        "name": "Weehawken",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "m~{wFnyvbMfE|Dv@t@fCvEtIdO~PtLdOfGxBhBtOrKfCjCqNbLdg@~X~IiXzFxEp@lRvK~GlFjBrARkEqC{@uCSuCL}BtAqJd@eJGcG{ASi@gE~BeIsG_ErFcRsRuJaFlOyEuDeA{GyFcFwCdA{CqAiAbAwNmJKJSp@EBSCKEQMOSGOEOMWKIoAw@_As@ICM@Q@UAm@MUEAG?EBEBCHCRMDAHDHFDMUSKGo@q@OMAEFQh@`@Rm@o@c@H]_@[?Mc@YDM@@`@cAZ{@KE]dA_@dAEE]kAUc@MSMKEICI@Ed@a@Rh@tA_AtA}@HCDA@?hE`ACOyDw@MEGAE@SL}@n@y@cDKFPn@OFQm@IHr@pCQLO]c@^m@f@m@iBg@sAU[}@aAUQYFQNK?IGg@y@W]w@g@KAED_@lAcAnC{@J}BiAOHqAxDIHMCWQ]SUUKMG_@Nk@R?HSEMRUL]LJHENc@kCiBMRARHTITAXW\\DVSj@W@yAeAESzAoEMUaDcCyEhNkC~DuD~J",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1009000",
+        "name": "Guttenberg",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "_z~wFxkubMdHyQpIgVZPdA]x@mB~AyFnAb@xAiDvCzAxBdBoCbIwCfHpA`BcFdPeUbn@z@j@aDdIqC`ImBcB}@~Bc@k@qImBbAeD{BcB`A}@fAeD|@oCfBuEbCxAb@}AhDoJ}BoB|C{I",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1010000",
+        "name": "Harrison",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "ejvwFrppcM`AIhHk@xAM\\Cp@GrCWz@KXnD^[|CgCdA{@nOgOnFiFsD_GlMwPBENjAb@bDx@fEn@tCpAnDfAlCbBbCjBrB~BpB|CrBfEhC`DnCvBnChA`B|@xB`@nATfA^bDRvCJrEJbGBbIErLCrHE~@M~AMt@YjAcB`Fy@vBcAfB}AjBwCvB{CjBiCnAeDhAiNfEwFlBeGjBaDbAc@HeBRc@FgBNyADgC?S?[A?AAsCAmAAU?QC?_BBG?CAW?{BCA?|@kIKAw@Ec@CYC[EMAMC??s@IAAG?GAe@IE?@I?A@I?C@I@C@I?C@I?C@I@C@I?C@I?C@I@CHs@@OBQLeAH{@BQBQJcALeABQBWJaA@CA?@O@gA@E?Q?U@c@BcA@c@GAMCi@GOAw@KMCOAu@KC?y@KOCKAc@GIAKAA?MCKAA?KAA?ICC?SC[ESCq@IKA@K{A@tCwI_CgAUKq@]KGmCsAk@[eB_A_@Sp@iDfAqHx@gFbHw^BA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1011000",
+        "name": "Kearny",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "aezwFf~lcMd@IAGeAoSO{B@MDIBEl@o@BGDK?MGeBAMCCCCgAu@ECGGEEAIG[Ki@G_@M}@Iq@AK?M?[CwAImACSAc@@K@KBGRYb@o@`@u@BGDI@K?GAKQw@KMIGKB_ALi@?OAGEAIAC@KBEHORs@BKBG?C?GAE?I]c@ICG@I?KDm@TUBKCEI?M?MBYD]?O?G@ECKEMKMEEIDGFCNS`@Qd@IDKDMAc@GIMEIAOK}@OeAEa@AOGWEIACiBu@_BcAkAiAaAu@UWKMRk@R}@Fc@?u@EmAAO?GD[BK?C?E?EAG?G?CAC?GAC?EAEACIKECOIGAKEAAMKACQa@MYM[EIEIAGQk@I]AGYUQAAKACYsBWA}@CGGGY?[EY?g@VMLe@`@qBR{A?GDGBI?G?U@OAO?K@YE_@Ea@A[A_@@a@Dg@BO@K?K@MBMFYDU@_@BWBUDUHSHSFOLSJMFQDOHWJWFSPYDEDCTSPOJMJORQZWNMHGDGDI?GCGKQIIOUEMGKKMSSEICGAKAG@KBU@M@GBMD]?M@S?E@o@D_@DYBg@@SBKDEFEH?F?D?B?T@\\DV?Z?X@`@DV@^A\\Dn@BX@Z?\\?N@FCHGDEHM@GHCJGHIHOPa@?CrA_F@CNa@JYJc@J]JYLUJEJGN?PAF@ZG\\CT@\\ATGP?F?HGFIFGHMNMNSFIJMHKJEJCHE^C`@A\\Ab@AH@HBJFJLDHXVLPDFLDJ?FCJCN?^C\\Cd@EP?NAHBHDLJNNVT`@\\b@`@^ZRLL?DEFEDEFQHWJQDK@APYT[PUFEPQLKPMJKPMV_@X[NUHSFGFALBNBTAZKl@[PIJOZ[\\K`@Mx@@\\Ep@U^Eb@G`AUj@Md@IZINSDOJ[@EXm@BEr@oAPe@FS?ECIAIc@mBAOAICIGKGEGAuBUMIGGCKGSIaB?e@?A@a@@GLUHKDEDEJCJGRQb@k@Z[vB}C|A{BbGdH`C|BbBzAVPPL`@TjD`B|IbF`Bn@n@Rn@JdBLN@hBDdCKfGY`AM~@YdAa@p@_@p@g@j@i@dAkBx@mBjAyDT{BRmBHaC?qCAeE_@oGIeAQkBa@eCq@cEg@iDSeAOeBGgBAyA?WGqE?ABeFF}C?CFqBJ}@TaBN_ATo@b@_At@wAlAuAlAeAbAi@r@Y~ASnBIpCP|@HhAZnAj@dBbA`D`CvB|BbChEvC|GjBdF~@bD^|AlB~LhCfQbAxFn@vCjA`FRf@lD~JdAbCn@xArAlB~A`BlDdCpDjCzIpElDdBlEhBvGtB`FfAxCZvALjEn@`AN~LfBfBd@jDvAnBbAdC|AlBtAz@~@~@xAv@tAl@rAx@tBhA|CbAnCjEjKrC`GvBnDfAhBlEzFfGdIlC`DpGnGpFjFsElBgCnAoDfBy@^uRdJgInCwFt@iGZqHQgDSsBYcRkE_JsBgKaBaOiCwFm@wFg@[CcDWsEO_DDeBHwAVkDbAq@\\{@f@aAbAg@p@qApCcA~Bm@vB_ArDg@rCYlCMbCKvEAp@B~CDfF@nFTdJtAt`@L~BH|@JpABRCDmMvPrD~FoFhFoOfOeAz@}CfC_@ZYoD{@JsCVq@F]ByALiHj@aAHC@cHv^y@fFgApHq@hD^RdB~@j@ZlCrAJFp@\\TJ~BfAuCvIzAAAJAD????ERIh@EPCPERMr@CNG^EPMr@_@vBETCPGC?@CH?DA?CNCNCPADAFAFCFCNGZERCLm@jD?@GXGXGXGXGXCHA@CLIVGXIVKVAFGN?@IRGP{AbEELk@|A??wAOgKeAkD_@kAQgAWw@UgE}A_Bq@eAi@eAk@_BcAoA{@iA{@gJ}IoCgCiC_CcCqBwB}AgBgAo@]cAa@q@UoBk@mJkCwB_A{B_AuBiAyEsCm@a@y@m@_A{@gCaDaC}CgByB{@{@eDsDcC{BgA{@mBqAg@Y[Iw@OwAGGA{DLoCLuADmCHkD?{@?qBCkAKq@MiA[_GmCXqANg@Pg@Pg@\\{@Ri@Xs@Zs@JQJU^{@f@gAd@eA@Cd@gAh@kAd@iATi@P_@f@gATi@Pa@x@kBRg@dAcCZq@Te@j@qAr@yABGr@_BZu@b@cAtAmDb@cAd@iAp@}AP_@|@{BlA}Cl@{A^aAd@iAh@qAlA{Cz@wBRi@J[DIf@mAVq@P_@PUBERUTQRO\\OVKVKXIf@ITCnAObBQ`@EZETAR?PBTBb@Jh@Lh@PPDL@NALAJCLELGHILIJQTa@z@eBv@_B^w@Ve@T[LONMPMJGNIRG\\Gt@M",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1012000",
+        "name": "Secaucus",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "gm`xF|xzbMz@mBtHfHg@fAd_@|]Ro@jEjEvDwKbC_H@EtFmYncAnj@@NBNFXL\\P\\NJFFPPPN`@\\DK@@rEtDuB~Vg@rE]tBqDj]zDrFHFLH\\RVNLFRNPP^b@TRLPJLl@^`A?f@Ip@IXAR@VBxA\\JDFDHFn@fAd@t@RTRNVPHFDBBJf@Zr@Pv@?jAH@?XFVDf@BFAPC\\KPI^S\\Yd@a@p@_ATa@PULKJGJADAF?D@L@LBFBFDPLNN\\d@d@f@NPRPLJVPTLRNJFFD@?FBLBPBf@DTBf@BZ?`@CVAf@?b@@^BT@RAJ?LCFCNEHCLG~@WFCHIFHDFLJ^VnAz@DBNLPNFDFDLHhAj@zDnB`@T\\Vl@f@\\VHJFHBHFRJVFXFLBHJPZh@Xf@JLLNXXLJHDFBFBF?L?Z?XCb@ENCf@MTG`A[VGLALAV?J@F@D@LFLJLNJJBDFBFBD@JBJBD?H@H?D?FADANCDCDAFCFAHCD?DAJ?@?D@FBB@FFFFDJBB@F?@@D@FBL@H?N@X@R@ZB\\Dz@@N?PCRATG`@Kf@Kd@ELM`@ENMPY^yAlBi@p@KPGNGNGRGXABEVCTCN?N?RB\\BZDRDPDJFLLPHJVXb@f@LNJNP\\LTXn@LZZ|@JZV`AJ`@Z~A?BFVFX@DXhADJFNdDlI@H@DBDDH\\l@LTFN`@|@Rf@Xn@^bA?@HV??DHBD@DDDFBFDF@NBPBZ@\\Bb@BL@JBHBHBFDDBBBFDBBDFBJBJDNDV@R@R@P@L@HBHj@jB@J@B@H?@@L@L@JBFBHHVFLHLHJDFFDFBHDNDRFPBPDLDJDRDr@LJ@J?N?VAPAJCv@UXKPIJAJCLCPAJ?J?L@JBHBHBNLBBJFFHDDDJBHBJ@LDd@FjA@RBRBLBJBJHLDFB@BDJDJBHBF?F?F?JAVEHCDARKFINMPQRS`@c@VYX[LMLKNKz@g@FCJCJAH?J@H@HBJDJHHHHLHLDL?@Lv@Dd@Bb@Bb@@x@@RDd@DXDNFNJNPPl@l@xHhFG|CCdF?@FpE?V@xAFfBNdBRdAf@hDp@bE`@dCPjBHdA^nG@dE?pCI`CSlBUzBkAxDy@lBeAjBk@h@q@f@q@^eA`@_AXaALgGXeCJiBEOAeBMo@Ko@SaBo@}IcFkDaBa@UQMWQcB{AaC}BcGeHY[k@i@u@s@oC{B{AgAgC{AiAo@{A[gBMyC?{BLs@DO@E?eL`B_Fb@e@DmIp@sB\\oB\\]Fm@NaB^cJ~AcDh@eABq@?iBQa@I[MSGa@QYOoDoBs@e@u@g@aC_BcDcCy@s@cB{AyHyHsEuEmCkC_D_DsBuBgBgB]]k@g@kDaDq@g@u@i@eAk@wAg@cEqA_GiBqJkDqAw@_BkAyAwAq@{@m@_Ao@cAYi@_@}@Wy@Us@Qu@]eCm@aHa@iEMiASoAEWIWs@{B_@{@Wo@KUKUSUQSYUk@_@aEaCyBuAkBqAiBwAi@c@??qFyEyAgBmAcBy@mAiAwBaA_CISaBmE]cA_@iAEMOk@_@yAMm@[yBS}BmAiY[oJSyEWsEKcB]cFAYUyCQiEEq@CwAIoDA}@E}I?O@aGnAwClNe\\Xo@`BsDr@}A\\w@JWJY",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1013000",
+        "name": "West New York",
+        "level": 2,
+        "parent_id": 1000000,
+        "map_coordinates": {
+        "encoded_boundary": "uw~wFhzvbM`DeI{@k@dUcn@bFeP_@m@[_@USrA_DbAgCnCcI~CrBrBdB`@?ZT^n@hHlFhLtHhEhDaAzBzJhH{@dDjAt@hBgE|@`@gBnFbMjIyEhN_I~PdE|DeB~FwMr^xAfAsCbIaAk@iA[aA?uAFcDZaBb@gDt@oC^}@Bg@D_@AwKc@]IqN_MkKyRmCoEqBcByCgC|@_ClBbBpCaI",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1117007",
+        "name": "Newport",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "}kswFbt{bMnzA|LlAyYlCql@cqA}ZgOjuA",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "1117008",
+        "name": "Bergen/Lafayette",
+        "level": 3,
+        "parent_id": 1001000,
+        "map_coordinates": {
+        "encoded_boundary": "_}pwFrz`cMkNmGyE}@vEuHcJsGxAiEz@@nEdBrAJjDc@xAiAxJtKpGk[nGdD|OkDv@iEvEWx\\|h@tg@px@_GxH`FbFnNdJlCdDdBtCkL`OoKaKgEmBgVvb@gAw@qWkRyMeOjFmLqDmBmGuDdGaSoEyAsE}CwBaCfCcI_FmAaCuBcGwCqGDsEoB",
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    },
+    {
+        "id": "9999999",
+        "name": "Unassigned",
+        "level": 0,
+        "parent_id": null,
+        "map_coordinates": {
+        "encoded_boundary": null,
+        "__typename": "AreaGeometry"
+        },
+        "__typename": "Area"
+    }
+]

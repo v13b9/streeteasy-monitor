@@ -58,24 +58,24 @@ def get_listing_info(card):
     }
     
 
-def get_paddaddy_info(listing):
-    lookup_url = offermate_lookup_api + listing['url']
-    r = requests.get(lookup_url)
+# def get_paddaddy_info(listing):
+#     lookup_url = offermate_lookup_api + listing['url']
+#     r = requests.get(lookup_url)
 
-    if r.status_code == 200:
-        try:
-            lookup_json = r.json()
-            paddaddy = lookup_json['matching_listings'][0] if lookup_json.get('matching_listings') and lookup_json['matching_listings'][0]['similarity_type'] == 'exact_match' else None
-        except (ValueError, requests.exceptions.JSONDecodeError) as e:
-            print(f'Error decoding JSON: {e}')
-            print(f'lookup_url: {lookup_url}')
-            paddaddy = None
-    else:
-        print(f'Request failed with status code {r.status_code}')
-        print(f'lookup_url: {lookup_url}')
-        paddaddy = None
+#     if r.status_code == 200:
+#         try:
+#             lookup_json = r.json()
+#             paddaddy = lookup_json['matching_listings'][0] if lookup_json.get('matching_listings') and lookup_json['matching_listings'][0]['similarity_type'] == 'exact_match' else None
+#         except (ValueError, requests.exceptions.JSONDecodeError) as e:
+#             print(f'Error decoding JSON: {e}')
+#             print(f'lookup_url: {lookup_url}')
+#             paddaddy = None
+#     else:
+#         print(f'Request failed with status code {r.status_code}')
+#         print(f'lookup_url: {lookup_url}')
+#         paddaddy = None
 
-    return paddaddy
+#     return paddaddy
 
 
 def get_new_listings(cards):
