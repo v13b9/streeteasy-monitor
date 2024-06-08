@@ -18,6 +18,7 @@ app = Flask(__name__)
 paddaddy_url = 'https://paddaddy.app'
 offermate_lookup_api = 'https://offermate.app/unit_lookup'
 
+
 @app.template_filter()
 def usd(value):
     """Format value as USD."""
@@ -48,7 +49,9 @@ class Config:
     SCHEDULER_API_ENABLED = True
     SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
 
+
 app.config.from_object(Config())
+
 
 def create_app():
     # Configure session to use filesystem (instead of signed cookies)
@@ -61,10 +64,7 @@ def create_app():
     scheduler.remove_all_jobs()
 
     scheduler.add_job(
-        id='main',
-        func=main,
-        trigger='interval',
-        seconds=random.randint(360, 480)
+        id='main', func=main, trigger='interval', seconds=random.randint(360, 480)
     )
 
     scheduler.start()
@@ -87,16 +87,21 @@ def url(url):
         params = {'q': url}
         r = requests.get(offermate_lookup_api, params=params)
         json = r.json()
-        redirect_url = paddaddy_url + json['matching_listings'][0]['url'] if json.get('matching_listings') and json['matching_listings'][0]['similarity_type'] == 'exact_match' else url
+        redirect_url = (
+            paddaddy_url + json['matching_listings'][0]['url']
+            if json.get('matching_listings')
+            and json['matching_listings'][0]['similarity_type'] == 'exact_match'
+            else url
+        )
     except Exception as e:
-        print(f"Error: {e}")
+        print(f'Error: {e}')
         redirect_url = url
 
     return redirect(redirect_url, code=302)
 
 
 @app.route('/', methods=['GET'])
-def index():    
+def index():
     listings = get_listings_sorted()
     return render_template('index.html', listings=listings)
 

@@ -1,5 +1,4 @@
-from .config import get_field_values
-
+from .utility import get_datetime
 
 class Messager:
     start_variables = {
@@ -116,20 +115,17 @@ class Messager:
         }
     """
 
-
     def __init__(self, monitor, listings):
-        self.field_values = get_field_values()
+        self.field_values = monitor.config.get_field_values()
         self.session = monitor.session
         self.db = monitor.db
         self.listings = listings
 
-
     def send_messages(self):
         for listing in self.listings:
             pageflow_id, reply_token = self.get_pageflow_id(listing['listing_id'])
-            self.submit_message(pageflow_id, reply_token)
-            self.db.insert_new_listing(listing)
-
+            if self.submit_message(pageflow_id, reply_token):
+                self.db.insert_new_listing(listing)
 
     def submit_message(self, pageflow_id, reply_token):
         finish_variables = {
@@ -145,8 +141,16 @@ class Messager:
             'variables': finish_variables,
         }
 
-        self.session.post(self.api_url, json=finish_json_data)
-
+        try:
+            date_now, time_now = get_datetime()
+            print(f'[{date_now} - {time_now}] Sending message...')
+            r = self.session.post(self.api_url, json=finish_json_data)
+            if r.status_code == 200:
+                print('Message sent successfully')
+                return True
+        except Exception as e:
+            print(f'Error sending message: {e}')
+            return False
 
     def get_pageflow_id(self, listing_id):
         self.start_variables['request']['context']['rental_id'] = listing_id

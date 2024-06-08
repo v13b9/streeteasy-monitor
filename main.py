@@ -1,5 +1,6 @@
 from src.streeteasymonitor.monitor import Monitor
 
+
 def main():
     with Monitor() as monitor:
         monitor.run()
