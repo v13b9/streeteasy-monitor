@@ -15,9 +15,9 @@ def wait():
 def get_datetime():
     NYC = gettz('America/New_York')
     now = datetime.now().astimezone(NYC)
-    date_now = now.strftime('%B %e, %Y')
-    time_now = now.strftime('%l:%M %p')
-    return date_now, time_now
+    date_now = now.strftime('%b %d, %Y')
+    time_now = now.strftime('%I:%M %p')
+    return f'[{date_now} - {time_now}]'
 
 
 def try_get(url, func_name, s):

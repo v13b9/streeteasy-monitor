@@ -10,7 +10,7 @@ SCRIPT_PATH="$PARENT_DIR/main.py"
 LOG_PATH="$PWD/$LOG_FILE"
 
 # set schedule
-CRON_SCHEDULE="*/6 * * * *"
+CRON_SCHEDULE="*/8 * * * *"
 
 write_cron_job() {
     echo "$CRON_SCHEDULE $PYTHON_PATH $SCRIPT_PATH >> $LOG_PATH 2>&1" > "$CRON_FILE"

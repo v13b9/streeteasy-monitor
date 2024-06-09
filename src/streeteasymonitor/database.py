@@ -4,7 +4,7 @@ class Database:
 
     def get_existing_ids(self):
         listings_data = self.supabase.table('listings').select('*').execute().data
-        return [listing['listing_id'] for listing in listings_data]
+        return set([listing['listing_id'] for listing in listings_data])
 
     def get_listings_sorted(self):
         response = (

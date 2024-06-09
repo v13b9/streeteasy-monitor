@@ -2,7 +2,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from .utility import build_url
+from .utility import build_url, get_datetime
 
 test_search_url = (
     'https://streeteasy.com/for-rent/new-jersey/price:-2000?sort_by=listed_desc'
@@ -74,6 +74,7 @@ class Search:
 class Parser:
     def __init__(self, content, db):
         self.soup = BeautifulSoup(content, 'html.parser')
+        self.existing_ids = db.get_existing_ids()
 
         self.filters = {
             'url': ['?featured=1', '?infeed=1'],
@@ -84,24 +85,29 @@ class Parser:
                 'Bushwick',
                 'Weeksville',
                 'Stuyvesant Heights',
-            ],
-            'listing_id': db.get_existing_ids(),
+            ]
         }
 
     def parse(self, card):
+        listing_id = card.select_one('div.SRPCarousel-container')['data-listing-id']
+        url = card.select_one('a.listingCard-globalLink')['href']
+        price_text = card.select_one('span.price').text
+        price = int(re.sub(r'[$,]', '', price_text))
+        address = card.select_one('address.listingCard-addressLabel').text.strip()
+        neighborhood_text = card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel').text
+        neighborhood = neighborhood_text.split(' in ')[-1].strip()
+
         return {
-            'listing_id': card.select_one('div.SRPCarousel-container')['data-listing-id'],
-            'url': card.select_one('a.listingCard-globalLink')['href'],
-            'price': int(re.sub(r'[$,]', '', card.select_one('span.price').text)),
-            'address': card.select_one('address.listingCard-addressLabel').text.strip(),
-            'neighborhood': (
-                card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel')
-                .text.split(' in ')[-1]
-                .strip()
-            ),
+            'listing_id': listing_id,
+            'url': url,
+            'price': price,
+            'address': address,
+            'neighborhood': neighborhood,
         }
 
     def filter(self, target):
+        if target['listing_id'] in self.existing_ids:
+            return True
         for key, substrings in self.filters.items():
             target_value = target.get(key, '')
             if any(substring in target_value for substring in substrings):
@@ -112,11 +118,9 @@ class Parser:
     def listings(self):
         cards = self.soup.select('li.searchCardList--listItem')
         parsed = [self.parse(card) for card in cards]
-        # print(f'parsed: {parsed}')
         filtered = [card for card in parsed if not self.filter(card)]
-        # print(f'filtered: {filtered}')
 
         if not filtered:
-            print('No new listings')
+            print(f'{get_datetime()} No new listings')
 
         return filtered

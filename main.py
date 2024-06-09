@@ -1,3 +1,5 @@
+import time
+
 from src.streeteasymonitor.monitor import Monitor
 
 
@@ -7,4 +9,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
