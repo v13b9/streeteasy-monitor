@@ -14,11 +14,11 @@ class Config:
         self.user_agent = self.random_user_agent or self.default_user_agent
 
         return {
-            'User-Agent': self.user_agent,
-            'Accept-Language': 'en-US,en;q=0.9',
-            'Referer': 'https://streeteasy.com/',
+            'user-agent': self.user_agent,
+            'accept-language': 'en-US,en;q=0.9',
+            'referer': 'https://streeteasy.com/',
             'cache-control': 'no-cache',
-            'Content-type': 'application/json',
+            'content-type': 'application/json',
             'origin': 'https://streeteasy.com',
         }
 
@@ -31,8 +31,8 @@ class Config:
             'name': self.env('NAME'),
         }
 
-    def setup_sqlalchemy(self, app):
-        app.config['SQLALCHEMY_DATABASE_URI'] = self.env('DATABASE_URI')
+    # def setup_sqlalchemy(self, app):
+    #     app.config['SQLALCHEMY_DATABASE_URI'] = self.env('DATABASE_URI')
 
     def setup_supabase(self):
         from supabase import create_client

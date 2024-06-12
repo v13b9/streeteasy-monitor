@@ -40,9 +40,9 @@ def try_post(url, json_data, func_name, s):
 
 # load streeteasy code mapping to genereate area segment of search url based on input
 def get_area_map():
-    with open(os.path.join(dir, 'src/streeteasymonitor/data/areas.json'), 'r') as f:
+    with open(os.path.join(dir, 'data/areas.json'), 'r') as f:
         areas = json.load(f)
-    return {area['id']: area['name'] for area in areas}
+    return {area['name']: area['id'] for area in areas}
 
 
 def build_url(**kwargs):

@@ -2,14 +2,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from .utility import build_url, get_datetime
-
-test_search_url = (
-    'https://streeteasy.com/for-rent/new-jersey/price:-2000?sort_by=listed_desc'
-)
-
-search_url_broad = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-3000%7Carea:321,364,322,325,304,320,301,319,326,329,302,310,306,307,303,412,305,109%7Cbeds:1-3?sort_by=listed_desc'
-search_url_narrow = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-2900%7Carea:310,306,305,321,364,322,307,303,304,320,301,319,326,302%7Cbeds:1-3?sort_by=listed_desc'
+from .utility import build_url, get_datetime, get_area_map
 
 # TODO: implement get validated neighborhood input
 
@@ -18,36 +11,40 @@ search_url_narrow = 'https://streeteasy.com/for-rent/nyc/status:open%7Cprice:-29
 # TODO: implement get other parameter input - in flask?
 
 min_price = 0
-max_price = 3000
+max_price = 2900
 min_beds = 1
 max_beds = 3
 
-codes = [
-    '321',
-    '364',
-    '322',
-    '325',
-    '304',
-    '320',
-    '301',
-    '319',
-    '326',
-    '329',
-    '302',
-    '310',
-    '306',
-    '307',
-    '303',
-    '412',
-    '305',
-    '109',
+area_map = get_area_map()
+
+areas = [
+    'Carroll Gardens',
+    'Clinton Hill',
+    'Cobble Hill',
+    # 'Crown Heights',
+    'Fort Greene',
+    'Gowanus',
+    'Greenpoint',
+    'Park Slope',
+    'Prospect Heights',
+    # 'Prospect Lefferts Gardens',
+    'Williamsburg',
+    'Bedford-Stuyvesant',
+    'Boerum Hill',
+    'DUMBO',
+    'Downtown Brooklyn',
+    # 'Ridgewood',
+    'Brooklyn Heights',
+    # 'Lower East Side',
+    # 'Upper East Side'
 ]
 
+codes = [area_map[area] for area in areas]
 
 class Search:
     def __init__(self, monitor):
         self.price = f'{min_price}-{max_price}'
-        self.area = ','.join([code for code in codes])
+        self.area = ','.join(codes)
         self.beds = f'{min_beds}-{max_beds}'
 
         self.parameters = {
@@ -58,11 +55,11 @@ class Search:
             'beds': self.beds,
         }
 
-        # self.url = build_url(**self.parameters)
-        self.url = search_url_narrow
+        self.url = build_url(**self.parameters)
         self.session = monitor.session
         self.db = monitor.db
         self.listings = []
+
 
     def fetch(self):
         r = self.session.get(self.url)
@@ -88,11 +85,13 @@ class Parser:
             ]
         }
 
+        self.price_pattern = re.compile(r'[$,]')
+
     def parse(self, card):
         listing_id = card.select_one('div.SRPCarousel-container')['data-listing-id']
         url = card.select_one('a.listingCard-globalLink')['href']
         price_text = card.select_one('span.price').text
-        price = int(re.sub(r'[$,]', '', price_text))
+        price = int(self.price_pattern.sub('', price_text))
         address = card.select_one('address.listingCard-addressLabel').text.strip()
         neighborhood_text = card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel').text
         neighborhood = neighborhood_text.split(' in ')[-1].strip()
@@ -107,20 +106,23 @@ class Parser:
 
     def filter(self, target):
         if target['listing_id'] in self.existing_ids:
-            return True
+            return False
+
         for key, substrings in self.filters.items():
             target_value = target.get(key, '')
             if any(substring in target_value for substring in substrings):
-                return True
-        return False
+                return False
+
+        return True
+
 
     @property
     def listings(self):
         cards = self.soup.select('li.searchCardList--listItem')
         parsed = [self.parse(card) for card in cards]
-        filtered = [card for card in parsed if not self.filter(card)]
-
+        filtered = [card for card in parsed if self.filter(card)]
+        
         if not filtered:
-            print(f'{get_datetime()} No new listings')
+            print(f'{get_datetime()} No new listings\n')
 
         return filtered
