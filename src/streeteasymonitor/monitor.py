@@ -6,12 +6,14 @@ from src.streeteasymonitor.messager import Messager
 from src.streeteasymonitor.config import Config
 
 class Monitor:
-    def __init__(self):
+    def __init__(self, **kwargs):
         self.config = Config()
         self.db = Database(self.config)
 
         self.session = requests.Session()
         self.session.headers.update(self.config.get_headers())
+
+        self.kwargs = kwargs
 
     def __enter__(self):
         return self

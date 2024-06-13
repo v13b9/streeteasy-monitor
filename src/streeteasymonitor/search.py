@@ -43,21 +43,25 @@ codes = [area_map[area] for area in areas]
 
 class Search:
     def __init__(self, monitor):
-        self.price = f'{min_price}-{max_price}'
-        self.area = ','.join(codes)
-        self.beds = f'{min_beds}-{max_beds}'
+        self.session = monitor.session
+        self.db = monitor.db
+        
+        self.kwargs = monitor.kwargs
+        self.codes = [area_map[area] for area in areas]
 
         self.parameters = {
             # for full functionality, define handling for every possible search parameter and handle variable input
             'status': 'open',
-            'price': self.price,
-            'area': self.area,
-            'beds': self.beds,
+            'price': f'{self.kwargs['min_price']}-{self.kwargs['max_price']}',
+            'area': ','.join(self.codes),
+            'beds': f'{self.kwargs['min_beds']}-{self.kwargs['max_beds']}',
         }
 
+        print(f'self.parameters: {self.parameters}')
+
         self.url = build_url(**self.parameters)
-        self.session = monitor.session
-        self.db = monitor.db
+        print(f'self.url: {self.url}')
+        
         self.listings = []
 
 

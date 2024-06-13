@@ -6,6 +6,25 @@
 
 {% block main %}
 
+<div class="container my-5">
+    <form method="POST" action="/start">
+        {{ form.csrf_token }}
+        <div class="mb-3">
+            <input id="min_price" class="form-control w-auto" name="min_price" placeholder="Minimum price" type="number" min="0">
+        </div>
+        <div class="mb-3">
+            <input id="max_price" class="form-control w-auto" name="max_price" placeholder="Maximum price" type="number" min="0">
+        </div>
+        <div class="mb-3">
+            <input id="min_beds" class="form-control w-auto" name="min_beds" placeholder="Minimum beds" type="number" min="0">
+        </div>
+        <div class="mb-3">
+            <input id="max_beds" class="form-control w-auto" name="max_beds" placeholder="Maximum beds" type="number" min="0">
+        </div>
+        <button class="btn btn-primary" type="submit" value="Start">Start</button>
+    </form>
+</div>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -26,5 +45,6 @@
         {% endfor %}
     </tbody>
 </table>
+
 
 {% endblock %}
