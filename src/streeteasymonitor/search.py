@@ -10,44 +10,15 @@ from .utility import build_url, get_datetime, get_area_map
 
 # TODO: implement get other parameter input - in flask?
 
-min_price = 0
-max_price = 2900
-min_beds = 1
-max_beds = 3
-
 area_map = get_area_map()
-
-areas = [
-    'Carroll Gardens',
-    'Clinton Hill',
-    'Cobble Hill',
-    # 'Crown Heights',
-    'Fort Greene',
-    'Gowanus',
-    'Greenpoint',
-    'Park Slope',
-    'Prospect Heights',
-    # 'Prospect Lefferts Gardens',
-    'Williamsburg',
-    'Bedford-Stuyvesant',
-    'Boerum Hill',
-    'DUMBO',
-    'Downtown Brooklyn',
-    # 'Ridgewood',
-    'Brooklyn Heights',
-    # 'Lower East Side',
-    # 'Upper East Side'
-]
-
-codes = [area_map[area] for area in areas]
 
 class Search:
     def __init__(self, monitor):
         self.session = monitor.session
         self.db = monitor.db
-        
         self.kwargs = monitor.kwargs
-        self.codes = [area_map[area] for area in areas]
+        
+        self.codes = [area_map[area] for area in self.kwargs['areas']]
 
         self.parameters = {
             # for full functionality, define handling for every possible search parameter and handle variable input

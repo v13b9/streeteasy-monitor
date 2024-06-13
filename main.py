@@ -1,11 +1,6 @@
 from src.streeteasymonitor.monitor import Monitor
 
-
-def main(**kwargs):
-    with Monitor(**kwargs) as monitor:
-        monitor.run()
-
-defaults = {
+default = {
 
     'min_price': 0,
     'max_price': 2900,
@@ -36,5 +31,10 @@ defaults = {
 
 }
 
+def main(**kwargs):
+    with Monitor(**kwargs) as monitor:
+        monitor.run()
+
+
 if __name__ == '__main__':
-    main(**defaults)
+    main(**default)
