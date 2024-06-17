@@ -16,3 +16,4 @@ test.*
 *.log
 fe_test.py
 archive/
+flask_test/

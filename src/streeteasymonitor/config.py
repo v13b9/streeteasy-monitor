@@ -31,9 +31,6 @@ class Config:
             'name': self.env('NAME'),
         }
 
-    # def setup_sqlalchemy(self, app):
-    #     app.config['SQLALCHEMY_DATABASE_URI'] = self.env('DATABASE_URI')
-
     def setup_supabase(self):
         from supabase import create_client
 

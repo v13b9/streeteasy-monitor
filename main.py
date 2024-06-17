@@ -26,7 +26,7 @@ default = {
         # 'Ridgewood',
         'Brooklyn Heights',
         # 'Lower East Side',
-        # 'Upper East Side'
+        'Upper East Side',
     ]
 
 }

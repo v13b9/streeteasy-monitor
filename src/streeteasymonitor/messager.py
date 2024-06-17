@@ -1,4 +1,4 @@
-from .utility import get_datetime
+from .utils import get_datetime
 
 class Messager:
     api_url = 'https://api-v6.streeteasy.com/'
