@@ -5,6 +5,7 @@ from src.streeteasymonitor.database import Database
 from src.streeteasymonitor.messager import Messager
 from src.streeteasymonitor.config import Config
 
+
 class Monitor:
     def __init__(self, **kwargs):
         self.config = Config()
@@ -26,4 +27,3 @@ class Monitor:
         listings = search.fetch()
         messager = Messager(self, listings)
         messager.send_messages()
-

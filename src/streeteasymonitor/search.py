@@ -4,12 +4,14 @@ from bs4 import BeautifulSoup
 
 from .utils import build_url, get_datetime, get_area_map
 
+
 class Search:
     """A search based on the current session, database instance, and keyword arguments for constructing a StreetEasy search URL.
 
     Attributes:
         area_map (dict[str, str]): A mapping of StreetEasy's neighborhood names and corresponding codes used for URL construction.
     """
+
     area_map: dict[str, str] = get_area_map()
 
     def __init__(self, monitor) -> None:
@@ -23,7 +25,7 @@ class Search:
             db (Database): The database instance.
             kwargs (dict[str, str]): The search parameter components.
             codes (list[str, str]): The StreetEasy neighborhood codes corresponding to selected neighborhood names.
-            
+
             price (str): The price range component of the search URL.
             area (str): The neighborhood code component of the search URL.
             beds (str): The number of beds component of the search URL.
@@ -31,12 +33,12 @@ class Search:
             parameters (dict[str, str]): Dictionary mapping query components for URL construction.
             url (str): Search URL for the current query.
             listings (list[dict[str, str]]): Listings corresponding to the current search - initially empty.
-            
         """
+        
         self.session = monitor.session
         self.db = monitor.db
         self.kwargs = monitor.kwargs
-        
+
         self.codes = [Search.area_map[area] for area in self.kwargs['areas']]
 
         self.price = f'{self.kwargs['min_price']}-{self.kwargs['max_price']}'
@@ -52,7 +54,6 @@ class Search:
 
         self.url = build_url(**self.parameters)
         self.listings = []
-
 
     def fetch(self) -> list[dict[str, str]]:
         """Check the search URL for new listings."""
@@ -74,15 +75,10 @@ class Parser:
         filters (dict[str, list[str]]): Used for filtering out listings based on criteria not captured by StreetEasy's search interface natively.
         price_pattern (re.Pattern): Regular expression used for stripping commas and dollar signs from listing price.
     """
+
     filters = {
-        'url': [
-            '?featured=1',
-            '?infeed=1'
-        ],
-        'address': [
-            'Herkimer',
-            'Fulton'
-        ],
+        'url': ['?featured=1', '?infeed=1'],
+        'address': ['Herkimer', 'Fulton'],
         'neighborhood': [
             'Ocean Hill',
             'Flatbush',
@@ -115,7 +111,11 @@ class Parser:
         url = card.select_one('a.listingCard-globalLink')['href']
         price = Parser.price_pattern.sub('', card.select_one('span.price').text)
         address = card.select_one('address.listingCard-addressLabel').text.strip()
-        neighborhood = card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel').text.split(' in ')[-1].strip()
+        neighborhood = (
+            card.select_one('div.listingCardBottom--upperBlock p.listingCardLabel')
+            .text.split(' in ')[-1]
+            .strip()
+        )
 
         return {
             'listing_id': listing_id,

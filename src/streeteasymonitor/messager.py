@@ -1,5 +1,6 @@
 from .utils import get_datetime
 
+
 class Messager:
     api_url = 'https://api-v6.streeteasy.com/'
 
@@ -133,7 +134,9 @@ class Messager:
                     print(f'                          Message sent successfully\n')
                     self.db.insert_new_listing(listing)
                 else:
-                    print(f'                          Error sending message: Failed to submit message\n')
+                    print(
+                        f'                          Error sending message: Failed to submit message\n'
+                    )
             except Exception as e:
                 print(f'                          Error sending message: {e}\n')
 

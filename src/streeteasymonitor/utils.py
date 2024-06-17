@@ -6,6 +6,7 @@ import os
 
 dir = os.path.dirname(os.path.abspath(__file__))
 
+
 def get_datetime() -> str:
     """Get current timestamp for logging."""
     NYC = gettz('America/New_York')

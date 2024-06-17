@@ -30,6 +30,7 @@ neighborhoods = {
     ],
 }
 
+
 class SearchForm(FlaskForm):
     min_price = IntegerField(
         'Minimum Price',
@@ -39,13 +40,13 @@ class SearchForm(FlaskForm):
                 min=0,
                 max=10000,
                 message='test',
-                ),
-            ],
+            ),
+        ],
         render_kw={
-            "step": "100",
-            "placeholder": "Min price",
-            },
-        )
+            'step': '100',
+            'placeholder': 'Min price',
+        },
+    )
     max_price = IntegerField(
         'Maximum Price',
         validators=[
@@ -54,13 +55,13 @@ class SearchForm(FlaskForm):
                 min=0,
                 max=10000,
                 message='test',
-                ),
-            ],
+            ),
+        ],
         render_kw={
-            "step": "100",
-            "placeholder": "Max price",
-            },
-        )
+            'step': '100',
+            'placeholder': 'Max price',
+        },
+    )
     min_beds = IntegerField(
         'Minimum Beds',
         validators=[
@@ -69,12 +70,12 @@ class SearchForm(FlaskForm):
                 min=0,
                 max=4,
                 message='test',
-                ),
-            ],
+            ),
+        ],
         render_kw={
-            "placeholder": "Min beds",
-            },
-        )
+            'placeholder': 'Min beds',
+        },
+    )
     max_beds = IntegerField(
         'Maximum Beds',
         validators=[
@@ -83,20 +84,18 @@ class SearchForm(FlaskForm):
                 min=0,
                 max=4,
                 message='test',
-                ),
-            ],
+            ),
+        ],
         render_kw={
-            "placeholder": "Max beds",
-            },
-        )
+            'placeholder': 'Max beds',
+        },
+    )
     areas = SelectMultipleField(
         'Neighborhoods',
         choices=neighborhoods,
-        validators=[
-            InputRequired()
-            ],
+        validators=[InputRequired()],
         render_kw={
-            "placeholder": "Select neighborhoods",
-            },
-        )
+            'placeholder': 'Select neighborhoods',
+        },
+    )
     submit = SubmitField('Run')

@@ -17,13 +17,12 @@ from .forms import SearchForm
 paddaddy_base_url = 'https://paddaddy.app'
 offermate_lookup_api = 'https://offermate.app/unit_lookup'
 
-def create_app():
 
+def create_app():
     app = Flask(__name__)
-    
+
     config = Config()
     db = Database(config)
-
 
     class FlaskConfig:
         SCHEDULER_API_ENABLED = True
@@ -61,44 +60,47 @@ def create_app():
                     field.name: field.data
                     for field in form
                     if field.name != 'csrf_token' and field.name != 'submit'
-                    }
+                }
 
                 print(f'Running script with kwargs:\n{json.dumps(kwargs, indent=2)}')
                 main(**kwargs)
                 return redirect('/')
-            
+
             print(f'Invalid form submission\n')
             return redirect('/')
-        
+
         return render_template(
             'index.html',
             listings=listings,
             form=form,
         )
-    
+
     @app.route('/<path:url>', methods=['GET'])
     def url(url):
         try:
             params = {'q': url}
             r = requests.get(offermate_lookup_api, params=params)
             json = r.json()
-            if json.get('matching_listings') and json['matching_listings'][0]['similarity_type'] == 'exact_match':
+            if (
+                json.get('matching_listings')
+                and json['matching_listings'][0]['similarity_type'] == 'exact_match'
+            ):
                 paddaddy_id = json['matching_listings'][0]['url']
                 redirect_url = paddaddy_base_url + paddaddy_id
             else:
                 redirect_url = url
         except Exception as e:
-            print(f"Error: {e}")
+            print(f'Error: {e}')
             redirect_url = url
 
         return redirect(redirect_url, code=302)
 
     """Template filters"""
+
     @app.template_filter()
     def usd(value):
         """Format value as USD."""
         return f'${value:,}'
-
 
     @app.template_filter()
     def format_datetime(created_at):
