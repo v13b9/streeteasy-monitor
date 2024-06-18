@@ -1,15 +1,17 @@
 # StreetEasy Monitor
-Python script that checks StreetEasy for new rentals matching search criteria and automatically messages new matches
+Python script that checks StreetEasy for new rentals matching search criteria and automatically messages new matches.
+
+Includes a Flask application that provides a search interface and displays contacted listings, plus optional helper scripts for setting up a cron job.
 
 ### Features
-- [Requests](https://pypi.org/project/requests/) Sessions with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
+- Uses a [Requests](https://pypi.org/project/requests/) Session with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
 - [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for HTML parsing
-- [environs](https://pypi.org/project/environs/) for environment variable parsing
 - [Supabase Python Client](https://github.com/supabase-community/supabase-py) for database operations
-- [Flask](https://flask.palletsprojects.com/en/3.0.x/) and [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/) for simple web app implementation
+- [environs](https://pypi.org/project/environs/) for environment variable parsing
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Choices.js](https://github.com/Choices-js/Choices) for simple web app implementation
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
-- [Ruff](https://docs.astral.sh/ruff/) for code formatting
 - Helper scripts for cron job management
+- [Ruff](https://docs.astral.sh/ruff/) for code formatting
 
 ## Table of Contents
 - [Usage](#Usage)  
@@ -37,7 +39,7 @@ When possible, listings link to their corresponding page on [Paddaddy](https://p
 ![screenshot](assets/screenshot.png)
 
 ### (Optional) Create cron job
-Setting up a cron job is the most straightforward way to run the script continuously, but it can be a cumbersome process. A collection of bash scripts are included to try to streamline the process.
+Setting up a cron job is the most straightforward way to run the script continuously, but it can be a cumbersome process. A collection of bash scripts are included to help streamline the process.
 
 Navigate to the cron folder and make all scripts executable
 ```bash
@@ -45,9 +47,9 @@ Navigate to the cron folder and make all scripts executable
 (.venv) $ chmod +x `ls *.sh`
 ```
 
-Create cron job (the default configuration will run the script every 8 minutes)
+Create cron job
 
-<i>Note: if using a virtual environment, it must be activated for the script to find the correct interpreter path.</i>
+<i>Note: if using a virtual environment, it must be activated for the script to select the correct Python path.</i>
 ```bash
 (.venv) $ ./create_cron.sh
 ```
@@ -89,21 +91,25 @@ $ pyenv local .venv
 
 ## Configuration
 ### Create .env file
-Add any necessary database credentials and message fields. Currently only works with Supabase but could be adapted for other databases/providers
 ```bash
 $ touch .env
 ```
+Add database credentials (by default, requires a Supabase account and proper database schema defining a table named `listings`).
+
+Adapt to your desired database as needed by editing `database.py`.
 ```
 SUPABASE_URL=[YOUR SUPABASE URL]
 SUPABASE_KEY=[YOUR SUPABASE KEY]
 ```
+
+Add your desired message, along with your phone number, email, and name. All fields are required.
 ```
 MESSAGE=[YOUR MESSAGE]
 PHONE=[YOUR PHONE NUMBER]
 EMAIL=[YOUR EMAIL ADDRESS]
 NAME=[YOUR NAME]
 ```
-When the script runs, the listing agent for a given rental will be sent the above information, and you will receive an automated email from StreetEasy at the address you provided indicating that the message has been sent.
+When the script runs, the listing agent for a matching rental will be sent the above information, and you will receive an automated email from StreetEasy at the address you provided indicating that the message has been sent.
 
 ### Configure default search parameters and optional filters
 If you choose to run the script by itself or in a cron job, edit the `default` and `filters` dictionaries in `config.py` according to your preferences.
@@ -142,7 +148,7 @@ filters = {
 In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side. "Featured" listings will be excluded, and so will any rentals with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
 
 ### Configure cron helper scripts for script scheduling
-The project includes a folder of shell scripts to help with managing a cron job based on `main.py`. This method allows the script to run without needing to run 
-- `create_cron.sh`: Creates a cron command by selecting the full path of the correct Python interpreter based on the user's virtual environment, saving to `cron.dat`. By default the interval is 8 minutes but can be changed by reassigning `CRON_SCHEDULE`.
-- `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log`
-- `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`
+The `cron/` directory contains the following files, which can be configured according to your preferences if using a cron job.
+- `create_cron.sh`: Saves a cron table entry to `cron.dat`. By default the cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
+- `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default.
+- `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
