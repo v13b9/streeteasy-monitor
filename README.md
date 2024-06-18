@@ -1,7 +1,7 @@
 # StreetEasy Monitor
-Python script that checks StreetEasy for new rentals matching search criteria and automatically messages any new matches
+Python script that checks StreetEasy for new rentals matching search criteria and automatically messages new matches
 
-## Features
+### Features
 - [Requests](https://pypi.org/project/requests/) Sessions with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
 - [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for HTML parsing
 - [environs](https://pypi.org/project/environs/) for environment variable parsing
@@ -9,7 +9,7 @@ Python script that checks StreetEasy for new rentals matching search criteria an
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/) and [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/) for simple web app implementation
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
 - [Ruff](https://docs.astral.sh/ruff/) for code formatting
-- Helper scripts for setting up a cron job
+- Helper scripts for cron job management
 
 ## Table of Contents
 - [Usage](#Usage)  
@@ -24,12 +24,12 @@ $ python main.py
 ```
 
 ### Run Flask application 
-The application will run on port 8002 by default (can be changed in `app/app.py`)
+The application will run on port 8002 by default (can be changed in `app/app.py`).
 ```bash
 $ python -m app.app
 ```
-The application consists of the following elements:
-- A form that can be used to check for listings based on selected criteria
+The application consists of:
+- A form that can be used to check for listings based on specified criteria
 - A table listing every rental that has been contacted so far, sorted by most recent
 
 When possible, listings link to their corresponding page on [Paddaddy](https://paddaddy.app/), and otherwise link to the original page on StreetEasy.
@@ -37,7 +37,7 @@ When possible, listings link to their corresponding page on [Paddaddy](https://p
 ![screenshot](assets/screenshot.png)
 
 ### (Optional) Create cron job
-Setting up a cron job is the most straightforward way to run the script continuously, but it's a little challenging to get set up, so I wrote some bash scripts to make the process a little easier.
+Setting up a cron job is the most straightforward way to run the script continuously, but I found it a little cumbersome, so I wrote some bash scripts to make the process a little easier.
 
 Navigate to the cron folder and make all scripts executable
 ```bash
@@ -59,7 +59,6 @@ Stop the cron job
 ```bash
 $ ./stop_cron.sh
 ```
-
 
 ## Installation
 ### Clone project

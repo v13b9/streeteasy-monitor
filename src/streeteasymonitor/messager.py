@@ -145,7 +145,7 @@ class Messager:
             'request': {
                 'pageflowId': pageflow_id,
                 'replyToken': reply_token,
-                'fieldValues': Messager.field_values,
+                'fieldValues': self.field_values,
             }
         }
 
