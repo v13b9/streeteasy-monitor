@@ -20,13 +20,13 @@ Python script that checks StreetEasy for new rentals matching search criteria an
 
 ### One-off script execution
 ```bash
-$ python main.py
+(.venv) $ python main.py
 ```
 
 ### Run Flask application 
 The application will run on port 8002 by default (can be changed in `app/app.py`).
 ```bash
-$ python -m app.app
+(.venv) $ python -m app.app
 ```
 The application consists of:
 - A form that can be used to check for listings based on specified criteria
@@ -37,27 +37,29 @@ When possible, listings link to their corresponding page on [Paddaddy](https://p
 ![screenshot](assets/screenshot.png)
 
 ### (Optional) Create cron job
-Setting up a cron job is the most straightforward way to run the script continuously, but I found it a little cumbersome, so I wrote some bash scripts to make the process a little easier.
+Setting up a cron job is the most straightforward way to run the script continuously, but it can be a cumbersome process. A collection of bash scripts are included to try to streamline the process.
 
 Navigate to the cron folder and make all scripts executable
 ```bash
-$ cd cron
-$ chmod +x `ls *.sh`
+(.venv) $ cd cron
+(.venv) $ chmod +x `ls *.sh`
 ```
 
 Create cron job (the default configuration will run the script every 8 minutes)
+
+<i>Note: if using a virtual environment, it must be activated for the script to find the correct interpreter path.</i>
 ```bash
-$ ./create_cron.sh
+(.venv) $ ./create_cron.sh
 ```
 
 Start the cron job
 ```bash
-$ ./start_cron.sh
+(.venv) $ ./start_cron.sh
 ```
 
 Stop the cron job
 ```bash
-$ ./stop_cron.sh
+(.venv) $ ./stop_cron.sh
 ```
 
 ## Installation
@@ -67,24 +69,22 @@ $ git clone https://github.com/joeschermer/streeteasy-monitor.git
 $ cd streeteasy-monitor
 ````
 ### (Recommended) Install Python and set up virtual environment using [pyenv](https://github.com/pyenv/)  
-
 Install Python 3.12.3  
 ```bash
 $ pyenv install 3.12.3
 ```
 Create virtual environment
 ```bash
-$ pyenv virtualenv 3.12.3 .streeteasy-monitor
+$ pyenv virtualenv 3.12.3 .venv
 ```
 Activate virtual environment
 ```bash
-$ pyenv local .streeteasy-monitor
+$ pyenv local .venv
 ```
-
 
 ### Install requirements
 ```bash
-$ pip install -r requirements.txt
+(.venv) $ pip install -r requirements.txt
 ```
 
 ## Configuration
@@ -103,10 +103,10 @@ PHONE=[YOUR PHONE NUMBER]
 EMAIL=[YOUR EMAIL ADDRESS]
 NAME=[YOUR NAME]
 ```
-When the script runs, the listing agent for a given rental will be sent the above information, and you will receive an email indicating that the message has been sent.
+When the script runs, the listing agent for a given rental will be sent the above information, and you will receive an automated email from StreetEasy at the address you provided indicating that the message has been sent.
 
 ### Configure default search parameters and optional filters
-If you choose to run the script by itself or in a cron job, edit the `default` and `filters` dictionaries in `config.py` according to your preferences
+If you choose to run the script by itself or in a cron job, edit the `default` and `filters` dictionaries in `config.py` according to your preferences.
 
 - `default`: defines the parameters that will be used when running the script directly (i.e., not through the Flask form)
 - `filters`: defines substrings for filtering results not otherwise captured by StreetEasy (e.g. addresses on specific streets, URLs for "featured" listings which include the substring `'?featured=1'`)
@@ -128,14 +128,18 @@ default = {
 
 filters = {
     'url': ['?featured=1', '?infeed=1'],
-    'address': ['Fulton', 'Atlantic', 'Herkimer'],
+    'address': [
+        'Fulton',
+        'Atlantic',
+        'Herkimer',
+    ],
     'neighborhood': [
         'New Development',
         'Ocean Hill',
     ],
 }
 ```
-In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side. "Featured" listings will be excluded, and so will any apartments with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
+In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side. "Featured" listings will be excluded, and so will any rentals with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
 
 ### Configure cron helper scripts for script scheduling
 The project includes a folder of shell scripts to help with managing a cron job based on `main.py`. This method allows the script to run without needing to run 
