@@ -1,9 +1,9 @@
 from datetime import datetime
-from dateutil.tz import gettz
 import json
-import requests
 
+from dateutil.tz import gettz
 from flask import Flask, request, redirect, render_template
+import requests
 import timeago
 
 from src.streeteasymonitor.config import Config
@@ -25,7 +25,6 @@ def create_app():
         SECRET_KEY = 'dev'
 
     app.config.from_object(FlaskConfig())
-
 
     @app.template_filter()
     def usd(value):
