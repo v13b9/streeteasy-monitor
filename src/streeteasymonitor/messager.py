@@ -4,7 +4,7 @@ from .utils import get_datetime
 class Messager:
     api_url = 'https://api-v6.streeteasy.com/'
 
-    start_variables = {
+    pageflow_variables = {
         'request': {
             'name': 'ContactBox-Rentals-Consumer-AskQuestion-v0.0.2',
             'context': {
@@ -16,7 +16,7 @@ class Messager:
         }
     }
 
-    start_query = """
+    pageflow_query = """
         fragment Children on KoiosElement {
         children {
             ...ChildrenFields
@@ -101,7 +101,7 @@ class Messager:
         }
     """
 
-    finish_query = """
+    message_query = """
         mutation FinishPageflow($request: KoiosFinishPageflowRequest) {
             data: finishPageflow(request: $request) {
                 ... on KoiosErrorResponse {
@@ -141,37 +141,34 @@ class Messager:
                 print(f'                          Error sending message: {e}\n')
 
     def submit_message(self, pageflow_id, reply_token):
-        finish_variables = {
+        message_variables = {
             'request': {
                 'pageflowId': pageflow_id,
                 'replyToken': reply_token,
-                'fieldValues': self.field_values,
+                'fieldValues': Messager.field_values,
             }
         }
 
-        finish_json_data = {
-            'query': self.finish_query,
-            'variables': finish_variables,
+        payload = {
+            'query': Messager.message_query,
+            'variables': message_variables,
         }
 
-        r = self.session.post(self.api_url, json=finish_json_data)
+        r = self.session.post(Messager.api_url, json=payload)
         if r.status_code == 200:
             return True
         return False
 
     def get_pageflow_id(self, listing_id):
-        self.start_variables['request']['context']['rental_id'] = listing_id
-        start_json_data = {
-            'query': self.start_query,
-            'variables': self.start_variables,
+        Messager.pageflow_variables['request']['context']['rental_id'] = listing_id
+        payload = {
+            'query': Messager.pageflow_query,
+            'variables': Messager.pageflow_variables,
         }
 
-        r = self.session.post(self.api_url, json=start_json_data)
+        r = self.session.post(Messager.api_url, json=payload)
 
         pageflow_id = r.json()['data']['data']['pageflowId']
         reply_token = r.json()['data']['data']['replyToken']
-
-        # print('pageflowId:', pageflow_id)
-        # print('replyToken:', reply_token)
 
         return pageflow_id, reply_token

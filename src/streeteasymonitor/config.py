@@ -3,6 +3,47 @@ from fake_useragent import UserAgent
 
 
 class Config:
+    default = {
+        'min_price': 0,
+        'max_price': 2900,
+        'min_beds': 1,
+        'max_beds': 3,
+        'areas': [
+            'Carroll Gardens',
+            'Clinton Hill',
+            'Cobble Hill',
+            # 'Crown Heights',
+            'Fort Greene',
+            'Gowanus',
+            'Greenpoint',
+            'Park Slope',
+            'Prospect Heights',
+            # 'Prospect Lefferts Gardens',
+            'Williamsburg',
+            'Bedford-Stuyvesant',
+            'Boerum Hill',
+            'DUMBO',
+            'Downtown Brooklyn',
+            # 'Ridgewood',
+            'Brooklyn Heights',
+            # 'Lower East Side',
+            'Upper East Side',
+        ],
+    }
+
+    filters = {
+        'url': ['?featured=1', '?infeed=1'],
+        'address': ['Herkimer', 'Fulton'],
+        'neighborhood': [
+            'Ocean Hill',
+            'Flatbush',
+            'Bushwick',
+            'Weeksville',
+            'Stuyvesant Heights',
+            'New Development',
+        ],
+    }
+
     def __init__(self):
         self.env = Env()
         self.env.read_env()

@@ -23,7 +23,7 @@ class Monitor:
         self.session.close()
 
     def run(self):
-        search = Search(self)
-        listings = search.fetch()
-        messager = Messager(self, listings)
-        messager.send_messages()
+        self.search = Search(self)
+        self.listings = self.search.fetch()
+        self.messager = Messager(self, self.listings)
+        self.messager.send_messages()

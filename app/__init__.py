@@ -4,51 +4,53 @@ import json
 import requests
 
 from flask import Flask, request, redirect, render_template
-from flask_apscheduler import APScheduler
-from flask_session import Session
 import timeago
-
-from main import main
 
 from src.streeteasymonitor.config import Config
 from src.streeteasymonitor.database import Database
 from .forms import SearchForm
-
-paddaddy_base_url = 'https://paddaddy.app'
-offermate_lookup_api = 'https://offermate.app/unit_lookup'
+from main import main
 
 
 def create_app():
+    paddaddy_base_url = 'https://paddaddy.app'
+    offermate_lookup_api = 'https://offermate.app/unit_lookup'
+
     app = Flask(__name__)
 
     config = Config()
     db = Database(config)
 
     class FlaskConfig:
-        SCHEDULER_API_ENABLED = True
-        SCHEDULER_JOB_DEFAULTS = {'misfire_grace_time': None}
         SECRET_KEY = 'dev'
-        SESSION_PERMANENT = False
-        SESSION_TYPE = 'filesystem'
 
     app.config.from_object(FlaskConfig())
 
-    Session(app)
-    # csrf = CSRFProtect(app)
 
-    # scheduler = APScheduler()
-    # scheduler.init_app(app)
-    # scheduler.remove_all_jobs()
+    @app.template_filter()
+    def usd(value):
+        """Format value as USD."""
+        return f'${value:,}'
 
-    # scheduler.add_job(
-    #     id='main',
-    #     func=main,
-    #     trigger='interval',
-    #     seconds=random.randint(360, 480)
-    # )
+    @app.template_filter()
+    def format_datetime(created_at):
+        """Format date and time for current timezone."""
+        NYC = gettz('America/New_York')
+        now = datetime.now(NYC)
 
-    # scheduler.start()
+        parsed = datetime.fromisoformat(created_at).astimezone(NYC)
+        date_formatted = parsed.strftime('%B %e, %Y')
+        time_formatted = parsed.strftime('%l:%M %p')
 
+        time_ago = timeago.format(parsed, now)
+
+        delta = now - parsed
+        hours = delta.total_seconds() / 3600
+
+        datetime_formatted = f'{date_formatted} {time_formatted}'
+
+        return datetime_formatted if hours > 8 else time_ago
+    
     @app.route('/', methods=['GET', 'POST'])
     def index():
         listings = db.get_listings_sorted()
@@ -94,31 +96,5 @@ def create_app():
             redirect_url = url
 
         return redirect(redirect_url, code=302)
-
-    """Template filters"""
-
-    @app.template_filter()
-    def usd(value):
-        """Format value as USD."""
-        return f'${value:,}'
-
-    @app.template_filter()
-    def format_datetime(created_at):
-        """Format date and time for current timezone."""
-        NYC = gettz('America/New_York')
-        now = datetime.now(NYC)
-
-        parsed = datetime.fromisoformat(created_at).astimezone(NYC)
-        date_formatted = parsed.strftime('%B %e, %Y')
-        time_formatted = parsed.strftime('%l:%M %p')
-
-        time_ago = timeago.format(parsed, now)
-
-        delta = now - parsed
-        hours = delta.total_seconds() / 3600
-
-        datetime_formatted = f'{date_formatted} {time_formatted}'
-
-        return datetime_formatted if hours > 8 else time_ago
 
     return app

@@ -2,6 +2,7 @@ import re
 
 from bs4 import BeautifulSoup
 
+from .config import Config
 from .utils import build_url, get_datetime, get_area_map
 
 
@@ -72,22 +73,9 @@ class Parser:
     """Separates parsing functionality from search.
 
     Attributes:
-        filters (dict[str, list[str]]): Used for filtering out listings based on criteria not captured by StreetEasy's search interface natively.
         price_pattern (re.Pattern): Regular expression used for stripping commas and dollar signs from listing price.
     """
 
-    filters = {
-        'url': ['?featured=1', '?infeed=1'],
-        'address': ['Herkimer', 'Fulton'],
-        'neighborhood': [
-            'Ocean Hill',
-            'Flatbush',
-            'Bushwick',
-            'Weeksville',
-            'Stuyvesant Heights',
-            'New Development',
-        ],
-    }
     price_pattern = re.compile(r'[$,]')
 
     def __init__(self, content: bytes, db) -> None:
@@ -130,7 +118,7 @@ class Parser:
         if target['listing_id'] in self.existing_ids:
             return False
 
-        for key, substrings in Parser.filters.items():
+        for key, substrings in Config.filters.items():
             target_value = target.get(key, '')
             if any(substring in target_value for substring in substrings):
                 return False
