@@ -8,7 +8,7 @@ Includes a Flask application that provides a search interface and displays conta
 - [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for HTML parsing
 - [Supabase Python Client](https://github.com/supabase-community/supabase-py) for database operations
 - [environs](https://pypi.org/project/environs/) for environment variable parsing
-- [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Choices.js](https://github.com/Choices-js/Choices) for simple web app implementation
+- Simple web app implemented with [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Choices.js](https://github.com/Choices-js/Choices)
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
 - Helper scripts for cron job management
 - [Ruff](https://docs.astral.sh/ruff/) for code formatting
@@ -126,7 +126,7 @@ PHONE=[YOUR PHONE NUMBER]
 EMAIL=[YOUR EMAIL ADDRESS]
 NAME=[YOUR NAME]
 ```
-When the script runs, the listing agent for a matching rental will be sent the above information, and you will receive an automated email from StreetEasy at the address you provided indicating that the message has been sent.
+When the script runs, any matching listings will be sent the above information, and an automated email from StreetEasy will be sent to the address you provided indicating that the message has been sent.
 
 ### Configure default search parameters and optional filters
 If you choose to run the script by itself or in a cron job, edit the `default` and `filters` dictionaries in `config.py` according to your preferences.
@@ -165,7 +165,7 @@ filters = {
 In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side. "Featured" listings will be excluded, and so will any rentals with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
 
 ### Configure cron helper scripts for script scheduling
-The `cron/` directory contains the following files, which can be configured according to your preferences if using a cron job.
-- `create_cron.sh`: Saves a cron table entry to `cron.dat`. By default the cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
+The `cron/` directory contains the following files, which can be configured according to your preferences.
+- `create_cron.sh`: Saves a cron command to `cron.dat`. The default cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
 - `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default.
 - `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
