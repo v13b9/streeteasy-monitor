@@ -9,7 +9,7 @@ from src.streeteasymonitor.config import Config
 class Monitor:
     def __init__(self, **kwargs):
         self.config = Config()
-        self.db = Database(self.config)
+        self.db = Database()
 
         self.session = requests.Session()
         self.session.headers.update(self.config.get_headers())

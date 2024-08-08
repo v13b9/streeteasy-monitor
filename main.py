@@ -8,4 +8,4 @@ def main(**kwargs):
 
 
 if __name__ == '__main__':
-    main(**Config.default)
+    main(**Config.defaults)

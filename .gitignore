@@ -17,3 +17,6 @@ test.*
 fe_test.py
 archive/
 flask_test/
+tests/
+archive/
+*.sqlite3

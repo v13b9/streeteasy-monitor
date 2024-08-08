@@ -126,19 +126,19 @@ class Messager:
 
     def send_messages(self):
         for listing in self.listings:
-            print(f'{get_datetime()} New listing: {listing['address']}')
+            print(f'{get_datetime()}\nNew listing: {listing['address']}')
             try:
-                print(f'                          Sending message...')
+                print(f'Sending message...')
                 pageflow_id, reply_token = self.get_pageflow_id(listing['listing_id'])
                 if self.submit_message(pageflow_id, reply_token):
-                    print(f'                          Message sent successfully\n')
+                    print(f'Message sent successfully\n')
                     self.db.insert_new_listing(listing)
                 else:
                     print(
-                        f'                          Error sending message: Failed to submit message\n'
+                        f'Error sending message: Failed to submit message\n'
                     )
             except Exception as e:
-                print(f'                          Error sending message: {e}\n')
+                print(f'Error sending message: {e}\n')
 
     def submit_message(self, pageflow_id, reply_token):
         message_variables = {

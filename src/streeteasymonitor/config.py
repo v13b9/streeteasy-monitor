@@ -3,7 +3,7 @@ from fake_useragent import UserAgent
 
 
 class Config:
-    default = {
+    defaults = {
         'min_price': 0,
         'max_price': 2900,
         'min_beds': 1,
@@ -71,11 +71,3 @@ class Config:
             'email': self.env('EMAIL'),
             'name': self.env('NAME'),
         }
-
-    def setup_supabase(self):
-        from supabase import create_client
-
-        supabase_url = self.env('SUPABASE_URL')
-        supabase_key = self.env('SUPABASE_KEY')
-
-        return create_client(supabase_url, supabase_key)

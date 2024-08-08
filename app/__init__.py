@@ -1,12 +1,11 @@
-from datetime import datetime
+from datetime import datetime, timedelta, UTC
 import json
 
-from dateutil.tz import gettz
+from dateutil import tz
 from flask import Flask, request, redirect, render_template
 import requests
 import timeago
 
-from src.streeteasymonitor.config import Config
 from src.streeteasymonitor.database import Database
 from .forms import SearchForm
 from main import main
@@ -17,9 +16,7 @@ def create_app():
     offermate_lookup_api = 'https://offermate.app/unit_lookup'
 
     app = Flask(__name__)
-
-    config = Config()
-    db = Database(config)
+    db = Database()
 
     class FlaskConfig:
         SECRET_KEY = 'dev'
@@ -29,27 +26,23 @@ def create_app():
     @app.template_filter()
     def usd(value):
         """Format value as USD."""
-        return f'${value:,}'
+        return f'${int(value):,}'
 
     @app.template_filter()
     def format_datetime(created_at):
         """Format date and time for current timezone."""
-        NYC = gettz('America/New_York')
-        now = datetime.now(NYC)
-
-        parsed = datetime.fromisoformat(created_at).astimezone(NYC)
-        date_formatted = parsed.strftime('%B %e, %Y')
-        time_formatted = parsed.strftime('%l:%M %p')
+        local_tz = tz.gettz()
+        now = datetime.now(local_tz)
+        parsed = datetime.fromisoformat(created_at).replace(tzinfo=UTC).astimezone()
 
         time_ago = timeago.format(parsed, now)
-
-        delta = now - parsed
-        hours = delta.total_seconds() / 3600
-
+        
+        date_formatted = parsed.strftime('%B %e, %Y')
+        time_formatted = parsed.strftime('%l:%M %p')
         datetime_formatted = f'{date_formatted} {time_formatted}'
 
-        return datetime_formatted if hours > 8 else time_ago
-    
+        return time_ago if now - parsed < timedelta(hours=8) else datetime_formatted
+
     @app.route('/', methods=['GET', 'POST'])
     def index():
         listings = db.get_listings_sorted()
