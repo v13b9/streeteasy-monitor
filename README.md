@@ -107,7 +107,7 @@ When the script runs, any matching listings will be sent the above information, 
 ### Configure default search parameters and optional filters
 If you choose to run the script by itself or in a cron job, edit the `defaults` dictionary found in `src/streeteasymonitor/config.py` according to your preferences. When running the script using the Flask application, your form inputs override the defaults defined here.
 
->Example:
+Example:
 >
 > ```python
 > defaults = {
@@ -126,7 +126,7 @@ If you choose to run the script by itself or in a cron job, edit the `defaults` 
 
 There is also a `filters` dictionary, which defines substrings for filtering results not otherwise captured by StreetEasy (e.g. addresses on specific streets, URLs for "featured" listings which include the substring `'?featured=1'`).
 
->Example:
+Example:
 >
 >```python
 >filters = {
