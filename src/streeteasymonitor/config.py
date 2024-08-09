@@ -32,8 +32,14 @@ class Config:
     }
 
     filters = {
-        'url': ['?featured=1', '?infeed=1'],
-        'address': ['Herkimer', 'Fulton'],
+        'url': [
+            '?featured=1',
+            '?infeed=1',
+        ],
+        'address': [
+            'Herkimer',
+            'Fulton',
+        ],
         'neighborhood': [
             'Ocean Hill',
             'Flatbush',

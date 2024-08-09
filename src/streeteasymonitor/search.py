@@ -35,7 +35,7 @@ class Search:
             url (str): Search URL for the current query.
             listings (list[dict[str, str]]): Listings corresponding to the current search - initially empty.
         """
-        
+
         self.session = monitor.session
         self.db = monitor.db
         self.kwargs = monitor.kwargs

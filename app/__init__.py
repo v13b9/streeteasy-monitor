@@ -1,13 +1,15 @@
 from datetime import datetime, timedelta, UTC
 import json
 
-from dateutil import tz
+from dateutil.tz import gettz
 from flask import Flask, request, redirect, render_template
 import requests
 import timeago
 
 from src.streeteasymonitor.database import Database
+
 from .forms import SearchForm
+
 from main import main
 
 
@@ -31,12 +33,12 @@ def create_app():
     @app.template_filter()
     def format_datetime(created_at):
         """Format date and time for current timezone."""
-        local_tz = tz.gettz()
+        local_tz = gettz()
         now = datetime.now(local_tz)
         parsed = datetime.fromisoformat(created_at).replace(tzinfo=UTC).astimezone()
 
         time_ago = timeago.format(parsed, now)
-        
+
         date_formatted = parsed.strftime('%B %e, %Y')
         time_formatted = parsed.strftime('%l:%M %p')
         datetime_formatted = f'{date_formatted} {time_formatted}'
@@ -56,11 +58,11 @@ def create_app():
                     if field.name != 'csrf_token' and field.name != 'submit'
                 }
 
-                print(f'Running script with kwargs:\n{json.dumps(kwargs, indent=2)}')
+                print(f'Running script with kwargs:\n{json.dumps(kwargs, indent=2)}\n')
                 main(**kwargs)
                 return redirect('/')
 
-            print(f'Invalid form submission\n')
+            print('Invalid form submission\n')
             return redirect('/')
 
         return render_template(

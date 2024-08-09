@@ -1,7 +1,7 @@
 # StreetEasy Monitor
 Python script that checks StreetEasy for new rentals matching search criteria and automatically messages new matches.
 
-Includes a Flask application that provides a search interface and displays contacted listings, plus optional helper scripts for setting up a cron job.
+Includes a Flask application that provides a messaging interface and displays contacted listings, plus optional helper scripts for setting up a cron job.
 
 ### Features
 - Uses a [Requests](https://pypi.org/project/requests/) Session with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
@@ -20,6 +20,7 @@ Includes a Flask application that provides a search interface and displays conta
 ## Usage
 
 ### One-off script execution
+Run the script using the values in the `defaults` dictionary found in `src/streeteasymonitor/config.py` for the search parameters.
 ```bash
 (.venv) $ python main.py
 ```
@@ -70,15 +71,15 @@ $ git clone https://github.com/joeschermer/streeteasy-monitor.git
 $ cd streeteasy-monitor
 ````
 ### (Recommended) Install Python and set up virtual environment using [pyenv](https://github.com/pyenv/)  
-Install Python 3.12.3  
+1. Install Python 3.12.3  
 ```bash
 $ pyenv install 3.12.3
 ```
-Create virtual environment
+2. Create virtual environment
 ```bash
 $ pyenv virtualenv 3.12.3 .venv
 ```
-Activate virtual environment
+3. Activate virtual environment
 ```bash
 $ pyenv local .venv
 ```
@@ -90,12 +91,9 @@ $ pyenv local .venv
 
 ## Configuration
 
-### Create .env file
-```bash
-$ touch .env
-```
+### Add message and contact info
 
-Add your desired message, along with your phone number, email, and name. All fields are required.
+Edit the `.env` file to include your desired message, along with your phone number, email, and name. A placeholder file with placeholder values is included in the root directory. All fields are required.
 ```
 MESSAGE=[YOUR MESSAGE]
 PHONE=[YOUR PHONE NUMBER]
@@ -104,45 +102,50 @@ NAME=[YOUR NAME]
 ```
 When the script runs, any matching listings will be sent the above information, and an automated email from StreetEasy will be sent to the address you provided indicating that the message has been sent.
 
+<i>Note: this information is not visible or accessible anywhere other than your local `.env` file.</i>
+
 ### Configure default search parameters and optional filters
-If you choose to run the script by itself or in a cron job, edit the `defaults` dictionary found in `config.py` according to your preferences. When running the script using the Flask application, your form inputs override the defaults defined here.
+If you choose to run the script by itself or in a cron job, edit the `defaults` dictionary found in `src/streeteasymonitor/config.py` according to your preferences. When running the script using the Flask application, your form inputs override the defaults defined here.
 
-Example:
-
-```python
-defaults = {
-    'min_price': 1000,
-    'max_price': 4500,
-    'min_beds': 1,
-    'max_beds': 2,
-    'areas': [
-        'Bedford-Stuyvesant',
-        'Carroll Gardens',
-        'Upper East Side',
-    ],
-}
-```
-In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side.
+>Example:
+>
+> ```python
+> defaults = {
+>    'min_price': 1000,
+>    'max_price': 4500,
+>    'min_beds': 1,
+>    'max_beds': 2,
+>    'areas': [
+>        'Bedford-Stuyvesant',
+>        'Carroll Gardens',
+>        'Upper East Side',
+>    ],
+>}
+>```
+>In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side.
 
 There is also a `filters` dictionary, which defines substrings for filtering results not otherwise captured by StreetEasy (e.g. addresses on specific streets, URLs for "featured" listings which include the substring `'?featured=1'`).
 
-Example:
-
-```python
-filters = {
-    'url': ['?featured=1', '?infeed=1'],
-    'address': [
-        'Fulton',
-        'Atlantic',
-        'Herkimer',
-    ],
-    'neighborhood': [
-        'New Development',
-        'Ocean Hill',
-    ],
-}
-```
- Here, "featured" listings will be excluded, and so will any rentals with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
+>Example:
+>
+>```python
+>filters = {
+>    'url': [
+>        '?featured=1',
+>        '?infeed=1',
+>    ],
+>    'address': [
+>        'Fulton',
+>        'Atlantic',
+>        'Herkimer',
+>    ],
+>    'neighborhood': [
+>        'New Development',
+>        'Ocean Hill',
+>    ],
+>}
+>```
+> Here, "featured" listings will be excluded, and so will any rentals with addresses on Fulton, Atlantic, or Herkimer, or in the Ocean Hill sub-neighborhood.
 
 ### Configure cron helper scripts for script scheduling
 The `cron` directory contains the following files, which can be configured according to your preferences.
@@ -151,8 +154,6 @@ The `cron` directory contains the following files, which can be configured accor
 - `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
 
 ## Disclaimer
-This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
-
 Users of this software are solely responsible for ensuring their use complies with StreetEasy's Terms of Service and all applicable laws and regulations. This tool is intended for personal, non-commercial use only. The authors do not endorse or encourage any use of this software that may violate StreetEasy's policies or any third-party rights.
 
 Use of this software is at your own risk. The authors disclaim any responsibility for any misuse or any consequences that may arise from the use of this software.
