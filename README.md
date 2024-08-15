@@ -16,6 +16,7 @@ Includes a Flask application that provides a messaging interface and displays co
 - [Usage](#Usage)  
 - [Installation](#Installation)
 - [Configuration](#Configuration)  
+- [Important Notes](#Important_Notes)
 
 ## Usage
 
@@ -152,6 +153,11 @@ The `cron` directory contains the following files, which can be configured accor
 - `create_cron.sh`: Saves a cron command to `cron.dat`. The default cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
 - `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default.
 - `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
+
+### Important Notes
+Whenever you send a message on StreetEasy, you will receive an automated email at the address you provide indicating that the listing has been contacted. You will then continue to receive automated messages about any updates to the listing (e.g. price changes, rental status). This means that if you run the script repeatedly, you will have a lot of emails to sort through, so you might want to create a new email address if you don't want to clog your inbox.
+
+This is a blunt tool that casts a wide net by design and there may be many listings you contact that aren't interesting to you. You might also inadvertently annoy brokers who represent multiple listings if you send them the same message over and over again. Try to be as specific as possible with your search criteria to avoid these issues.
 
 ## Disclaimer
 Users of this software are solely responsible for ensuring their use complies with StreetEasy's Terms of Service and all applicable laws and regulations. This tool is intended for personal, non-commercial use only. The authors do not endorse or encourage any use of this software that may violate StreetEasy's policies or any third-party rights.
