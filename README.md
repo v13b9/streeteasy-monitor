@@ -50,7 +50,7 @@ Navigate to the cron folder and make all scripts executable
 
 Create cron job
 
-<i>Note: if using a virtual environment, it must be activated for the script to select the correct Python path.</i>
+*Note: if using a virtual environment, it must be activated for the script to select the correct Python path.*
 ```bash
 (.venv) $ ./create_cron.sh
 ```
@@ -103,7 +103,7 @@ NAME=[YOUR NAME]
 ```
 When the script runs, any matching listings will be sent the above information, and an automated email from StreetEasy will be sent to the address you provided indicating that the message has been sent.
 
-<i>Note: this information is not visible or accessible anywhere other than your local `.env` file.</i>
+*Note: this information is not visible or accessible anywhere other than your local `.env` file.*
 
 ### Configure default search parameters and optional filters
 If you choose to run the script by itself or in a cron job, edit the `defaults` dictionary found in `src/streeteasymonitor/config.py` according to your preferences. When running the script using the Flask application, your form inputs override the defaults defined here.
@@ -151,7 +151,7 @@ Example:
 ### Configure cron helper scripts for script scheduling
 The `cron` directory contains the following files, which can be configured according to your preferences.
 - `create_cron.sh`: Saves a cron command to `cron.dat`. The default cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
-- `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default.
+- `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default. *(Note: this will overwrite any active cron jobs)*
 - `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
 
 ## Important Notes
@@ -160,8 +160,15 @@ Whenever you send a message on StreetEasy, you will receive an automated email a
 This is a blunt tool that casts a wide net by design and there may be many listings you contact that aren't interesting to you. You might also inadvertently annoy brokers who represent multiple listings if you send them the same message over and over again. Try to be as specific as possible with your search criteria to avoid these issues.
 
 ## Todo
-- [ ] (for unchecked checkbox)
-- [x] (for checked checkbox)
+- [ ] Add more filtering options (no fee, amenities, etc.)
+- [ ] Add form fields for name, email, message, and phone number
+- [ ] Implement dynamic form submission
+- [ ] Persist form fields
+- [ ] Add more methods for running continuously (APScheduler?)
+- [ ] Add pagination for results
+- [ ] Document all classes
+- [ ] Build tests
+
 
 ## Disclaimer
 Users of this software are solely responsible for ensuring their use complies with StreetEasy's Terms of Service and all applicable laws and regulations. This tool is intended for personal, non-commercial use only. The authors do not endorse or encourage any use of this software that may violate StreetEasy's policies or any third-party rights.
