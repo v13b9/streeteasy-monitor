@@ -1,7 +1,7 @@
 # StreetEasy Monitor
 Python script that checks StreetEasy for new rentals matching search criteria and automatically messages new matches.
 
-Includes a Flask application that provides a messaging interface and displays contacted listings, plus optional helper scripts for setting up a cron job.
+Includes a Flask application that provides a messaging interface and displays contacted listings, plus optional helper scripts for setting up a cron job to run the script continuously.
 
 ### Features
 - Uses a [Requests](https://pypi.org/project/requests/) Session with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
@@ -150,22 +150,22 @@ Example:
 
 ### Configure cron helper scripts for script scheduling
 The `cron` directory contains the following files, which can be configured according to your preferences.
-- `create_cron.sh`: Saves a cron command to `cron.dat`. The default cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`.
+- `create_cron.sh`: Saves a cron command to `cron.dat`. The default cron job will run `main.py` every 8 minutes, but can be changed by reassigning `CRON_SCHEDULE`. Refer to [cron.help](https://cron.help/) for schedule formatting.
 - `start_cron.sh`: Starts the cron job from `cron.dat`. The job will log stdout/stderr to `cron.log` by default. *(Note: this will overwrite any active cron jobs)*
 - `stop_cron.sh`: Stops any active cron job and saves to `cron.dat`.
 
 ## Important Notes
 Whenever you send a message on StreetEasy, you will receive an automated email at the address you provide indicating that the listing has been contacted. You will then continue to receive automated messages about any updates to the listing (e.g. price changes, rental status). This means that if you run the script repeatedly, you will have a lot of emails to sort through, so you might want to create a new email address if you don't want to clog your inbox.
 
-This is a blunt tool that casts a wide net by design and there may be many listings you contact that aren't interesting to you. You might also inadvertently annoy brokers who represent multiple listings if you send them the same message over and over again. Try to be as specific as possible with your search criteria to avoid these issues.
+This is a blunt tool that casts a wide net by design and there may be many listings you contact that aren't interesting to you. You might also annoy brokers who represent multiple listings if you inadvertently send them the same message over and over again. Try to be as specific as possible with your search criteria to avoid these issues.
 
 ## Todo
-- [ ] Add more filtering options (no fee, amenities, etc.)
+- [ ] Add more filtering options (no fee, pets, amenities, etc.)
 - [ ] Add form fields for name, email, message, and phone number
 - [ ] Implement dynamic form submission
 - [ ] Persist form fields
 - [ ] Add more methods for running continuously (APScheduler?)
-- [ ] Add pagination for results
+- [ ] Add pagination for results table
 - [ ] Document all classes
 - [ ] Build tests
 
