@@ -20,7 +20,7 @@ Includes a Flask application that provides a messaging interface and displays co
 
 ## Usage
 
-### One-off script execution
+### Command line execution
 Run the script using the values in the `defaults` dictionary found in `src/streeteasymonitor/config.py` for the search parameters.
 ```bash
 (.venv) $ python main.py
