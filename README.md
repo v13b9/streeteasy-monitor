@@ -166,6 +166,7 @@ This is a blunt tool that casts a wide net by design and there may be many listi
 - [ ] Persist form fields
 - [ ] Add more methods for running continuously (APScheduler?)
 - [ ] Add pagination for results table
+- [ ] Add alert messages
 - [ ] Document all classes
 - [ ] Build tests
 
