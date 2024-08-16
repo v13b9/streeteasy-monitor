@@ -4,8 +4,8 @@ from fake_useragent import UserAgent
 
 class Config:
     defaults = {
-        'min_price': 0,
-        'max_price': 2900,
+        'min_price': 3000,
+        'max_price': 3100,
         'min_beds': 1,
         'max_beds': 3,
         'areas': [
@@ -29,6 +29,17 @@ class Config:
             # 'Lower East Side',
             'Upper East Side',
         ],
+        'amenities': [
+            'pets',
+            'doorman',
+            # 'laundry',
+            # 'elevator',
+            # 'private_outdoor_space',
+            # 'dishwasher',
+            # 'washer_dryer',
+            # 'gym',
+        ],
+        'no_fee': False,
     }
 
     filters = {
@@ -71,9 +82,9 @@ class Config:
 
     def get_field_values(self):
         return {
-            'message': self.env('MESSAGE'),
-            'phone': self.env('PHONE'),
+            'message': self.env('MESSAGE', default=''),
+            'phone': self.env('PHONE', default=''),
+            'email': self.env('EMAIL', default=''),
+            'name': self.env('NAME', default=''),
             'search_partners': None,
-            'email': self.env('EMAIL'),
-            'name': self.env('NAME'),
         }

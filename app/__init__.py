@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta, UTC
-import json
 
 from dateutil.tz import gettz
 from flask import Flask, request, redirect, render_template
@@ -57,8 +56,6 @@ def create_app():
                     for field in form
                     if field.name != 'csrf_token' and field.name != 'submit'
                 }
-
-                print(f'Running script with kwargs:\n{json.dumps(kwargs, indent=2)}\n')
                 main(**kwargs)
                 return redirect('/')
 
