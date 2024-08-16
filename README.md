@@ -116,6 +116,7 @@ Example:
 >    'max_price': 4500,
 >    'min_beds': 1,
 >    'max_beds': 2,
+>    'baths': 1,
 >    'areas': [
 >        'Bedford-Stuyvesant',
 >        'Carroll Gardens',
@@ -127,7 +128,7 @@ Example:
 >    'no_fee': True,
 >}
 >```
->In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side that allow pets and have no fee.
+>In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms and at least 1 bathroom, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side, that allow pets and have no fee.
 
 There is also a `filters` dictionary, which defines substrings for filtering results not otherwise captured by StreetEasy (e.g. addresses on specific streets, URLs for "featured" listings which include the substring `'?featured=1'`).
 
@@ -165,7 +166,7 @@ This is a blunt tool that casts a wide net by design and there may be many listi
 
 ## Todo
 - [x] Add more filtering options (no fee, pets, amenities, etc.)
-- [ ] Add no fee and amenities options in Flask
+- [x] Add no fee and amenities options in Flask
 - [ ] Add form fields for name, email, message, and phone number
 - [ ] Implement dynamic form submission
 - [ ] Persist form fields
