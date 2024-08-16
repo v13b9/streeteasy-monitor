@@ -8,7 +8,7 @@ Includes a Flask application that provides a messaging interface and displays co
 - [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for HTML parsing
 - SQLite for database operations
 - [environs](https://pypi.org/project/environs/) for environment variable parsing
-- Simple web app implemented with [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Choices.js](https://github.com/Choices-js/Choices)
+- Simple web app implemented with [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Tom Select](https://tom-select.js.org/)
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
 - Helper scripts for cron job management
 
@@ -96,10 +96,10 @@ $ pyenv local .venv
 
 Edit the `.env` file to include your desired message, along with your phone number, email, and name. A placeholder file with placeholder values is included in the root directory. All fields are required.
 ```
-MESSAGE=[YOUR MESSAGE]
-PHONE=[YOUR PHONE NUMBER]
-EMAIL=[YOUR EMAIL ADDRESS]
-NAME=[YOUR NAME]
+MESSAGE='[YOUR MESSAGE]'
+PHONE='[YOUR PHONE NUMBER]'
+EMAIL='[YOUR EMAIL ADDRESS]'
+NAME='[YOUR NAME]'
 ```
 When the script runs, any matching listings will be sent the above information, and an automated email from StreetEasy will be sent to the address you provided indicating that the message has been sent.
 
