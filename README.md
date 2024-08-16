@@ -121,16 +121,20 @@ Example:
 >        'Carroll Gardens',
 >        'Upper East Side',
 >    ],
+>    'amenities': [
+>        'pets',
+>    ],
+>    'no_fee': True,
 >}
 >```
->In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side.
+>In this example, the script will check for rentals priced between $1,000 and $4,500, with 1-2 bedrooms, in the neighborhoods of Bedford-Stuyvesant, Carroll Gardens, and the Upper East Side that allow pets and have no fee.
 
 There is also a `filters` dictionary, which defines substrings for filtering results not otherwise captured by StreetEasy (e.g. addresses on specific streets, URLs for "featured" listings which include the substring `'?featured=1'`).
 
 Example:
 >
->```python
->filters = {
+> ```python
+> filters = {
 >    'url': [
 >        '?featured=1',
 >        '?infeed=1',
