@@ -43,23 +43,20 @@ class Search:
 
         self.codes = [Search.area_map[area] for area in self.kwargs['areas']]
 
-        self.price = f'{self.kwargs['min_price']}-{self.kwargs['max_price']}'
         self.area = ','.join(self.codes)
-        self.beds = f'{self.kwargs['min_beds']}-{self.kwargs['max_beds']}'
+        self.price = f"{self.kwargs['min_price']}-{self.kwargs['max_price']}"
+        self.beds = f"{self.kwargs['min_beds']}-{self.kwargs['max_beds']}"
+        self.baths = f">={self.kwargs['baths']}"
+        self.amenities = f"{','.join(self.kwargs['amenities'])}"
+        self.no_fee = f"{1 if self.kwargs['no_fee'] == True else 0}"
 
-        if 'amenities' not in self.kwargs:
-            self.kwargs['amenities'] = ''
-        if 'no_fee' not in self.kwargs:
-            self.kwargs['no_fee'] = '0'
-
-        self.amenities = f'{','.join(self.kwargs['amenities'])}'
-        self.no_fee = f'{1 if self.kwargs['no_fee'] == True else 0}'
 
         self.parameters = {
             'status': 'open',
             'price': self.price,
             'area': self.area,
             'beds': self.beds,
+            'baths': self.baths,
             'amenities': self.amenities,
             'no_fee': self.no_fee,
         }
@@ -70,7 +67,7 @@ class Search:
     def fetch(self) -> list[dict[str, str]]:
         """Check the search URL for new listings."""
         print(f'Running script with parameters:\n{json.dumps(self.parameters, indent=2)}\n')
-        print(f'url: {self.url}')
+        print(f'URL: {self.url}')
         self.r = self.session.get(self.url)
         if self.r.status_code == 200:
             parser = Parser(self.r.content, self.db)

@@ -8,6 +8,7 @@ class Config:
         'max_price': 3100,
         'min_beds': 1,
         'max_beds': 3,
+        'baths': 1,
         'areas': [
             'Carroll Gardens',
             'Clinton Hill',

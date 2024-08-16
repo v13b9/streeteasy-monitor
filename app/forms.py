@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import SelectMultipleField, IntegerField, SubmitField
+from wtforms import SelectMultipleField, IntegerField, SubmitField, BooleanField
 from wtforms.validators import NumberRange, InputRequired
 
 neighborhoods = {
@@ -103,6 +103,17 @@ neighborhoods = {
     ],
 }
 
+extras = {
+    'pets': 'Pets allowed',
+    'doorman': 'Doorman',
+    'laundry': 'Laundry',
+    'elevator': 'Elevator',
+    'private_outdoor_space': 'Private outdoor space',
+    'dishwasher': 'Dishwasher',
+    'washer_dryer': 'Washer dryer',
+    'gym': 'Gym',
+}
+
 class SearchForm(FlaskForm):
     min_price = IntegerField(
         'Minimum Price',
@@ -117,6 +128,7 @@ class SearchForm(FlaskForm):
         render_kw={
             'step': '100',
             'placeholder': 'Min price',
+            'class': 'form-control',
         },
     )
     max_price = IntegerField(
@@ -132,6 +144,7 @@ class SearchForm(FlaskForm):
         render_kw={
             'step': '100',
             'placeholder': 'Max price',
+            'class': 'form-control',
         },
     )
     min_beds = IntegerField(
@@ -146,6 +159,7 @@ class SearchForm(FlaskForm):
         ],
         render_kw={
             'placeholder': 'Min beds',
+            'class': 'form-control',
         },
     )
     max_beds = IntegerField(
@@ -155,11 +169,11 @@ class SearchForm(FlaskForm):
             NumberRange(
                 min=0,
                 max=4,
-                message='test',
             ),
         ],
         render_kw={
             'placeholder': 'Max beds',
+            'class': 'form-control',
         },
     )
     areas = SelectMultipleField(
@@ -170,4 +184,31 @@ class SearchForm(FlaskForm):
             'placeholder': 'Select neighborhoods',
         },
     )
+    baths = IntegerField(
+        'Minimum Bathrooms',
+        validators=[
+            NumberRange(
+                min=0,
+                max=4,
+            ),
+        ],
+        render_kw={
+            'placeholder': 'Min baths',
+            'class': 'form-control',
+        },
+    )
+    amenities = SelectMultipleField(
+        'Amenities',
+        choices=list(extras.items()),
+        render_kw={
+            'placeholder': 'Select amenities',
+        },
+    )
+    no_fee = BooleanField(
+        'No fee',
+        render_kw={
+            'class': 'form-check-input',
+        },
+    )
+
     submit = SubmitField('Run')

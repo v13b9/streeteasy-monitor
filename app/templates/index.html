@@ -8,57 +8,52 @@
 <div class="container">
     <form method="POST" action="" novalidate>
         {{ form.hidden_tag() }}
-        <div class="row mt-4">
-            <div class="col-4">
-                <div class="row">
-                    <div class="col text-center">
-                        <b>Price Range</b>
+        <div class="row mt-2">
+
+            <div class="col-5">
+                <label><b>Price</b></label>
+                <div class="input-group">
+                    {{ form.min_price }}
+                    <span class="input-group-text">to</span>
+                    {{ form.max_price }}
+                    <span class="input-group-text">No fee</span>
+                    <div class="input-group-text">
+                        {{ form.no_fee }}
                     </div>
                 </div>
+
                 <div class="row mt-2">
+                    <div class="col-7">
+                        <label><b>Bedrooms</b></label>
+                        <div class="input-group">
+                            {{ form.min_beds }}
+                            <span class="input-group-text">to</span>
+                            {{ form.max_beds }}
+                        </div>
+                    </div>
+
                     <div class="col-5">
-                        {{ form.min_price(class="form-control") }}
-                    </div>
-                    <div class="col-2 text-center">
-                        <i>to</i>
-                    </div>
-                    <div class="col-5">
-                        {{ form.max_price(class="form-control") }}
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col text-center">
-                        <b>Number of Beds</b>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-5">
-                        {{ form.min_beds(class="form-control") }}
-                    </div>
-                    <div class="col-2 text-center">
-                        <i>to</i>
-                    </div>
-                    <div class="col-5">
-                        {{ form.max_beds(class="form-control") }}
+                        <label><b>Bathrooms</b></label>
+                        <div class="input-group">
+                            {{ form.baths }}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-8">
-                <div class="row">
-                    <div class="col">
-                        <b>Neighborhoods</b>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-10 data-width=100%">
-                        {{ form.areas(class="form-select", size="6") }}
-                    </div>
-                    <div class="col-2">
-                        {{ form.submit(class="btn btn-primary w-100") }}
-                    </div>
-                </div>
+
+            <div class="col-5">
+                <label><b>Neighborhoods</b></label>
+                {{ form.areas }}
+                <label class="mt-2"><b>Amenities</b></label>
+                {{ form.amenities }}
             </div>
+
+            <div class="col mt-2">
+                <button class="btn btn-primary w-100" style="height:100%;">Run</button>
+            </div>
+        
         </div>
+
     </form>
 </div>
 
@@ -83,16 +78,30 @@
     </tbody>
 </table>
 
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
-        const areas = document.getElementById('areas');
-        const choices = new Choices(areas, {
-            removeItemButton: true,
-            searchEnabled: true,
-            noResultsText: 'No neighborhoods found',
+
+        new TomSelect('#areas', {
+            plugins: [
+                'remove_button',
+                'clear_button',
+                'optgroup_columns',
+            ],
+            maxOptions: null,
         });
+
+        new TomSelect('#amenities', {
+            plugins: [
+                'remove_button',
+                'clear_button',
+            ],
+        });
+
     });
+
+
 </script>
 
 {% endblock %}
