@@ -160,7 +160,8 @@ Whenever you send a message on StreetEasy, you will receive an automated email a
 This is a blunt tool that casts a wide net by design and there may be many listings you contact that aren't interesting to you. You might also annoy brokers who represent multiple listings if you inadvertently send them the same message over and over again. Try to be as specific as possible with your search criteria to avoid these issues.
 
 ## Todo
-- [ ] Add more filtering options (no fee, pets, amenities, etc.)
+- [x] Add more filtering options (no fee, pets, amenities, etc.)
+- [ ] Add no fee and amenities options in Flask
 - [ ] Add form fields for name, email, message, and phone number
 - [ ] Implement dynamic form submission
 - [ ] Persist form fields
