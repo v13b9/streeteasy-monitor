@@ -117,8 +117,8 @@ extras = {
 class SearchForm(FlaskForm):
     min_price = IntegerField(
         'Minimum Price',
+        default=0,
         validators=[
-            InputRequired(),
             NumberRange(
                 min=0,
                 max=10000,
@@ -138,7 +138,6 @@ class SearchForm(FlaskForm):
             NumberRange(
                 min=0,
                 max=10000,
-                message='test',
             ),
         ],
         render_kw={
@@ -154,7 +153,6 @@ class SearchForm(FlaskForm):
             NumberRange(
                 min=0,
                 max=4,
-                message='test',
             ),
         ],
         render_kw={
@@ -186,6 +184,7 @@ class SearchForm(FlaskForm):
     )
     baths = IntegerField(
         'Minimum Bathrooms',
+        default=0,
         validators=[
             NumberRange(
                 min=0,
