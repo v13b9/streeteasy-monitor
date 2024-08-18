@@ -1,5 +1,6 @@
 beautifulsoup4==4.12.3
 blinker==1.8.2
+Bootstrap-Flask==2.4.0
 bs4==0.0.2
 certifi==2024.7.4
 charset-normalizer==3.3.2

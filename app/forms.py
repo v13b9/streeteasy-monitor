@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import SelectMultipleField, IntegerField, SubmitField, BooleanField
-from wtforms.validators import NumberRange, InputRequired
+from wtforms.validators import NumberRange, InputRequired, Optional
 
 neighborhoods = {
     "Brooklyn": [
@@ -116,38 +116,45 @@ extras = {
 
 class SearchForm(FlaskForm):
     min_price = IntegerField(
-        'Minimum Price',
-        default=0,
+        'Min Price',
         validators=[
+            InputRequired(),
             NumberRange(
                 min=0,
                 max=10000,
-                message='test',
+                message=('test'),
             ),
         ],
         render_kw={
             'step': '100',
-            'placeholder': 'Min price',
+            'placeholder': 'Min',
             'class': 'form-control',
         },
     )
     max_price = IntegerField(
-        'Maximum Price',
+        'Max Price',
         validators=[
             InputRequired(),
             NumberRange(
-                min=0,
+                min=100,
                 max=10000,
             ),
         ],
         render_kw={
             'step': '100',
-            'placeholder': 'Max price',
+            'placeholder': 'Max',
             'class': 'form-control',
         },
     )
+    no_fee = BooleanField(
+        'No fee',
+        validators=[Optional()],
+        render_kw={
+            'class': 'form-check-input',
+        },
+    )
     min_beds = IntegerField(
-        'Minimum Beds',
+        'Min Beds',
         validators=[
             InputRequired(),
             NumberRange(
@@ -156,12 +163,12 @@ class SearchForm(FlaskForm):
             ),
         ],
         render_kw={
-            'placeholder': 'Min beds',
+            'placeholder': 'Min',
             'class': 'form-control',
         },
     )
     max_beds = IntegerField(
-        'Maximum Beds',
+        'Max Beds',
         validators=[
             InputRequired(),
             NumberRange(
@@ -170,7 +177,21 @@ class SearchForm(FlaskForm):
             ),
         ],
         render_kw={
-            'placeholder': 'Max beds',
+            'placeholder': 'Max',
+            'class': 'form-control',
+        },
+    )
+    baths = IntegerField(
+        'Bathrooms',
+        validators=[
+            InputRequired(),
+            NumberRange(
+                min=0,
+                max=4,
+            ),
+        ],
+        render_kw={
+            'placeholder': 'Min',
             'class': 'form-control',
         },
     )
@@ -180,33 +201,17 @@ class SearchForm(FlaskForm):
         validators=[InputRequired()],
         render_kw={
             'placeholder': 'Select neighborhoods',
-        },
-    )
-    baths = IntegerField(
-        'Minimum Bathrooms',
-        default=0,
-        validators=[
-            NumberRange(
-                min=0,
-                max=4,
-            ),
-        ],
-        render_kw={
-            'placeholder': 'Min baths',
-            'class': 'form-control',
+            'class': 'form-select',
         },
     )
     amenities = SelectMultipleField(
         'Amenities',
+        default=[],
         choices=list(extras.items()),
+        validators=[Optional()],
         render_kw={
             'placeholder': 'Select amenities',
-        },
-    )
-    no_fee = BooleanField(
-        'No fee',
-        render_kw={
-            'class': 'form-check-input',
+            'class': 'form-select',
         },
     )
 

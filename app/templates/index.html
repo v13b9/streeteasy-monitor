@@ -1,3 +1,5 @@
+{% from 'bootstrap5/form.html' import render_field %}
+
 {% extends "layout.html" %}
 
 {% block title %}
@@ -6,11 +8,11 @@
 
 {% block main %}
 <div class="container">
-    <form method="POST" action="" novalidate>
+    <form method="POST" action="" novalidate class="needs-validation">
         {{ form.hidden_tag() }}
         <div class="row mt-2">
 
-            <div class="col-5">
+            <div class="col-4">
                 <label><b>Price</b></label>
                 <div class="input-group">
                     {{ form.min_price }}
@@ -33,18 +35,16 @@
                     </div>
 
                     <div class="col-5">
-                        <label><b>Bathrooms</b></label>
-                        <div class="input-group">
-                            {{ form.baths }}
-                        </div>
+                        {{ form.baths.label(style="font-weight: bold;") }}
+                        {{ form.baths(required=true) }}
                     </div>
                 </div>
             </div>
 
-            <div class="col-5">
-                <label><b>Neighborhoods</b></label>
+            <div class="col-6">
+                {{ form.areas.label(style="font-weight: bold;") }}
                 {{ form.areas }}
-                <label class="mt-2"><b>Amenities</b></label>
+                {{ form.amenities.label(style="font-weight: bold;", class="mt-2") }}
                 {{ form.amenities }}
             </div>
 
@@ -84,6 +84,7 @@
     document.addEventListener('DOMContentLoaded', function () {
 
         new TomSelect('#areas', {
+            hidePlaceholder: true,
             plugins: [
                 'remove_button',
                 'clear_button',
@@ -91,13 +92,23 @@
             ],
             maxOptions: null,
         });
-
+        
         new TomSelect('#amenities', {
+            hidePlaceholder: true,
             plugins: [
                 'remove_button',
                 'clear_button',
             ],
         });
+
+        const form = document.querySelector('.needs-validation');
+        form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
 
     });
 

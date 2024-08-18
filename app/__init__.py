@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta, UTC
 
 from dateutil.tz import gettz
-from flask import Flask, request, redirect, render_template
+from flask_bootstrap import Bootstrap5
+from flask import Flask, request, redirect, render_template, session
 import requests
 import timeago
 
@@ -17,6 +18,7 @@ def create_app():
     offermate_lookup_api = 'https://offermate.app/unit_lookup'
 
     app = Flask(__name__)
+    bootstrap = Bootstrap5(app)
     db = Database()
 
     class FlaskConfig:
@@ -47,25 +49,29 @@ def create_app():
     @app.route('/', methods=['GET', 'POST'])
     def index():
         listings = db.get_listings_sorted()
+
         form = SearchForm()
 
         if request.method == 'POST':
             if form.validate_on_submit():
                 kwargs = {
-                    field.name: field.data
+                    field.name: field.data or field.default
                     for field in form
                     if field.name != 'csrf_token' and field.name != 'submit'
                 }
+                session['data'] = kwargs
                 main(**kwargs)
                 return redirect('/')
 
             print('Invalid form submission\n')
             return redirect('/')
+        
+        data = session.pop('data', None)
 
         return render_template(
             'index.html',
             listings=listings,
-            form=form,
+            form=SearchForm(data=data),
         )
 
     @app.route('/<path:url>', methods=['GET'])
