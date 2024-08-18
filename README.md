@@ -13,8 +13,8 @@ Includes a Flask application that provides a messaging interface and displays co
 - Helper scripts for cron job management
 
 ### How it works
-1. Constructs a StreetEasy URL based on search criteria
-2. Scrapes and parses listings from search results page, sorted by most recent
+1. Constructs a StreetEasy URL corresponding to search criteria
+2. Scrapes, parses and filters listings from search results page
 3. Messages any listings that haven't already been contacted
 4. Stores details of newly contacted listings in a database
 
