@@ -12,6 +12,12 @@ Includes a Flask application that provides a messaging interface and displays co
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
 - Helper scripts for cron job management
 
+### How it works
+1. Constructs a StreetEasy URL based on search criteria
+2. Scrapes and parses listings from search results page, sorted by most recent
+3. Messages any listings that haven't already been contacted
+4. Stores details of newly contacted listings in a database
+
 ## Table of Contents
 - [Usage](#Usage)  
 - [Installation](#Installation)
@@ -167,9 +173,9 @@ This is a blunt tool that casts a wide net by design and there may be many listi
 ## Todo
 - [x] Add more filtering options (no fee, pets, amenities, etc.)
 - [x] Add no fee and amenities options in Flask
+- [x] Persist form fields after successful submission
 - [ ] Add form fields for name, email, message, and phone number
 - [ ] Implement dynamic form submission
-- [ ] Persist form fields
 - [ ] Add more methods for running continuously (APScheduler?)
 - [ ] Add pagination for results table
 - [ ] Add alert messages
