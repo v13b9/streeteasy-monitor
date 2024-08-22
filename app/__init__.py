@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, UTC
 
 from dateutil.tz import gettz
 from flask_bootstrap import Bootstrap5
-from flask import Flask, request, redirect, render_template, session
+from flask import Flask, flash, request, redirect, render_template, session
 import requests
 import timeago
 
@@ -45,11 +45,9 @@ def create_app():
         datetime_formatted = f'{date_formatted} {time_formatted}'
 
         return time_ago if now - parsed < timedelta(hours=8) else datetime_formatted
-
+    
     @app.route('/', methods=['GET', 'POST'])
     def index():
-        listings = db.get_listings_sorted()
-
         form = SearchForm()
 
         if request.method == 'POST':
@@ -61,7 +59,7 @@ def create_app():
                 }
                 session['data'] = kwargs
                 main(**kwargs)
-                return redirect('/')
+                return render_template('table.html', listings=db.get_listings_sorted())
 
             print('Invalid form submission\n')
             return redirect('/')
@@ -70,9 +68,10 @@ def create_app():
 
         return render_template(
             'index.html',
-            listings=listings,
+            listings=db.get_listings_sorted(),
             form=SearchForm(data=data),
         )
+    
 
     @app.route('/<path:url>', methods=['GET'])
     def url(url):

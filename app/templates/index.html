@@ -1,5 +1,3 @@
-{% from 'bootstrap5/form.html' import render_field %}
-
 {% extends "layout.html" %}
 
 {% block title %}
@@ -7,112 +5,25 @@
 {% endblock %}
 
 {% block main %}
-<div class="container">
-    <form method="POST" action="" novalidate class="needs-validation">
-        {{ form.hidden_tag() }}
-        <div class="row mt-2">
 
-            <div class="col-4">
-                <label><b>Price</b></label>
-                <div class="input-group">
-                    {{ form.min_price }}
-                    <span class="input-group-text">to</span>
-                    {{ form.max_price }}
-                    <span class="input-group-text">No fee</span>
-                    <div class="input-group-text">
-                        {{ form.no_fee }}
-                    </div>
-                </div>
-
-                <div class="row mt-2">
-                    <div class="col-7">
-                        <label><b>Bedrooms</b></label>
-                        <div class="input-group">
-                            {{ form.min_beds }}
-                            <span class="input-group-text">to</span>
-                            {{ form.max_beds }}
-                        </div>
-                    </div>
-
-                    <div class="col-5">
-                        {{ form.baths.label(style="font-weight: bold;") }}
-                        {{ form.baths(required=true) }}
-                    </div>
-                </div>
+<div id="form-and-table">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col" id="form">
+                {% include 'form.html' %}
             </div>
-
-            <div class="col-6">
-                {{ form.areas.label(style="font-weight: bold;") }}
-                {{ form.areas }}
-                {{ form.amenities.label(style="font-weight: bold;", class="mt-2") }}
-                {{ form.amenities }}
-            </div>
-
-            <div class="col mt-2">
-                <button class="btn btn-primary w-100" style="height:100%;">Run</button>
-            </div>
-        
         </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col" id="table">
+                {% include 'table.html' %}
+            </div>
+        </div>
+    </div>
 
-    </form>
 </div>
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Contacted</th>
-            <th scope="col">Address</th>
-            <th scope="col">Neighborhood</th>
-            <th scope="col">Price</th>
-        </tr>
-    </thead>
-    <tbody class="table-group-divider">
-        {% for listing in listings %}
-        <tr>
-            <td>{{ listing["created_at"] | format_datetime }}</td>
-            <td><a href='/{{ listing["url"] }}' target="_blank">{{ listing["address"] }}</a></td>
-            <td>{{ listing["neighborhood"] }}</td>
-            <td>{{ listing["price"] | usd }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
-<script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-
-        new TomSelect('#areas', {
-            hidePlaceholder: true,
-            plugins: [
-                'remove_button',
-                'clear_button',
-                'optgroup_columns',
-            ],
-            maxOptions: null,
-        });
-        
-        new TomSelect('#amenities', {
-            hidePlaceholder: true,
-            plugins: [
-                'remove_button',
-                'clear_button',
-            ],
-        });
-
-        const form = document.querySelector('.needs-validation');
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-
-    });
-
-
-</script>
 
 {% endblock %}

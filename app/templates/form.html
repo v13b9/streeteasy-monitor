@@ -1,0 +1,48 @@
+<form hx-post="/" hx-validate="true" hx-target="#table" class="needs-validation" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="row mt-2">
+
+        <div class="col-4">
+            <label><b>Price</b></label>
+            <div class="input-group">
+                {{ form.min_price }}
+                <span class="input-group-text">to</span>
+                {{ form.max_price }}
+                <span class="input-group-text">No fee</span>
+                <div class="input-group-text">
+                    {{ form.no_fee }}
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-7">
+                    <label><b>Bedrooms</b></label>
+                    <div class="input-group">
+                        {{ form.min_beds }}
+                        <span class="input-group-text">to</span>
+                        {{ form.max_beds }}
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    {{ form.baths.label(style="font-weight: bold;") }}
+                    {{ form.baths }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            {{ form.areas.label(style="font-weight: bold;") }}
+            {{ form.areas }}
+            {{ form.amenities.label(style="font-weight: bold;", class="mt-2") }}
+            {{ form.amenities }}
+        </div>
+
+        <div class="col mt-2">
+            <button type="post" class="btn btn-primary w-100" style="height:100%;">
+                Run
+            </button>
+        </div>
+    
+    </div>
+</form>

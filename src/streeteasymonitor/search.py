@@ -48,7 +48,7 @@ class Search:
         self.beds = f"{self.kwargs['min_beds']}-{self.kwargs['max_beds']}"
         self.baths = f">={self.kwargs['baths']}"
         self.amenities = f"{','.join(self.kwargs['amenities'])}"
-        self.no_fee = f"{1 if self.kwargs['no_fee'] == True else 0}"
+        self.no_fee = f"{1 if self.kwargs['no_fee'] == True else ''}"
 
 
         self.parameters = {
