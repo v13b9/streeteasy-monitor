@@ -173,8 +173,9 @@ This is a blunt tool that casts a wide net by design and there may be many listi
 - [x] Add more filtering options (no fee, pets, amenities, etc.)
 - [x] Add no fee and amenities options in Flask
 - [x] Persist form fields after successful submission
+- [x] Implement dynamic form submission
+- [ ] Add navbar, improve page layout
 - [ ] Add form fields for name, email, message, and phone number
-- [ ] Implement dynamic form submission
 - [ ] Add more methods for running continuously (APScheduler?)
 - [ ] Add pagination for results table
 - [ ] Add alert messages
