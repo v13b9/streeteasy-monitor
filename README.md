@@ -6,9 +6,8 @@ Includes a Flask application that provides a messaging interface and displays co
 ### Features
 - Uses a [Requests](https://pypi.org/project/requests/) Session with [fake-useragent](https://pypi.org/project/fake-useragent/) to bypass request blocking
 - [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/) for HTML parsing
-- SQLite for database operations
-- [environs](https://pypi.org/project/environs/) for environment variable parsing
-- Simple web app implemented with [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), and [Tom Select](https://tom-select.js.org/)
+- SQLite database
+- Simple web app implemented with [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/), [HTMX](https://htmx.org/), [Bootstrap](https://getbootstrap.com/) and [Tom Select](https://tom-select.js.org/)
 - Integration with [Paddaddy](https://paddaddy.app/) for added rental info
 - Helper scripts for cron job management
 

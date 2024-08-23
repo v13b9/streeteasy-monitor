@@ -33,13 +33,13 @@
 
         <div class="col-6">
             {{ form.areas.label(style="font-weight: bold;") }}
-            {{ form.areas }}
+            {{ form.areas(style="visibility: hidden; height: 38px;") }}
             {{ form.amenities.label(style="font-weight: bold;", class="mt-2") }}
-            {{ form.amenities }}
+            {{ form.amenities(style="visibility: hidden; height: 38px;") }}
         </div>
 
         <div class="col mt-2">
-            <button type="post" class="btn btn-primary w-100" style="height:100%;">
+            <button type="post" class="btn btn-primary w-100" style="aspect-ratio: 1/1;">
                 Run
             </button>
         </div>

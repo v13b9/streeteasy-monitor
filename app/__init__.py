@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, UTC
 
 from dateutil.tz import gettz
 from flask_bootstrap import Bootstrap5
-from flask import Flask, flash, request, redirect, render_template, session
+from flask import Flask, flash, request, redirect, render_template, session, url_for
 import requests
 import timeago
 
@@ -62,7 +62,7 @@ def create_app():
                 return render_template('table.html', listings=db.get_listings_sorted())
 
             print('Invalid form submission\n')
-            return redirect('/')
+            return redirect(url_for('index'))
         
         data = session.pop('data', None)
 
